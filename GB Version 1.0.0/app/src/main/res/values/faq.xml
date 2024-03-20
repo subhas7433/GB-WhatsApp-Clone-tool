@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="faqQuestion">
+        <item>Showing blank screen?</item>
+        <item>Can I delete downloaded file ?</item>
+        <item>How can I know about all the features of this app?</item>
+        <item>Can I recover deleted WhatsApp photos?</item>
+        <item>Bangla messages can not be recovered?</item>
+        <item>Can I recover Hindi messages?</item>
+        <item>When will Schedule messages function does not work?</item>
+        <item>Auto Reply function does not working?</item>
+        <item>Can WhatsTool app read my deleted messages?</item>
+        <item>How can I contact customer care?</item>
+        <item>When I am using Text repeater function my phone was fully stuck?</item>
+        <item>App does not work properly?</item>
+    </string-array>
+
+    <string-array name="faqAns">
+        <item>Close you application from recent activity and Open again.</item>
+        <item>Yes! Go to status section and click on "Download" button.\n
+            Click the delete button below the image or video you want to delete.</item>
+        <item>Go to home section\n
+            Click on the second number icon on the right side of the navigation bar.</item>
+        <item>No.</item>
+        <item>Yes! But sometimes it cannot happen.</item>
+        <item>Yes! You can.</item>
+        <item>1.If you are using any clone.Then manually you need to choose one for sending sms.\n
+              2.If screen lock is enable. </item>
+        <item>You need to give us all the permission what we ask.</item>
+        <item>No.(Everything store in your phone)</item>
+        <item>Go to home section.\n
+            Click on settings icon.\n
+            Then click on "Chat with us" button.</item>
+        <item>If your mobile are stuck then you should not set much value in text repeater "Repeat" section.\n
+            Because your mobile is low performance mobile.</item>
+        <item>If you face any problem in any function then you can contact us by taking screenshot.</item>
+    </string-array>
+</resources>

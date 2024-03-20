@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--    Quick Messages Section-->
+    <string-array name="QuickMessageLanguage">
+        <item>Mixed</item>
+        <item>English</item>
+        <item>हिन्दी</item>
+        <item>বাংলা</item>
+    </string-array>
+
+    <string-array name="QuickMessage">
+        <item> Hi!I am </item>
+        <item> Who are you?</item>
+        <item> আপনি কে ?</item>
+        <item> Where are you?</item>
+        <item> আপনি কোথায় আছেন?</item>
+        <item> तुम कौन हो?</item>
+        <item> Hello,How  are you? </item>
+        <item> হ্যালো, আপনি কেমন আছেন?</item>
+        <item> Nice to talk to you.</item>
+        <item> Now I\'m busy talking to you later.</item>
+        <item> এখন আমি ব্যস্ত আছি পরে তোমার সাথে কথা বলব</item>
+        <item> मैं आपके मन को कैसे जान सकता हूँ?</item>
+        <item> You are so cute.</item>
+        <item> How may I help you?</item>
+        <item> I am driving car.</item>
+        <item> What do I have to do?</item>
+        <item> আমাকে আর কি করতে হবে ?</item>
+        <item> क्या मेरे द्वारा आपकी कोई सहायता हो सकती है?</item>
+        <item> Miss you my dear, love you</item>
+        <item> আমি কিভাবে আপনাকে সাহায্য করতে পারি ?</item>
+        <item> Thank you for your valuable time</item>
+        <item> ধন্যবাদ আপনার মূল্যবান সময় দেয়ার জন্য</item>
+        <item> आपके बहुमूल्य समय के लिए धन्यवाद।</item>
+    </string-array>
+    <string-array name="english">
+        <item> Hi!I am </item>
+        <item> Where are you?</item>
+        <item> Who are you?</item>
+        <item> Hello,How  are you? </item>
+        <item> Nice to talk to you.</item>
+        <item> How can I know your mind?</item>
+        <item> I have reached home.</item>
+        <item> Now I\'m busy talking to you later.</item>
+        <item> You are so cute.</item>
+        <item> How may I help you?</item>
+        <item> I am driving car.</item>
+        <item> What do I have to do?</item>
+        <item> Miss you my dear, love you</item>
+        <item> Thank you for your valuable time.</item>
+    </string-array>
+    <string-array name="bengali">
+        <item> হাই, আমি </item>
+        <item> আপনি কে ?</item>
+        <item> আপনি কোথায় আছেন?</item>
+        <item> হ্যালো, আপনি কেমন আছেন?</item>
+        <item> বাড়িতে পৌঁছে গিয়েছি</item>
+        <item> এখন আমি ব্যস্ত আছি পরে তোমার সাথে কথা বলব</item>
+        <item> তোমাকে দেখতে খুব ভালো লাগছিল</item>
+        <item> আমি কিভাবে আপনাকে সাহায্য করতে পারি ?</item>
+        <item> আমি এখন গাড়ি চালাচ্ছি পরে তোমার সাথে কথা বলব</item>
+        <item> আমাকে আর কি করতে হবে ?</item>
+        <item> যদি ভালো করে একটু বলেন তাহলে বুঝতে সুবিধা হয় ?</item>
+        <item> আমার মনে হয় আপনি আমাকে ভুল বুঝছেন</item>
+        <item> আপনার সাথে কথা বলে খুব ভালো লাগলো</item>
+        <item> আপনার মনের কথা আমি কিভাবে জানতে পারি ?</item>
+        <item> ধন্যবাদ আপনার মূল্যবান সময় দেয়ার জন্য</item>
+    </string-array>
+    <string-array name="hindi">
+        <item> हाय मैं हु </item>
+        <item> आप कहाँ हैं?</item>
+        <item> तुम कौन हो?</item>
+        <item> नमस्ते आप कैसे हैं? </item>
+        <item> आपसे बात करके अच्छा लगा</item>
+        <item> मैं आपके मन को कैसे जान सकता हूँ?</item>
+        <item> मैं घर पहुंच गया हूं।</item>
+        <item> अब मैं आपसे बाद में बात करने में व्यस्त हूँ</item>
+        <item> आप बहुत प्यारे है और सुंदर हैं</item>
+        <item> क्या मेरे द्वारा आपकी कोई सहायता हो सकती है?</item>
+        <item> मैं गाड़ी चला रहा हूँ</item>
+        <item> मुझे क्या करना होगा?</item>
+        <item> मिस यू माय डियर, लव यू</item>
+        <item> आपके बहुमूल्य समय के लिए धन्यवाद।</item>
+    </string-array>
+
+
+
+</resources>

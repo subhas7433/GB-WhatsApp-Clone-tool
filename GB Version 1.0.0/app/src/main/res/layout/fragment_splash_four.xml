@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".splash_four">
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/spl_private_chat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/primary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="start"
+        android:text="@string/no_blue_tick_title"
+        android:textColor="@color/private_chat"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="#08000000"
+        android:padding="5dp"
+        android:src="@drawable/double_tick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:tint="@color/private_chat" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/Private_chat_des"
+        android:textColor="@color/about_cl"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/done_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/primary" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/intro_back"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

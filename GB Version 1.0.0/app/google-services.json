@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1011027735462",
+    "firebase_url": "https://quiz-cb1d0-default-rtdb.firebaseio.com",
+    "project_id": "quiz-cb1d0",
+    "storage_bucket": "quiz-cb1d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011027735462:android:72b5f1835d81b11c5c5567",
+        "android_client_info": {
+          "package_name": "com.affixstudio.gbversion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011027735462-6k6h561ermh77qmelij4m8ps07aqhpkq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi-OogcovRopAJYLnz0XjXZVwYNdZ7OM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011027735462-6k6h561ermh77qmelij4m8ps07aqhpkq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".private_view_media_small">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mediaSecondViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/chat_backround"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/media_card_padding"
+        android:paddingBottom="@dimen/media_card_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageButton
+            android:id="@+id/mediaBack"
+            android:layout_width="@dimen/back_icon_topnav"
+            android:layout_height="@dimen/back_icon_topnav"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="7dp"
+            android:padding="5dp"
+            android:background="#00ffffff"
+            android:src="@drawable/back_icon"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorPrimaryVariant" />
+
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Private Chat Images"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/mediaBack"
+            app:layout_constraintStart_toEndOf="@+id/mediaBack"
+            app:layout_constraintTop_toTopOf="@+id/mediaBack" />
+
+        <Button
+            android:id="@+id/deleteAllMediaSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:paddingEnd="0dp"
+            android:text="Delete All"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/pageTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pageTitle" />
+
+
+        <!--Recycle View-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:ignore="MissingConstraints"
+                tools:listitem="@layout/private_media_recycleview" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/seeMoreImage"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/see_more_btn_height"
+            android:layout_gravity="end"
+            android:layout_marginTop="7dp"
+            android:background="@color/transparent"
+            android:paddingEnd="5dp"
+            android:paddingBottom="0dp"
+            android:text="See more images"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

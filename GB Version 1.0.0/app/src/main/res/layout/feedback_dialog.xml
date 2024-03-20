@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/custom_dialog"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:minWidth="@dimen/dialog_min_width"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="4dp"
+            android:src="@mipmap/app_logo_round"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="FEEDBACK"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tagLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="5dp"
+            android:text="Our improvement will be done by your feedback."
+            android:textColor="@color/mid_black"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/input_icon"
+                android:layout_height="@dimen/input_icon"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/accent"
+                android:src="@drawable/ms_lg_focused"
+                app:tint="@color/primary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:elevation="1dp"
+                android:gravity="start"
+                android:scrollbars="vertical"
+                android:textColorHint="@color/hint"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                app:boxStrokeColor="@color/primary"
+                app:boxStrokeWidth="@dimen/inputboxStrokeWidth"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputFeedTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Type text"
+                    android:maxLength="5000"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:maxLines="4"
+                    android:minLines="3"
+                    android:padding="15dp"
+                    android:textColor="@color/primary"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/complainVA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:textColor="#505050"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please share"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textColor="#505050"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:text="@string/forScheduleMatch"
+                android:visibility="invisible"
+                android:singleLine="true"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/about_cl"
+                android:text="1. Screenshot of your screen where you are facing problem"
+                android:textSize="13sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/about_cl"
+                android:text="2. Explain in detail about your problem"
+                android:textSize="13sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/about_cl"
+                android:text="3. If possible please share video explanation"
+                android:textSize="13sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check this to find solution before contacting customer support."
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="7dp"
+                android:textColor="#505050"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+                <!--Button -->
+                <LinearLayout
+                    android:id="@+id/contactFaq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FAQs"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/appTutorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="App Tutorial"
+                        android:textSize="15sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:textColor="@color/primary"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect with"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="#505050"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/whatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/whatsapp_focused"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="WhatsApp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ms_lg_focused" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/feedbackVA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:text="Which feature do you use most (Optional) :"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/auto"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="Auto Reply"
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/pChat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="@string/no_blue_tick_title"
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/sChat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="@string/schedule_chat_title"
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/sDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="Status Download"
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+               android:id="@+id/rChat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="Recover Chat"
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/web"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="WhatsApp Web"
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tabIndicator_height"
+                android:text="Others"
+
+                android:textSize="13sp"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:buttonTint="@color/checkbox_tint"
+                android:textColor="@color/checkbox_tint"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom">
+            <Button
+                android:id="@+id/dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:paddingHorizontal="18dp"
+                android:text="Dismiss"
+                android:textAllCaps="false"
+                android:textColor="@color/about_cl"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:cornerRadius="0dp" />
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:paddingHorizontal="18dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:cornerRadius="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

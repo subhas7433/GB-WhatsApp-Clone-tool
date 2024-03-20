@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/customSpinnerItemLayout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <ImageView
+            android:id="@+id/ivSpinnerLayout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/cp_all" />
+        <TextView
+            android:id="@+id/tvSpinnerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="All"
+            android:padding="10dp"
+            android:textSize="17sp"
+            android:textColor="@color/primary"/>
+        <ImageView
+            android:id="@+id/customSpinnerIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/spinner_icon" />
+
+    </LinearLayout>
+
+</RelativeLayout>

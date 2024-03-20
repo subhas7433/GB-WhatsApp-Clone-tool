@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment_private_media">
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:paddingVertical="3dp"
+            android:gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/workProperlyImg"
+                android:layout_width="22dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/alert_icon"
+                />
+            <TextView
+                android:id="@+id/workProperly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="Not Showing anything"
+                android:textColor="@color/ascii_cl"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                />
+            <TextView
+                android:id="@+id/deleteAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:layout_marginStart="5dp"
+                android:drawableTint="@color/mid_black"
+                android:drawableTop="@drawable/delete_icon_18dp"
+                android:text="Delete ALL"
+                android:textAllCaps="true"
+                android:textColor="@color/mid_black"
+                android:textSize="9sp"
+                android:layout_gravity="end"
+                android:textStyle="bold"
+                android:visibility="visible"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/noMediaLA"
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:background="#FFDADA"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/srn_folder1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Set those functions to 'All media'"
+                android:textColor="@color/mid_black"
+                android:gravity="center"
+                android:visibility="visible" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:src="@drawable/srn_folder2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="Tick all the option."
+                android:textColor="@color/mid_black"
+                android:gravity="center"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/turnOnAllMediaDownload"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_send_bt"
+                android:backgroundTint="#DF0000"
+                android:gravity="center"
+                android:elevation="3dp"
+                android:text="Turn on"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mediaCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:paddingBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <!--Images card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/imageCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/media_card_evelation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/media_card_padding"
+                android:paddingEnd="@dimen/media_card_padding"
+                android:paddingBottom="5dp"
+                android:background="@color/media_image_card_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Images"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/media_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/title_text_marging"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <!--No Imageview -->
+                <LinearLayout
+                    android:id="@+id/noImageLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#E6E6E6"
+                        android:padding="5dp"
+                        android:src="@drawable/image_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/media_text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorry, No Images found"
+                        android:textSize="13sp"
+                        android:maxLength="28"
+                        android:textColor="@color/media_text_hint"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/showImageLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <!--Imageview Section-->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/imageRV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:scrollbars="horizontal"
+                        android:visibility="visible"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/media_image_recycleview" />
+                    <Button
+                        android:id="@+id/seeMoreImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/see_more_btn_height"
+                        android:layout_gravity="end"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="0dp"
+                        android:visibility="visible"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/transparent"
+                        android:text="See more image"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <FrameLayout
+            android:id="@+id/ad_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </FrameLayout>
+
+        <!--Videos card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/videoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/media_card_evelation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/media_video_card_bg"
+                android:paddingStart="@dimen/media_card_padding"
+                android:paddingEnd="@dimen/media_card_padding"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Videos"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/media_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/title_text_marging"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <!--No Videoview -->
+                <LinearLayout
+                    android:id="@+id/noVideoLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#E6E6E6"
+                        android:padding="3dp"
+                        android:src="@drawable/play_round_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/media_text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorry, No Videos found"
+                        android:textSize="13sp"
+                        android:maxLength="28"
+                        android:textColor="@color/media_text_hint"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showVideoLA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <!--Videosview Section-->
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:scrollbars="horizontal"
+                        tools:ignore="MissingConstraints"
+                        tools:listitem="@layout/media_video_recycleview" />
+                <Button
+                    android:id="@+id/seeMoreVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/see_more_btn_height"
+                    android:layout_gravity="end"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="0dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/transparent"
+                    android:text="See more Video"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--Audio card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/AudioCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/media_card_evelation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/media_audio_card_bg"
+                android:paddingStart="@dimen/media_card_padding"
+                android:paddingEnd="@dimen/media_card_padding"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Audio"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/media_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/title_text_marging"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <!--No Audioview -->
+                <LinearLayout
+                    android:id="@+id/noAudioLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#E6E6E6"
+                        android:padding="5dp"
+                        android:src="@drawable/music_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/media_text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorry, No Music found"
+                        android:textSize="13sp"
+                        android:maxLength="28"
+                        android:textColor="@color/media_text_hint"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showAudioLA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <!--AudioView Section-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/audioRecycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:visibility="visible"
+                    android:scrollbars="horizontal"
+                    tools:ignore="MissingConstraints"
+                    tools:listitem="@layout/media_audio_recycleview" />
+                <Button
+                    android:id="@+id/seeMoreAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/see_more_btn_height"
+                    android:layout_gravity="end"
+                    android:paddingEnd="5dp"
+                    android:visibility="visible"
+                    android:paddingBottom="0dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/transparent"
+                    android:text="See more Audio"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <!--Documents card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/documentCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/media_card_evelation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/media_document_card_bg"
+                android:paddingStart="@dimen/media_card_padding"
+                android:paddingEnd="@dimen/media_card_padding"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Documents"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/media_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/title_text_marging"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <!--No Documents -->
+                <LinearLayout
+                    android:id="@+id/noDocLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#E6E6E6"
+                        android:padding="5dp"
+                        android:rotation="-40"
+                        android:src="@drawable/doument_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/media_text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorry, No Documents found"
+                        android:textSize="13sp"
+                        android:maxLength="28"
+                        android:textColor="@color/media_text_hint"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showDocLA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <!--Documentsview Section-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/docRecycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:visibility="visible"
+                    android:scrollbars="horizontal"
+                    tools:ignore="MissingConstraints"
+                    tools:listitem="@layout/media_document_recycleview" />
+
+                <Button
+                    android:id="@+id/seeMoreDocumnet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/see_more_btn_height"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="7dp"
+                    android:paddingEnd="5dp"
+                    android:visibility="visible"
+                    android:paddingBottom="0dp"
+                    android:background="@color/transparent"
+                    android:text="See more Document"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <FrameLayout
+            android:id="@+id/ad_frame1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+
+        <!--Voiceover card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/VoiceCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/media_card_evelation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/media_voiceover_card_bg"
+                android:paddingStart="@dimen/media_card_padding"
+                android:paddingEnd="@dimen/media_card_padding"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Voice note"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/media_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/title_text_marging"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <!--No Voiceoverview -->
+                <LinearLayout
+                    android:id="@+id/noVoiceLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#E6E6E6"
+                        android:padding="6dp"
+                        android:src="@drawable/voice_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/media_text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorry, No Voice note found"
+                        android:textSize="13sp"
+                        android:maxLength="28"
+                        android:textColor="@color/media_text_hint"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showVoiceLA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/voiceRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:scrollbars="horizontal"
+                    tools:ignore="MissingConstraints"
+                    android:visibility="visible"
+                    tools:listitem="@layout/media_voicenote_recycleview" />
+
+                <!--Voiceoverview Section-->
+                <Button
+                    android:id="@+id/seeMoreVoicenote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/see_more_btn_height"
+                    android:layout_gravity="end"
+                    android:visibility="visible"
+                    android:layout_marginTop="7dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="0dp"
+                    android:background="@color/transparent"
+                    android:text="See more Voice note"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/StickerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/media_card_evelation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/media_sticker_card_bg"
+                android:paddingStart="@dimen/media_card_padding"
+                android:paddingEnd="@dimen/media_card_padding"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Sticker"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/media_title"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/title_text_marging"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    />
+                <!--No Voiceoverview -->
+                <LinearLayout
+                    android:id="@+id/noSticlerLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#E6E6E6"
+                        android:padding="6dp"
+                        android:src="@drawable/voice_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/media_text_hint" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sorry, No Sticker found"
+                        android:textSize="13sp"
+                        android:maxLength="28"
+                        android:textColor="@color/media_text_hint"
+                        android:layout_marginStart="5dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                        app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/showStickerLA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/stickerRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    tools:ignore="MissingConstraints"
+                    android:visibility="visible"
+                    tools:listitem="@layout/media_image_recycleview" />
+
+                <!--Voiceoverview Section-->
+                <Button
+                    android:id="@+id/seeMoreSticker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/see_more_btn_height"
+                    android:layout_gravity="end"
+                    android:visibility="visible"
+                    android:layout_marginTop="7dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="0dp"
+                    android:background="@color/transparent"
+                    android:text="See more Sticker"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragmentsOur.ChatFragment">
+    <!--TOP Navbar-->
+    <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_height"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/direct_chat_title"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/home_title"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/tutorial"
+            android:layout_width="@dimen/home_icon"
+            android:layout_height="@dimen/home_icon"
+            android:padding="@dimen/home_icon_padding"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/tutorial_icon" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout13">
+
+            <!--Add new Chat -->
+            <LinearLayout
+                android:id="@+id/chatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="vertical"
+                android:paddingStart="5dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/input_icon"
+                        android:layout_height="@dimen/input_icon"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/custom_btn"
+                        android:src="@drawable/whatsapp_focused_35dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/primary" />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/custom_inputbox"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        app:ccpDialog_textColor="@color/primary"
+                        app:ccp_countryPreference="us,in"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/TextCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/custom_inputbox"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="+91"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:elevation="0.5dp"
+                        android:gravity="start"
+                        android:scrollbars="vertical"
+                        android:textColorHint="@color/hint"
+                        app:boxBackgroundColor="@color/transparent"
+                        app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                        app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                        app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                        app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                        app:boxStrokeColor="@color/primary"
+                        app:boxStrokeWidth="@dimen/inputboxStrokeWidth"
+                        app:boxStrokeWidthFocused="1dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/whatsappNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="WhatsApp Number"
+                            android:inputType="number"
+
+                            android:padding="15dp"
+                            android:singleLine="true"
+                            android:textColor="@color/primary"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/contactBtn"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:padding="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/contact_icon"
+                        android:background="@drawable/custom_inputbox"
+                        android:backgroundTint="@color/colorSecondaryVariant"
+                        app:tint="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/input_icon"
+                        android:layout_height="@dimen/input_icon"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/accent"
+                        android:src="@drawable/ms_lg_focused"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/primary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:elevation="0.5dp"
+                        android:gravity="start"
+                        android:scrollbars="vertical"
+                        android:textColorHint="@color/hint"
+                        app:boxBackgroundColor="@color/transparent"
+                        app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                        app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                        app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                        app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                        app:boxStrokeColor="@color/primary"
+                        app:boxStrokeWidth="@dimen/inputboxStrokeWidth"
+                        app:boxStrokeWidthFocused="1dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/Directmessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="Type messages(Optional)"
+                            android:maxLength="5000"
+                            android:maxLines="4"
+                            android:minLines="1"
+                            android:padding="15dp"
+                            android:textColor="@color/primary"
+                            android:textSize="15sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="15dp"
+                    android:textColorHint="@color/colorPrimaryVariant"
+                    app:boxBackgroundColor="@color/transparent"
+                    app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                    app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                    app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                    app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                    app:boxStrokeColor="@color/primary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@color/hint">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/quick_ms_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="25dp"
+                        android:inputType="none"
+                        android:paddingStart="15dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="0dp"
+                        android:text="Choose Quick messages"
+                        android:textColor="@color/primary"
+                        android:textSize="15sp"
+                        tools:listitem="@layout/style_spinner" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/input_icon"
+                        android:layout_height="@dimen/input_icon"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/accent"
+                        android:src="@drawable/added_round_icon"
+                        app:tint="@color/primary" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/documentsPickerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/Caption"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="#0D000000"
+                            android:padding="10dp"
+                            android:src="@drawable/sms_template_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/Ascii_btn"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/Ascii_btn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="#0D000000"
+                            android:padding="10dp"
+                            android:src="@drawable/ascii_fc_logo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/quickMessage"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/Caption"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/quickMessage"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="#0D000000"
+                            android:padding="10dp"
+                            android:src="@drawable/quick_sms_focused"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/Text_Repeater"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/Ascii_btn"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/pick"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="#0D000000"
+                            android:padding="10dp"
+                            android:rotation="-40"
+                            android:src="@drawable/doument_icon"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/Text_Repeater"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/quickMessage"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageButton
+                            android:id="@+id/Text_Repeater"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="#0D000000"
+                            android:padding="10dp"
+                            android:src="@drawable/repeat_icon"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/quickMessage"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/Decoration_Text"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/custom_btn"
+                            android:backgroundTint="#0D000000"
+                            android:padding="10dp"
+                            android:src="@drawable/dc_text_icon"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/Text_Repeater"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/scheduleGo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/input_icon"
+                        android:layout_height="@dimen/input_icon"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/accent"
+                        android:src="@drawable/schedule_icon"
+                        app:tint="@color/primary" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/onschedule_timer"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/LR_margin"
+                        android:checked="false"
+                        android:text="Schedule this message"
+                        android:textColor="@color/primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:thumb="@drawable/thumb"
+                        app:showText="false"
+                        app:track="@drawable/switch_track" />
+
+                </LinearLayout>
+                <!--Selected  file list Group list-->
+
+
+                <LinearLayout
+                    android:id="@+id/selectDataLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input_ms"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/calender_icon"
+                            app:tint="@color/primary_icon" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Select Date"
+                            android:textColor="@color/primary_icon"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_input_ms"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/clock_icon"
+                            app:tint="@color/primary_icon" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="Select Time"
+                            android:textColor="@color/primary_icon"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/input_icon"
+                        android:layout_height="@dimen/input_icon"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/accent"
+                        android:src="@drawable/send_lg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/primary" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal">
+
+                        <RadioButton
+                            android:id="@+id/whats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-20dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/radio_btn_selector"
+                            android:buttonTint="@color/transparent"
+                            android:drawableTop="@drawable/custom_ww_icon"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:text="WhatsApp"
+                            android:textAlignment="center"
+                            android:textColor="@drawable/radio_btn_text"
+                            android:textSize="15sp" />
+
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/primary" />
+
+                        <RadioButton
+                            android:id="@+id/whatsBs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-10dp"
+                            android:background="@drawable/radio_btn_selector"
+                            android:buttonTint="@color/transparent"
+                            android:drawableTop="@drawable/custom_ww_bs_icon"
+                            android:drawablePadding="3dp"
+                            android:gravity="center"
+                            android:paddingEnd="0dp"
+                            android:text="WA Business"
+                            android:textAlignment="center"
+                            android:textColor="@drawable/radio_btn_text"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginTop="@dimen/TOP_margin"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="0.5dp"/>
+
+                <!-- Send Button -->
+                <Button
+                    android:id="@+id/sendDirectChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:gravity="center"
+                    android:text="Send"
+                    app:cornerRadius="@dimen/input_box_radious"
+                    app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/autoReplyTextInputLayout" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/ad_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <!--chat History-->
+            <LinearLayout
+                android:id="@+id/History"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/sch_msg_history_recycle" />
+
+                <LinearLayout
+                    android:id="@+id/noHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/chat_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="No Chat History Available"
+                        android:textColor="@color/about_cl"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorSecondaryVariant"
+        android:focusable="true"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="55dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/history_icon"
+        app:tint="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_new_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/primary"
+        android:focusable="true"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="55dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/add_icon"
+        app:tint="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

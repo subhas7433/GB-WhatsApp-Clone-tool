@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.affixstudio.whatsapptool">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.webkit.PermissionRequest" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <queries>
+
+        <!-- Specific apps Watomatic interacts with. Required for Android 11+ -->
+        <package android:name="com.whatsapp" />
+        <package android:name="com.facebook.orca" />
+        <package android:name="com.facebook.mlite" />
+    </queries>
+    <queries>
+
+        <!-- Explicit apps you know in advance about: -->
+        <package android:name="com.whatsapp.w4b" />
+    </queries>
+
+    <application
+        android:name=".ads.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/domain_whitelist"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/app_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Whatsapptool"
+        tools:targetApi="n">
+        <activity
+            android:name=".PurchaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".new_year"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activityOur.Call_block"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activityOur.no_internet_Screen"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".playPrivateMedia"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".private_view_media_small"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.autoReplyTest"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.scheduleAction"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.private_chat"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".whatsappwebtogo.WebviewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.codinguser.android.contactpicker.ContactsPickerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name="com.onegravity.contactpicker.core.ContactPickerActivity" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" > -->
+        <!-- <intent-filter> -->
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.affixstudio.gbVersion.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <activity
+            android:name=".intro"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.AppTutorials"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.caption"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.settingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.customreplyeditor.CustomReplyEditorActivity"
+            android:exported="true"
+            android:label="@string/mainAutoReplyLabel"
+            android:parentActivityName=".activity.main.MainActivity">
+            <intent-filter android:label="global-auto-reply-message-intent">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "watomatic://auto-reply” -->
+                <data
+                    android:host="auto-reply"
+                    android:scheme="watomatic" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activityOur.TextFunction"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.schedule_sms"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activityOur.induvidualChat"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".modelOur.scheduleBrodcust" />
+        <receiver android:name=".modelOur.scheduleOffBroadcast" />
+
+        <activity
+            android:name=".activity.specificContactReply"
+            android:label="@string/about"
+            android:parentActivityName=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.about.AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.contactselector.ContactSelectorActivity"
+            android:label="@string/contact_selector"
+            android:parentActivityName=".activity.advancedsettings.AdvancedSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.notification.NotificationIntentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.enabledapps.EnabledAppsActivity"
+            android:label="@string/enabled_apps_title"
+            android:parentActivityName=".activity.main.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".serviceOur.NotificationService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.KeepAliveService"
+            android:stopWithTask="false" />
+        <service
+            android:name=".modelOur.whatsappAccessibility"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/whatsappservice" />
+
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+        </service>
+        <service android:name=".serviceOur.mediaWatcher" />
+        <!--
+<receiver
+              android:name=".model.BodcastRecever"
+              android:exported="false"
+              tools:ignore="Instantiatable">
+              <intent-filter>
+                  <action android:name="android.intent.ACTION_PHONE_STATE_CHANGED" />
+              </intent-filter>
+          </receiver>
+        -->
+        <activity
+            android:name=".activityOur.startScreen"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".bottom_navigation"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_navigation" />
+        <activity
+            android:name=".activityOur.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" /> <!-- https://techstop.github.io/android-broadcastreceiver/ -->
+        <receiver
+            android:name=".receivers.t"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <!-- original AdMob app ID: ca-app-pub-7685168822144606~2420054676 -->
+<!--        <meta-data-->
+<!--            android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+<!--            android:value="ca-app-pub-7685168822144606~2420054676" /> &lt;!&ndash; for facebook advertisement &ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="com.facebook.sdk.ApplicationId"-->
+<!--            android:value="@string/facebook_app_id" />-->
+<!--        <meta-data-->
+<!--            android:name="com.facebook.sdk.ClientToken"-->
+<!--            android:value="@string/facebook_client_token" />-->
+<!--        <meta-data-->
+<!--            android:name="com.facebook.sdk.CodelessDebugLogEnabled"-->
+<!--            android:value="true" />-->
+<!--        <meta-data-->
+<!--            android:name="applovin.sdk.key"-->
+<!--            android:value="ZgxD2fEHaPe8aNfIpWoeLSLkfHxgDO_rzv5GSOm4wNSDA2sZCdT_GSZOibfE43NVdvrgebLVxxJtcdlvPQS98w" />-->
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/primary" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/home_card_radious"/>
+            <stroke android:color="@color/primary" android:width="0.5dp"/>
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+</ripple>

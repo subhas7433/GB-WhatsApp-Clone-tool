@@ -1,0 +1,215 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+//    id 'com.google.firebase.crashlytics'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'applovin-quality-service'
+
+//applovin {
+//    apiKey "pfgBm3ffxSXGX3hpf3bCm4CxpeoDi0QHbDXMMoPdPUlKlghRFO25g7GQNiQ3g1IFBm7l0ochAbMFwaFBZTR2vn"
+//}
+
+android {
+    packagingOptions {
+       // https://stackoverflow.com/questions/60447746/more-than-one-file-was-found-with-os-independent-path-meta-inf-index-list-and
+
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+    }
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.affixstudio.gbversion"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 26 // was adding facebook ads token in manifast
+        // version Has 14
+        versionName "1.26.0"
+        //was 1.14
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":"$projectDir/schemas".toString()]
+            }
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    //Disable split language resources on .aab, necessary to allow the language changing
+    //option to work
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    buildTypes {
+        release {
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+    flavorDimensions 'version'
+    productFlavors {
+        GooglePlay {
+            dimension 'version'
+        }
+        Default {
+            dimension 'version'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation 'com.google.android.material:material:1.8.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.room:room-runtime:2.4.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
+    implementation 'com.google.android.play:core:1.10.3'
+//    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.8.1'
+    implementation 'androidx.webkit:webkit:1.4.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+//    implementation 'com.google.firebase:firebase-database:20.0.5'
+//    implementation 'com.google.firebase:firebase-firestore:24.4.0'
+//    implementation 'com.google.firebase:firebase-analytics:21.2.0'
+//    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    annotationProcessor 'androidx.room:room-compiler:2.4.3'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.10'
+    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
+    implementation 'com.github.transferwise:sequence-layout:1.1.1'
+    implementation "androidx.browser:browser:1.4.0"
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    implementation 'com.karumi:dexter:6.2.3' // for asking permission
+    implementation 'com.github.bumptech.glide:glide:4.13.2' // for image view
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2' // for image view
+
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation 'commons-io:commons-io:2.11.0'
+
+    implementation 'com.hbb20:ccp:2.6.1' // country code
+
+    // implementation 'com.github.white05:AndroidSlider:1.0' // image and video slider
+    implementation 'bg.devlabs:fullscreen-video-view:1.2.0' // custom video player
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0' // round image
+
+    //implementation 'com.github.thunder413:DateTimeUtils:3.0' // to calculate time and date difference
+    implementation "androidx.work:work-runtime:2.7.1" //    work manager for schedule messaging
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3' // meterial date and time picker
+
+    //implementation 'com.github.broakenmedia:MultiContactPicker:1.8.5'// contect picker
+   // implementation 'com.karumi:dexter:6.2.3'// user permission
+
+    // https://mvnrepository.com/artifact/io.appium/java-client
+   // implementation 'io.appium:java-client:8.1.1'
+
+    implementation 'com.github.ashishbhandari:AndroidTabbedDialog:v1.1'
+    //gif image setup
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
+    implementation 'com.github.AppIntro:AppIntro:6.2.0' // app intro
+    //implementation 'com.google.android.gms:play-services-ads:21.2.0' // admob
+
+    def lifecycle_version = '2.5.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version" //for opening ads
+
+  //  implementation 'com.1gravity:android-contactpicker:1.3.2' // multi contact picker
+  //  implementation 'com.github.broakenmedia:MultiContactPicker:1.8.5' // material multi contact picker
+   // implementation 'com.github.quiin:unifiedContactPicker:1.0' // material multi contact picker
+
+    implementation 'com.codinguser.android:contactpicker:3.0.0@aar'
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'// Auto Slide images
+
+
+
+    implementation  'com.bogdwellers:pinchtozoom:0.1'
+    implementation 'com.jsibbold:zoomage:1.3.1' // zoom
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5' //youtube player
+
+    // Import the BoM for the Firebase platform
+   // implementation platform('com.google.firebase:firebase-bom:31.1.0')
+
+    // Add the dependency for the Analytics library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+//    implementation 'com.google.firebase:firebase-analytics'
+
+//    implementation 'com.facebook.android:facebook-android-sdk:15.1.0'
+//    implementation 'com.facebook.android:facebook-marketing:latest.release'
+
+
+
+    implementation 'com.unity3d.ads:unity-ads:4.7.1'
+
+
+
+
+
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+//    implementation 'com.applovin:applovin-sdk:12.0.0'
+//    implementation 'androidx.annotation:annotation:1.0.0'
+//    implementation 'com.applovin.mediation:facebook-adapter:6.16.0.2'
+//    implementation 'com.applovin.mediation:unityads-adapter:4.7.1.0'
+//    implementation 'com.facebook.android:audience-network-sdk:6.16.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+
+
+
+//    implementation 'com.pollfish:pollfish-googleplay:6.4.0'
+
+
+
+}
+repositories {
+    mavenCentral()
+
+    maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
+}

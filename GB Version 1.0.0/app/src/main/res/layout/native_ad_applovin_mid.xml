@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardMessegeRecycle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:minHeight="50dp"
+    android:scrollbars="vertical"
+    android:minWidth="120dp"
+    android:layout_marginVertical="3dp"
+    android:layout_marginEnd="75dp"
+    android:layout_marginStart="2dp"
+    android:paddingStart="24dp"
+    android:paddingRight="7dp"
+    android:outlineProvider="paddedBounds"
+    android:background="@drawable/custom_receive_msg_bg"/>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<com.google.android.gms.ads.nativead.NativeAdView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginVertical="5dp"-->
+<!--    android:layout_marginHorizontal="10dp">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/icon_image_view"-->
+<!--                    android:layout_width="@dimen/native_ad_logo_size"-->
+<!--                    android:layout_height="32dp"-->
+<!--                    android:layout_marginStart="12dp"-->
+<!--                    android:src="@drawable/app_logo"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="0.5" />-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="start"-->
+<!--                    android:paddingStart="5dp"-->
+<!--                    android:paddingTop="5dp"-->
+<!--                    android:paddingBottom="3dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/icon_image_view"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_bias="0.5">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/title_text_view"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:maxLength="25"-->
+<!--                            android:text="@string/app_name"-->
+<!--                            android:textColor="@color/mid_black"-->
+<!--                            android:textSize="15sp"-->
+<!--                            android:textStyle="bold" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/body_text_view"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="3dp"-->
+<!--                            android:layout_marginBottom="4dp"-->
+<!--                            android:text="Get Auto-Reply, Schedule messages, Status download, Recover sms and much more."-->
+<!--                            android:textColor="@color/about_cl"-->
+<!--                            android:textSize="10sp"-->
+<!--                            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"-->
+<!--                            app:layout_constraintEnd_toEndOf="@+id/dec"-->
+<!--                            app:layout_constraintStart_toStartOf="@+id/dec"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/dec" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/body_text_view"-->
+<!--                        android:orientation="vertical">-->
+<!--                        <FrameLayout-->
+<!--                            android:id="@+id/star_rating_view"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"/>-->
+<!--                        <FrameLayout-->
+<!--                            android:id="@+id/media_view_container"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_marginVertical="5dp"-->
+<!--                            android:layout_height="150dp"/>-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:gravity="center_vertical">-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/textView32"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Ads"-->
+<!--                            android:textColor="@color/about_cl"-->
+<!--                            android:textSize="8sp"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent" />-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/advertiser_textView"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:paddingStart="5dp"-->
+<!--                            android:text="Ads"-->
+<!--                            android:textColor="@color/about_cl"-->
+<!--                            android:textSize="10sp" />-->
+
+<!--                        <Button-->
+<!--                            android:id="@+id/cta_button"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="end"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:background="@color/transparent"-->
+<!--                            android:paddingHorizontal="18dp"-->
+<!--                            android:paddingVertical="0dp"-->
+<!--                            android:text="Install now"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textColor="@color/primary"-->
+<!--                            android:textSize="11sp"-->
+<!--                            android:textStyle="bold" />-->
+<!--                    </LinearLayout>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    </LinearLayout>-->
+<!--</com.google.android.gms.ads.nativead.NativeAdView>-->

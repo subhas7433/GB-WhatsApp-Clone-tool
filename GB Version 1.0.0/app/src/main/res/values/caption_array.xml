@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--    Caption Category-->
+
+    <string-array name="Category">
+        <item>All </item>
+        <item>Greeting </item>
+        <item>Sales </item>
+        <item>Promotion </item>
+        <item>Love </item>
+        <item>Romantic </item>
+        <item>WishBox </item>
+        <item>Shayari </item>
+        <item>Motivation </item>
+        <item>Festival </item>
+        <item>Inspiration </item>
+        <item>Sad </item>
+    </string-array>
+
+
+
+    <string-array name="Greeting">
+        <item>Good afternoon.</item>
+        <item>Good morning.</item>
+        <item>How are you?</item>
+        <item>Hope this email finds you well.</item>
+        <item>I hope you enjoyed your weekend.</item>
+        <item>I hope you\'re doing well.</item>
+        <item>I hope you\'re having a great week. </item>
+        <item> Allow Me to Introduce Myself.</item>
+        <item> Be good for no reason. </item>
+        <item> Good news equals good days.</item>
+        <item> Thanks for choosing us.</item>
+        <item> It’s time to start living the life you’ve imagined.</item>
+        <item> Have a ridiculously amazing day! </item>
+        <item> Good morning…have an awesome day! </item>
+        <item> Life is beautiful; enjoy the ride. </item>
+        <item> Lovely days don’t come to you; you should walk to them</item>
+        <item> Unwrap the gift of life with gratitude. </item>
+        <item> Don’t count the days; make the days count. </item>
+        <item> A good day is a good day. A bad day is a good story. </item>
+        <item> This is a wonderful day; I have never seen this one before. </item>
+        <item> A great attitude is like a perfect cup of coffee – don’t start your day without it. </item>
+        <item> For me, a lovely day is any day I wake up. </item>
+        <item> Make each day your masterpiece.</item>
+        <item> Every day is a good day. There is something to learn, care and celebrate. </item>
+    </string-array>
+    <string-array name="Sales">
+        <item>“If you aim at nothing, you will hit it every time.”</item>
+        <item>“Every choice you make has an end result.”</item>
+        <item>"Your attitude, not your aptitude, will determine your altitude."</item>
+        <item>“It’s easier to explain price once than to apologize for quality forever.”</item>
+        <item>“Remember that failure is an event, not a person. Yesterday ended last night.”</item>
+        <item>“Lack of direction, not lack of time, is the problem. We all have twenty-four hour days.”</item>
+        <item>“If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.”</item>
+        <item>“If you are not willing to learn, no one can help you. If you are determined to learn, no one can stop you.”</item>
+        <item>“For every sale you miss because you\'re too enthusiastic, you will miss a hundred because you\'re not enthusiastic enough.”</item>
+        <item> “If you are not taking care of your customer, your competitor will.” – Bob Hooey</item>
+        <item>"Winning isn’t everything, but wanting to win is." – Vince Lombardi</item>
+        <item>“Chase the vision, not the money; the money will end up following you.” – Tony Hsieh</item>
+        <item>“Pretend that every single person you meet has a sign around his or her neck that says, ‘Make me feel important.’ Not only will you succeed in sales, you will succeed in life.” – Mary Kay Ash</item>
+        <item>"Ninety percent of selling is conviction and 10 percent is persuasion." – Shiv Khera</item>
+        <item>“I like to think of sales as the ability to gracefully persuade, not manipulate, a person or persons into a win-win situation.” – Bo Bennett</item>
+        <item>“Don’t find customers for your products, find products for your customers.” – Seth Godin</item>
+        <item>“Make a customer, not a sale.” – Katherine Barchetti</item>
+        <item>“In sales, a referral is the key to the door of resistance.” – Bo Bennett</item>
+        <item>“Your most unhappy customers are your greatest source of learning.” – Bill Gates</item>
+        <item>“A-B-C. Always Be Closing.” – Blake in Glengarry Glen Ross</item>
+        <item>“You\'re only as good as your last sale, so you put your all into something and just hope that from that you can get your next job." – Josh Peck</item>
+        <item>“Turn up the volume of your computer speakers before making calls. You may hear money talk.” – Pipedrive</item>
+        <item>“People often say that motivation doesn’t last. Well, neither does bathing – that’s why we recommend it daily.”</item>
+    </string-array>
+    <string-array name="Promotion">
+        <item>Congratulations on your well-deserved promotion!</item>
+        <item>Good luck in your new position.</item>
+        <item>Way to climb that corporate ladder!</item>
+        <item>You worked hard for this and you deserve it.</item>
+        <item>Hope this job is the start of great things for you.</item>
+        <item>We’re lucky to have you here.</item>
+        <item>Let’s have lunch (or drinks) sometime to celebrate.</item>
+        <item>I know you’ll do a great job!</item>
+        <item>So excited to have you as part of our team.</item>
+        <item>Welcome to our workplace.</item>
+        <item>You should be really happy and proud of your success.</item>
+        <item>Hope this promotion brings all kinds of new challenges and opportunities for you.</item>
+        <item>You really deserve this promotion. Congratulations!</item>
+        <item>Aim for the stars. Congratulations on your promotion. </item>
+        <item>Your hard work has paid off. Congratulations on your promotion! </item>
+        <item> I am happy your boss saw your effort and hard work. Congratulations!</item>
+        <item>You are the best boss we have ever had, you deserve this promotion. Congratulations!</item>
+        <item>A promotion is a sign of good things ahead. Congratulations and all the best</item>
+        <item>God has been faithful to you, you deserved the promotion. I wish you all the best.</item>
+        <item>Finally your turn has come. This calls for a grand celebration. Congratulations on your promotion.</item>
+        <item>You are the employee that our boss cannot let go of. Congratulations on your well-deserved promotion.</item>
+        <item>You are very brilliant; no one can match your skill. You deserved the promotion. Congratulations!</item>
+        <item>I know this promotion means so much to you. I am so happy about your success. Congratulations on your promotion. All the best! </item>
+        <item>Congratulations on your accomplishment. You have worked hard for this position. You deserved the promotion. Keep it up</item>
+        <item> You are an honest man. You ensured everything was done correctly and in the right way. Truly dedicated to your work! I am very happy to hear about your promotion. Congratulations!</item>
+        <item> Your hard work has finally paid off. You really worked hard for that position. Congratulations on your promotion</item>
+        <item>You have slowly started climbing the ladder; don’t forget those who helped you climb. Congratulations.</item>
+        <item>You deserved this promotion more than anyone in this company. Congratulations on your promotion!</item>
+        <item>I know this is a dream come true for you, you have always wanted that position. Congratulations!</item>
+        <item>You are on the right path, may your talent keep shining. Congratulations on your promotion. </item>
+        <item> Promotion comes with more responsibilities, but I know there is nothing that you cannot handle. Congratulations on your promotion!</item>
+    </string-array>
+    <string-array name="Love">
+        <item>I love you—now and always.</item>
+        <item>To the moon and back, I love you.</item>
+        <item>Every atom, molecule, and cell of me loves you.</item>
+        <item>Hold my hand, hold my heart, and hold me forever. I love you.</item>
+        <item>It’s just you and me against the world. I love you!</item>
+        <item>I love you. Nothing and nobody—not even time—will ever change that.</item>
+        <item>Being with you is the best thing that\'s every happened to me. I love you.</item>
+        <item>Being in love with you makes every morning worth getting up for.</item>
+        <item>"You have bewitched me body and soul, and I love, I love, I love you."</item>
+        <item>"The sea hath its pearls, the heaven hath its stars, but my heart, my heart has its love."</item>
+        <item>"Love never claims, it ever gives. Love ever suffers, never resents, never revenges itself." — Mahatma Gandhi</item>
+        <item> Part of love is being stupid together, which basically sums up our relationship! Love you lots!</item>
+        <item>Cuddling with you, talking with you, and being with you, that\'s what I love most.</item>
+        <item>Somewhere between all our laughs, long talks, stupid little fights, and inside jokes, I fell in love.</item>
+        <item> When I tell you I love you, I don\'t say it out of habit. I say it to remind you that you\'re the best thing that ever happened to me.</item>
+        <item>Thank you, my love, for making me feel like the most beautiful person in the world.</item>
+        <item>I had no plans of falling in love with you. But now that I have, I plan to stay in love with you forever.</item>
+        <item>I know I am in love with you because I see the world in your eyes and your eyes everywhere in the world.</item>
+        <item>I am so in love with you that sometimes I still pinch myself to make sure it\'s not a dream.</item>
+        <item>Look into my heart and feel what I am saying, for my heart speaks the truth and the truth is I love you.</item>
+        <item>Our love is a promise; our love is a souvenir, once given never forgotten, never let it disappear.</item>
+        <item> I want you in my life for today, tomorrow and forever.</item>
+        <item>Your love is a drug, and I never want to recover from it.</item>
+        <item>There are only two times that I want to be with you: Now and Forever! </item>
+        <item>What I want is to be with you right now and for the rest of the time.</item>
+        <item>I am forever grateful to God for blessing me with an angel like you!</item>
+        <item> You are the brightest star that lights up my life every day.</item>
+        <item>Good morning my love! Sending you lots of love and kisses.</item>
+        <item>I have fallen in love so many times in life. But every time, it was with you!</item>
+        <item>“For you, I may be just one person, but for me, you are the world.” </item>
+        <item> I feel lucky to have you. I love you, honey.</item>
+        <item>My sweet prince, I loved you once, love you still, always have, and always will. </item>
+        <item> You are the reason for my smile and my happiness. I love you!</item>
+        <item>My heart belongs to you and it doesn’t want anything but you. I love you, beautiful. </item>
+        <item> “Love is being stupid together.” – Paul Valery</item>
+        <item>“True love stories never have endings.” — Richard Bach</item>
+        <item>“If I know what love is, it is because of you.” – Hermann Hesse</item>
+        <item>“There is a madness in loving you, a lack of reason that makes it feel so flawless.”</item>
+        <item>“If you want to know how much I love and care for you, count the waves.”</item>
+        <item>“Women are meant to be loved, not to be understood.” – Oscar Wilde </item>
+        <item> You came to my life as a blessing. Thank you, darling, for never giving up on me.</item>
+        <item>“For you see, each day I love you more, today more than yesterday and less than tomorrow.”</item>
+        <item>Living this life without you will be worthless. I want to stay with you forever and always.</item>
+        <item>“I love you as one loves certain dark things, secretly, between the shadow and the soul.” </item>
+        <item> I love you, babe. You make me feel special!</item>
+        <item>Your love is all that makes me a happy person in this unhappy world.</item>
+        <item>Because of you, my life is full of fun, and there is no shortage of love!</item>
+        <item>I’m in love with you, and I’m the happiest for the rest of my life.</item>
+        <item>I love you with all my heart, sweetheart!</item>
+        <item>My life has never been this much better. I wish I had met you sooner.</item>
+        <item>Nothing in this world can replace your place in my heart because you own it.</item>
+        <item>All I want from God is you for today, tomorrow, and forever.</item>
+        <item>No matter how dark my days are, your presence lights up my heart every time.</item>
+        <item>I can’t live without you; you’re the best thing that ever happened to me.</item>
+        <item>I love you and we meant to be, and being together was written into our destiny.</item>
+        <item>You complete me, and this is the best feeling ever. Love you, darling.</item>
+        <item>In your smile, I see something more beautiful than flowers.</item>
+        <item>My life is fully recharged with joy and happiness because of you. Never let me go!</item>
+        <item>I love you more than I can say. You’re my favorite person of all time.</item>
+        <item>My love is all yours for the rest of my life, my queen.</item>
+        <item>You’re undoubtedly the best when it comes to loving me!</item>
+        <item>I can never think of anyone else who could love me so deeply!</item>
+        <item>Everything feels empty when you are not around, but our love is what keeps me going. Miss you, babe.</item>
+        <item>Nothing can explain fully how fortunate I am to have you in my life. Love you sincerely. </item>
+        <item>Darling, Thanks for giving so much love. I am so happy to be with you.</item>
+        <item>If I ever found a genie in a bottle, I would spend my three wishes wanting you by my side forever.</item>
+        <item>You are my greatest possession and I cannot risk losing you for anything. </item>
+        <item> It’s been said that you only truly fall in love once, but I don’t believe it. Every time I see you, I fall in love all over again!</item>
+        <item>I love you, in ways you\'ve never been loved, for reasons you\'ve never been told, for longer than you think you deserved and with more than you will ever know existed inside me.</item>
+        <item>The more and more I spend time with you, the more and more I realize I am doing the one thing I told myself I would never do again... fall in love.</item>
+    </string-array>
+    <string-array name="Romantic">
+        <item>Love = you + me.</item>
+        <item>“You had me at hello.”</item>
+        <item>“I am catastrophically in love with you.”</item>
+        <item>Stop making me think about you! I\'m busy.</item>
+        <item>You make me the happiest person on Earth.</item>
+        <item>“Your hand touching mine. This is how galaxies collide.”</item>
+        <item>"Love is like a virus. It can happen to anybody at any time."</item>
+        <item>“I do know some things. I know I love you. I know you love me.”</item>
+        <item>“And in her smile I see something more beautiful than the stars.”</item>
+        <item>“I am in you and you in me, mutual in divine love.”</item>
+        <item> “Love is being stupid together.”</item>
+        <item>“My heart is and always will be yours.”</item>
+        <item> Come to my dreams if you can. I\'ll kiss you there.</item>
+        <item>I just want to be curled up in your arms right now.</item>
+        <item>You\'re on my mind every second of every day!</item>
+        <item>When I say that you are the love of my life, believe me, it’s true. You are the only one in my heart.</item>
+        <item>If you wanna stop by my house tonight, I just might have a kiss waiting for you.</item>
+        <item>I\'m getting butterflies just thinking about seeing you later.</item>
+        <item>Can we just call in sick tomorrow and spend the whole day together?</item>
+        <item>Your texts make my day even better.</item>
+        <item>Every time you text me, I get butterflies.</item>
+        <item>I wish I was in your arms.</item>
+        <item>Such a stressful day. Want to blow off some steam tonight?</item>
+        <item>You. Me. Takeout. Tonight.</item>
+        <item>I hope you know how wonderful you are, even when we are apart.</item>
+        <item>Counting down the seconds until I get to see you again!</item>
+        <item>I love you with all my heart.</item>
+        <item>I just realized something for the hundredth time today: I love you.</item>
+        <item>Just a note to remind you I’m thinking about you.</item>
+        <item>Stop looking so hot in the pics you post. You’re killing me over here!</item>
+        <item>I can’t wait to come home to you tonight.</item>
+        <item>I can NOT stop thinking about you, and it\'s very distracting.</item>
+        <item>When I close my eyes, I see you. When I open my eyes, I see you. There is nothing I can do without thinking of you.</item>
+        <item>Wanna know something? I love you.</item>
+        <item>I\'m so lucky you\'re mine.</item>
+        <item>I love you to the moon and back.</item>
+        <item>"Love is an irresistible desire to be irresistibly desired."</item>
+        <item>"Love is the hardest habit to break and the most difficult to satisfy."</item>
+        <item>I didn\'t think it was even possible to love someone as much as I love you.</item>
+        <item>You make every day better, which is one of the million reasons I love you.</item>
+        <item> "I would rather spend one moment holding you than a lifetime knowing I never could."</item>
+        <item>“But you’ve slipped under my skin, invaded my blood and seized my heart.”</item>
+        <item>“I never loved you any more than I do, right this second. And I’ll never love you any less than I do, right this second.”</item>
+        <item>“I love you and I don’t want to lose you. Because my life has been better since the day I found out.”</item>
+        <item>“You have bewitched me, body and soul, and I love, I love, I love you. I never wish to be parted from you from this day on.”</item>
+        <item>“I want you. All of you. Your flaws. Your mistakes. Your imperfections. I want you, and only you.”</item>
+        <item>“I’ve never had a moment’s doubt. I love you. I believe in you completely. You are my dearest one. My reason for life.”</item>
+        <item>"When I saw you I fell in love, and you smiled because you knew."</item>
+        <item> “If I had a flower for every time I thought of you, I could walk in my garden forever.”</item>
+        <item> “I don’t care how hard being together is, nothing is worse than being apart.”</item>
+        <item>“In a sea of people, my eyes will always be searching for you.”</item>
+        <item> “Sometimes, I knock on the doors of your heart, just to make sure I still live there.”</item>
+        <item>“No matter what has happened. No matter what you’ve done. No matter what you will do. I will always love you. I swear it.”</item>
+        <item>“And I’ve realized that the Beatles got it wrong. Love isn’t all we need—love is all there is.”</item>
+        <item>"Promise me you\'ll never forget me, because if I thought you would, I\'d never leave."</item>
+        <item>“Loved you yesterday, love you still, always have, always will.”</item>
+        <item> "I need you like a heart needs a beat."</item>
+        <item>"When I look into your eyes, I know I have found the mirror of my soul."</item>
+        <item>“Morning without you is a dwindled dawn.”</item>
+        <item>"It was love at first sight, at last sight, at ever and ever sight."</item>
+        <item> “Your absence has not taught me how to be alone; it has merely shown me that when together we cast a single shadow on the wall.”</item>
+        <item> “Your love shines in my heart as the sun that shines upon the earth.”</item>
+        <item> “I would rather share one lifetime with you than face all the ages of this world alone.”</item>
+        <item> “Each day I love you more, today more than yesterday and less than tomorrow.”</item>
+        <item>“I don’t wanna close my eyes, I don’t wanna fall asleep, cuz I’d miss you babe and I don’t wanna miss a thing.”</item>
+        <item>“If I had to choose between breathing and loving you I would use my last breath to tell you I love you.”</item>
+        <item>“Absence is to love as wind is to fire; it extinguishes the small and kindles the great.”</item>
+        <item>“If I tell you I love you, can I keep you forever?”</item>
+        <item>Love makes no sense if it is not to the right person. I feel very lucky to be with you!</item>
+        <item>What is love? It is what makes your cell phone ring every time I send text messages.</item>
+        <item> I’m giving you my heart now and forever. My goal is to make sure that I always make you feel loved, appreciated, and accepted, even over text.</item>
+        <item>The world is so perfect because of you, without you the world would be meaningless. I Love you.</item>
+        <item>You wanna know who I\'m in love with? Read the first word again.</item>
+        <item> Sweetheart, everything is meaningless without you, you are part of me. Even When we are apart.</item>
+        <item> I admire you, I care for you, I love you, I respect you and I trust you. Unconditionally.</item>
+        <item> The only thing I need in life is to see you smile; you are the queen of my heart. I love you.</item>
+        <item>“At the touch of love everyone becomes a poet.”</item>
+        <item>“The only thing we never get enough of is love; and the only thing we never give enough of is love.”</item>
+        <item>I love you,with the kind of love that’s more than love.</item>
+        <item>You are my forever. I will love you always.</item>
+        <item>"Being deeply loved by someone gives you strength, while loving someone deeply gives you courage."</item>
+        <item>"Some love stories aren\'t epic novels. Some are short stories. But that doesn\'t make them any less filled with love."</item>
+        <item>"Who, being loved, is poor?</item>
+        <item>"Passion is momentary; love is enduring."</item>
+        <item>You never fail to amaze me. Every day there is something new that makes me love you even more than the day before.</item>
+        <item>"Do I love you? My god, if your love were a grain of sand, mine would be a universe of beaches."</item>
+        <item>“If I know what love is, it is because of you.”</item>
+        <item>Give me a kiss and I\'ll serenade you among the stars. Give me your love and I will pluck each star to set at your feet.</item>
+        <item>"To love is nothing to be loved is something..to love and be loved is everything."</item>
+        <item>"The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space." — Marilyn Monroe</item>
+    </string-array>
+    <string-array name="WishBox">
+        <item>YOU + ME = LOVE. Happy Anniversary!</item>
+        <item> Congratulations! We’re so very proud of you!</item>
+        <item> Warmest wishes for a very happy birthday! </item>
+        <item> Happy birthday to you! Let\'s make today perfect! </item>
+        <item>Congrats on the promotion! You deserve it. </item>
+        <item>Congrats on the promotion! You deserve it.</item>
+        <item>Congratulations. You’re going to rock this new job!</item>
+        <item>Congratulations. You’re going to rock this new job!</item>
+        <item> Sending my warmest wishes your way for a very happy birthday. </item>
+        <item> A new year to keep being your amazing self. Happy birthday! </item>
+        <item>Congratulations to the happy couple! We’re thrilled for you and wish you all the best.</item>
+        <item>Cheers to you both. Congratulations on your wedding day!</item>
+        <item> Happy, healthy, wonderful birthday to you, my friend!</item>
+        <item>Happy Anniversary. There’s no one I’d rather spend my life with.</item>
+        <item>Happy Anniversary to my one and only. I love you so very much. </item>
+        <item>Your hard work and perseverance have paid off. Congratulations!</item>
+        <item> May this special day bring you joy, happiness, and precious memories! </item>
+        <item> Happy birthday to you! This day comes just once a year, so make the most of it! </item>
+        <item> You\'re a year older, but you somehow look even better. Happy birthday to you!</item>
+        <item> Wishing you the happiest birthday! Enjoy your special day. </item>
+        <item> May God shower blessings on you today and forever. Happy birthday! </item>
+        <item> I wish you a day filled with fun and a year filled with true happiness! </item>
+        <item> Congratulations on your well-deserved success! You’re an inspiration!</item>
+        <item> Warmest congratulations on your achievement! Wishing you even more success in the future.</item>
+        <item> Congrats on landing the new job. Your team is lucky to have you!</item>
+        <item>You should be really happy and proud of your promotion. You’ve worked so hard for it!</item>
+        <item>Wishing you a sweet and happy life together. Congratulations. </item>
+        <item>Best wishes to you both. May your marriage bring you a lifetime of happiness!</item>
+        <item> Congrats on another amazing year! Wishing you a truly wonderful and happy birthday! </item>
+        <item> I am so thankful that you are a part of my life. Wishing you all the best for your birthday! </item>
+        <item>Congrats on landing the new job. Your team is lucky to have you!</item>
+        <item>You should be really happy and proud of your promotion. You’ve worked so hard for it!</item>
+    </string-array>
+    <string-array name="Shayari">
+        <item> Din hua hai to raat bhi hogi,
+                Ho mat udas kabhi to baat bhi hogi.
+                Itne pyar se dosti ki hai,
+                jindagi rahi to mulaqat bhi hogi.</item>
+        <item>Ek Pehchan Hazaron Dost Bana Deti Hai
+                Ek Muskaan Hazaron Ghum Bhula Deti Hai
+                Zindagi Ke Safar Mein Sambhal Kar Chalna
+                Ek Galti Hazaron Sapne Jala Kar Rakh Deti Hai</item>
+        <item>Mil jati hai kitno ko khushi,
+                Mit jate hain kitno ke gum,
+                Message isliye bhejte hai hum,
+                Taki na milne se bhi apni dosti na ho kam.</item>
+        <item>Na dil mein basakar bhulaya karte hain,
+                Na hasakar rulaya karte hain,
+                Kabhi mehsoos kar ke dekh lena,
+                Hum jaise toh dil se rishte nibhaya karte hai.</item>
+        <item>Din Ki Roshni Khwabon Ko Banane Mein Gujar Gayi,
+                Raat Ki Neend Bachche Ko Sulane Mein Gujar Gayi,
+                Jis Ghar Mein Mere Naam Ki Takhti Bhi Nahi Hai,
+                Saari Umar Uss Ghar Ko Banane Mein Gujar Gayi. </item>
+        <item>Teri dhadkan hi zindagi ka kissa hai mera,
+               tu zindagi ka ek ahem hissa hai mera,
+               ye mohabbat tujhse sirf lafzo ki nahin hai,
+               teri rooh se rooh tak ka rishta hai mera..!</item>
+        <item>Sukun apne dilka maine kho diya,
+               Khud ko tanhai ke samandar mai dubo diya,
+               Jo thi mere kabhi muskrane ki wajah,
+               Aaj uski kami ne meri palko ko bhigo diya.</item>
+        <item>Na milataa gam to barabaadi ke afasaane kahaan jaate,
+               agar duniyaa hoti chaman to viraane kahaan jaate,
+               chalo achchhaa huaa apano me koi gair to nikalaa,
+               sabhi agar apane hote to begaane kahaan jaate!</item>
+        <item>Hasti Mit jati hai Aashiya Banane Me,
+               Bahut Muskil hoti hai Aapno Ko Samjane Me,
+               Ek pal me Kisi Ko bhula na Dena,
+               Zindagi lag jati hai Kisi Ko Aapna Banane me.</item>
+        <item>Aap se door ho kar hum jayenge kaha,
+               Aap jaisa dost hum payenge kaha,
+               Dil ko kaise bhi sambhal lenge,
+               Par aankho ke aansu hum chupayege kaha.</item>
+        <item> जिंदगी में कोई प्यार से प्यारा नही मिलता,
+                जिंदगी में कोई प्यार से प्यारा नही मिलता,
+                जो है पास आपके उसको सम्भाल कर रखना,
+                क्योंकि एक बार खोकर प्यार दोबारा नही मिलता।</item>
+        <item>बहुत सुकून मिलता है जब उनसे हमारी बात होती है,
+                वो हजारो रातों में वो एक रात होती है,
+                जब निगाहें उठा कर देखते हैं वो मेरी तरफ,
+                तब वो ही पल मेरे लीये पूरी कायनात होती है।</item>
+        <item>आग लगी दिल में जब वो खफ़ा हुए,
+                एहसास हुआ तब, जब वो जुदा हुए,
+                करके वफ़ा वो हमे कुछ दे न सके,
+                लेकिन दे गये बहुत कुछ जब वो वेबफा हुए।</item>
+        <item>किसी न किसी को किसी पर एतवार हो जाता है,
+                एक अजनबी सा चेहरा ही यार हो जाता है,
+                खूबियों से ही नही होती मोहब्बत सदा,
+                किसी की कमियों से भी कभी प्यार हो जाता है।</item>
+        <item>दिल का हाल बताना नही आता,
+                हमे ऐसे किसी को तड़पाना नही आता,
+                सुनना तो चाहतें हैं हम उनकी आवाज़ को,
+                पर हमे कोई बात करने का बहाना नही आता। </item>
+        <item> हर कदम हर पल हम आपके साथ है,
+                भले ही आपसे दूर सही, लेकिन आपके पास हैं,
+                जिंदगी में हम कभी आपके हो या न हों,
+                लेकिन हमे आपकी कमी का हर पल एहसास हैं।</item>
+        <item>इश्क करती हूँ तुझसे अपनी जिंदगी से ज्यादा,
+                मैं डरतीं हूँ मौत से नही तेरी जुदाई से ज्यादा,
+                चाहे तो हमे आज़मा कर देख किसी और से ज्यादा,
+                मेरी जिंदगी में कुछ नही तेरी आवाज़ से ज्यादा।</item>
+        <item>जब खामोश निगाहों से बात होती है,
+                तो ऐसे ही मोहब्बत की शुरुआत होती है,
+                हमतो बस खोये ही रहतें हैं उनके ख्यालों में,
+                पता ही नही चलता कब दिन कब रात होती है।</item>
+        <item>हकीकत कहो तो उन्हें ख्वाब लगता है,
+                शिकवा करो तो उन्हें मज़ाक लगता है,
+                कितनी शिद्दत से हम उन्हें याद करते हैं,
+                और एक वो हैं जिन्हें ये सब मजाक लगता है।</item>
+        <item>तेरी मोहब्बत ने हमे बेनाम कर दिया,
+                हमे हर ख़ुशी से अंजान कर दिया,
+                हमने तो कभी नही चाहा था हमे मोहब्बत हो,
+                लेकिन उसकी पहली नज़र ने हमे नीलाम कर दिया। </item>
+        <item>Agar Itni Pyari Soch Tumhari Na Hoti, Mulakat Tumse Humari Na Kabhi Hoti, Tadapte Rahte Sachhe Dost Ke Liye, Agar Dosti Tumse Humari Na Hui Hoti</item>
+        <item>Najron ki juban wo samajh nahi paate, hont hamaare kuch keh nahi pate, dil apni majboori bataaye kese, Koi hy jin ke bina hum reh nahi paate</item>
+        <item>Ahista ahista aapka yakeen karne lage hain, Ahista ahista aapke kareeb aane lage hain, Dil tho dene se ghabraathe hain, Magar ahista ahista aapke dil ki kadar karne lage hain</item>
+        <item>Dil Ko Abhi Nahi Ho Raha Hai Ye Aabhass, Dil Na Jaane Aap Ho Kitne Humare Liye Khaas, Dheere Dheere Hoga Apoki Kami Ka Hume Ehsaas, Jab Aap Hume Yaad Aaogi Har Lamha Har Saan</item>
+        <item>Haste dilo me gham bhi hai, muskurati aankhe kabhi nam bhi hai, dua karte hai aapki hansi kabhi na ruke, kyunki apki muskurahat ke deewane hum bhi hai</item>
+        <item> When I dream I dream of you. Maybe one day dreams will come true. Because I really love you.</item>
+        <item>I love you until the day after forever.</item>
+        <item>Every love story is beautiful but ours is my favorite.</item>
+        <item>There are only two times that I want to be with you… Now and Forever.</item>
+        <item>If I could be anything I would be your tear so I could be born in your eye live down your cheek and die on your lips. </item>
+    </string-array>
+    <string-array name="Motivation">
+        <item> “The best revenge is massive success.” – Frank Sinatra</item>
+        <item>“Fall seven times, stand up eight.” – Japanese Proverb</item>
+        <item>“A goal is a dream with a deadline.” – Napoleon Hill</item>
+        <item>“You just can\'t beat the person who never gives up.” – Babe Ruth</item>
+        <item>“Every strike brings me closer to the next home run.” – Babe Ruth</item>
+        <item>“If you\'re going through hell, keep going.” – Winston Churchill</item>
+        <item>“Tough times never last, but tough people do.” – Robert Schuller</item>
+        <item>“Today is always the most productive day of your week.” – Mark Hunter</item>
+        <item>"Do not let what you cannot do interfere with what you can do." – John R. Wooden</item>
+        <item>"The secret of getting ahead is getting started." – Mark Twain</item>
+        <item>"Setting goals is the first step in turning the invisible into the visible." – Tony Robbins</item>
+        <item>"Well done is better than well said." – Benjamin Franklin</item>
+        <item>“Some men see things as they are and ask why … I dream of things that never were and ask why not?” – Robert Kennedy</item>
+        <item>"The successful warrior is the average man, with laser-like focus." – Bruce Lee</item>
+        <item>“If you were happy every day of your life, you wouldn\'t be human, you\'d be a game show host.” – Gabriel Heather</item>
+        <item>“Two roads diverged in a wood, and I – I took the one less traveled by, and that has made all the difference.” – Robert Frost</item>
+        <item>“Success is the ability to go from failure to failure without losing your enthusiasm.” – Winston Churchill</item>
+        <item>“Success is the culmination of failures, mistakes, false starts, confusion, and the determination to keep going anyway.” – Nick Gleason</item>
+        <item>“You don’t learn to walk by following rules. You learn by doing and falling over.” – Richard Branson</item>
+        <item>“The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack of will.” – Vince Lombardi</item>
+        <item>“A successful man is one who can lay a firm foundation with the bricks others have thrown at him.” – David Brinkley</item>
+        <item>“Success is never final, failure is never fatal. It\'s courage that counts.” – John Wooden</item>
+        <item>“Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.” – Dale Carnegie</item>
+    </string-array>
+    <string-array name="Festival">
+        <item>“Celebrate life, not just festivals.”</item>
+        <item>“Live every day as if it is a festival. Turn your life into a celebration.”</item>
+        <item>“Sending you my cheerful wishes and warmest greetings for a joyous and Festive Season.”</item>
+        <item>“Share our similarities. Celebrate our differences.”</item>
+        <item>“The festivals are like a map charting our spiritual progress in God.”</item>
+        <item>“The greatness of a culture can be found in its festivals.”</item>
+        <item>“There are a lot more variables with festivals than just playing in a venue.“</item>
+        <item>“Wishing you every happiness this Festive Season.”</item>
+        <item>“Wishing you laughter and fun to cheer your days, in this Festive Season and always. Best wishes.”</item>
+        <item>“Festivals are a time to play the songs people know and are looking forward to hearing.”</item>
+        <item>“Blessed is the season which engages the whole world in a conspiracy of love.“</item>
+        <item>“Happiness, Joy, Health, and Wealth may reach your door this festival. Have a great celebration!”</item>
+        <item>“May this festival be one that brings along with it all that’s best and everything you deserve.”</item>
+        <item>Celebrate life, not just festivals.</item>
+        <item>Share our similarities. Celebrate our differences.</item>
+        <item>The festivals are like a map charting our spiritual progress in God.</item>
+        <item>The greatness of a culture can be found in its festivals.</item>
+        <item>The true essentials of a feast are only fun and feed.</item>
+        <item>Wishing you every happiness this Festive Season.</item>
+        <item>Blessed is the season which engages the whole world in a conspiracy of love.</item>
+        <item>Live every day as if it is a festival. Turn your life into a celebration.</item>
+        <item>There are a lot more variables with festivals than just playing in a venue.</item>
+        <item>May this festival be one that brings along with it all that’s best and everything you deserve.</item>
+        <item>Festivals are a time to play the songs people know and are looking forward to hearing.</item>
+        <item>Sending you my cheerful wishes and warmest greetings for a joyous and Festive Season.</item>
+        <item>Wishing you laughter and fun to cheer your days, in this Festive Season and always. Best wishes. </item>
+        <item>Festival Season is a perfect time to reflect on our blessings and seek out ways to make life better for those around us.</item>
+        <item> A true and caring relation doesn’t have to speak loud, a soft SMS is enough to express the heartiest feelings!</item>
+        <item>Festivals are great because you get to just walk around the corner and see a new band that you’ve heard but not had the chance to check out.</item>
+        <item>For this special time of festival celebration, family and friends get together for fun. Wishing laughter and fun to cheer your days, in this festive season and always!</item>
+        <item>Good health, loads of wealth, prosperity in abundance are the things I am wishing you on this Festival Season.</item>
+        <item>Happiness, Joy, Health and Wealth may reach your door this festival. Have a great celebration!</item>
+        <item>May this festival be the start of the year that will bring your joy and happiness! Best wishes to you and your family.</item>
+        <item>May this festival gives you – A rainbow for every storm, A smile for every tear, A promise for every care, And an answer to every prayer. Best wishes.</item>
+        <item>May your day be filled with blessings Like the sun that lights the sky and may you always have the courage to spread your wings and fly. Festival Greetings to you!</item>
+        <item>My special wishes to you and to all those to are close to you. May you have a celebration that is more special than it has ever been.</item>
+        <item>Take nothing for granted and be thankful that you have such great family and friends to spend this joyous season with. Wishing you a delightful Festival season.</item>
+        <item>This is a special time when family and friends gather together for fun. Wishing laughter and fun to cheer your days in this Festival Season.</item>
+        <item>This time of year brings festivities and family fun. It is a time for reminiscing and looking forward. Wishing you wonderful memories during this joyous season.</item>
+        <item>To celebrate a festival means: to live out, for some special occasion and in an uncommon manner, the universal assent to the world as a whole.</item>
+        <item>Festival of the impassioned efforts and manifold ambitions of all forms of youthful activity of every generation springing from the threshold of life.</item>
+        <item>Wishing that this festival brings good luck and prosperity and hoping that it is joyous, and fills your days ahead with happiness.</item>
+        <item>During the holiday season more than ever, our thoughts turn gratefully to those who have made our progress possible. In this spirit, we sincerely say Thank you and Best Wishes for the Festival Season.</item>
+        <item>“During the holiday season more than ever, our thoughts turn gratefully to those who have made our progress possible.”</item>
+        <item>“Festival Season is a perfect time to reflect on our blessings and seek out ways to make life better for those around us.”</item>
+        <item>“May your day be filled with blessings Like the sun that lights the sky and may you always have the courage to spread your wings and fly. Festival Greetings to you!”</item>
+        <item>  </item>
+    </string-array>
+    <string-array name="Inspiration">
+        <item> "When you have a dream, you\'ve got to grab it and never let go."
+                — Carol Burnett</item>
+
+        <item>"Nothing is impossible. The word itself says \'I\'m possible!\'"
+                — Audrey Hepburn</item>
+
+        <item>"There is nothing impossible to they who will try."
+                — Alexander the Great</item>
+
+        <item>"The bad news is time flies. The good news is you\'re the pilot."
+                — Michael Altshuler</item>
+
+        <item>"Life has got all those twists and turns. You\'ve got to hold on tight and off you go."
+                — Nicole Kidman</item>
+
+        <item>"Keep your face always toward the sunshine, and shadows will fall behind you."
+                — Walt Whitman</item>
+
+        <item>"Be courageous. Challenge orthodoxy. Stand up for what you believe in. When you are in your rocking chair talking to your grandchildren many years from now, be sure you have a good story to tell."
+                — Amal Clooney</item>
+        <item>"You make a choice: continue living your life feeling muddled in this abyss of self-misunderstanding, or you find your identity independent of it. You draw your own box."
+                — Duchess Meghan</item>
+        <item>"I just want you to know that if you are out there and you are being really hard on yourself right now for something that has happened ... it\'s normal. That is what is going to happen to you in life. No one gets through unscathed. We are all going to have a few scratches on us. Please be kind to yourselves and stand up for yourself, please."
+            — Taylor Swift</item>
+        <item>"Success is not final, failure is not fatal: it is the courage to continue that counts."
+            - Winston Churchill</item>
+        <item>"You define your own life. Don\'t let other people write your script."
+            — Oprah Winfrey</item>
+        <item>"You are never too old to set another goal or to dream a new dream."
+            — Malala Yousafzai</item>
+        <item>"At the end of the day, whether or not those people are comfortable with how you\'re living your life doesn\'t matter. What matters is whether you\'re comfortable with it."
+            — Dr. Phil</item>
+        <item>"People tell you the world looks a certain way. Parents tell you how to think. Schools tell you how to think. TV. Religion. And then at a certain point, if you\'re lucky, you realize you can make up your own mind. Nobody sets the rules but you. You can design your own life."
+            — Carrie Ann Moss</item>
+        <item>"For me, becoming isn’t about arriving somewhere or achieving a certain aim. I see it instead as forward motion, a means of evolving, a way to reach continuously toward a better self. The journey doesn\'t end."
+            — Michelle Obama</item>
+        <item>"Spread love everywhere you go."
+            — Mother Teresa</item>
+        <item>"Do not allow people to dim your shine because they are blinded. Tell them to put some sunglasses on."
+            — Lady Gaga</item>
+        <item>"If you make your internal life a priority, then everything else you need on the outside will be given to you and it will be extremely clear what the next step is."
+            — Gabrielle Bernstein</item>
+        <item>"You don\'t always need a plan. Sometimes you just need to breathe, trust, let go and see what happens."
+            — Mandy Hale</item>
+        <item>"You can be everything. You can be the infinite amount of things that people are."
+            — Kesha</item>
+        <item>"What lies behind you and what lies in front of you, pales in comparison to what lies inside of you."
+            — Ralph Waldo Emerson</item>
+        <item>"I want to be in the arena. I want to be brave with my life. And when we make the choice to dare greatly, we sign up to get our asses kicked. We can choose courage or we can choose comfort, but we can\'t have both. Not at the same time."
+            — Brene Brown</item>
+        <item>"I\'m going to be gone one day, and I have to accept that tomorrow isn\'t promised. Am I OK with how I’m living today? It\'s the only thing I can help. If I didn\'t have another one, what have I done with all my todays? Am I doing a good job?"
+            — Hayley Williams</item>
+        <item>"I am experienced enough to do this. I am knowledgeable enough to do this. I am prepared enough to do this. I am mature enough to do this. I am brave enough to do this."
+            — Alexandria Ocasio-Cortez in Knock Down The House</item>
+        <item>"Belief creates the actual fact."
+            — William James</item>
+        <item>"No matter what people tell you, words and ideas can change the world."
+            — Robin Williams  as John Keating in Dead Poets Society</item>
+        <item>"I\'m not going to continue knocking that old door that doesn\'t open for me. I\'m going to create my own door and walk through that."
+            — Ava DuVernay</item>
+        <item>"It is during our darkest moments that we must focus to see the light."
+            — Aristotle</item>
+        <item>"Not having the best situation, but seeing the best in your situation is the key to happiness."
+— Marie Forleo</item>
+        <item>"Believe you can and you\'re halfway there."
+- Theodore Roosevelt</item>
+        <item>"Weaknesses are just strengths in the wrong environment."
+— Marianne Cantwell</item>
+        <item>"Just don\'t give up trying to do what you really want to do. Where there is love and inspiration, I don\'t think you can go wrong."
+— Ella Fitzgerald</item>
+        <item>"Silence is the last thing the world will ever hear from me."
+— Marlee Matlin</item>
+        <item>"In a gentle way, you can shake the world."
+— Mahatma Gandhi</item>
+        <item>"Learning how to be still, to really be still and let life happen—that stillness becomes a radiance."
+— Morgan Freeman</item>
+        <item>"Everyone has inside of him a piece of good news. The good news is that you don\'t know how great you can be! How much you can love! What you can accomplish! And what your potential is!"
+— Anne Frank</item>
+        <item>"All you need is the plan, the road map, and the courage to press on to your destination."
+— Earl Nightingale</item>
+        <item> "I care about decency and humanity and kindness. Kindness today is an act of rebellion."
+— Pink</item>
+        <item>"If you have good thoughts they will shine out of your face like sunbeams and you will always look lovely."</item>
+        <item>"Try to be a rainbow in someone\'s cloud."
+— Maya Angelou</item>
+        <item>"We must let go of the life we have planned, so as to accept the one that is waiting for us."
+— Joseph Campbell</item>
+        <item>"Find out who you are and be that person. That\'s what your soul was put on this earth to be. Find that truth, live that truth, and everything else will come."
+— Ellen DeGeneres</item>
+        <item>"Real change, enduring change, happens one step at a time."
+— Ruth Bader Ginsburg</item>
+        <item>"Wake up determined, go to bed satisfied."
+— Dwayne "The Rock" Johnson</item>
+        <item>"Nobody built like you, you design yourself."
+— Jay-Z</item>
+        <item>"You gain strength, courage, and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself, \'I lived through this horror. I can take the next thing that comes along.\' You must do the thing you think you cannot do."
+— Eleanor Roosevelt</item>
+        <item>"I tell myself, \'You\'ve been through so much, you\'ve endured so much, time will allow me to heal, and soon this will be just another memory that made me the strong woman, athlete, and mother I am today."\'
+— Serena Williams</item>
+        <item>"Live your beliefs and you can turn the world around."
+— Henry David Thoreau</item>
+        <item>"Our lives are stories in which we write, direct and star in the leading role. Some chapters are happy while others bring lessons to learn, but we always have the power to be the heroes of our own adventures."
+— Joelle Speranza</item>
+        <item>"Life is like riding a bicycle. To keep your balance, you must keep moving."
+- Albert Einstein</item>
+        <item>"Don\'t try to lessen yourself for the world; let the world catch up to you."
+— Beyoncé</item>
+        <item>"There\'s nothing more powerful than not giving a f—k."
+— Amy Schumer</item>
+        <item>"Faith is love taking the form of aspiration."
+—William Ellery Channing</item>
+        <item>"When it comes to luck, you make your own."
+— Bruce Springsteen</item>
+        <item>"If you don\'t like the road you\'re walking, start paving another one!"
+— Dolly Parton</item>
+        <item>"I have learned over the years that when one\'s mind is made up, this diminishes fear; knowing what must be done does away with fear."
+— Rosa Parks</item>
+        <item>"The moral of my story is the sun always comes out after the storm. Being optimistic and surrounding yourself with positive loving people is for me, living life on the sunny side of the street."
+— Janice Dean</item>
+        <item>"We generate fears while we sit. We overcome them by action."
+— Dr. Henry Link</item>
+        <item>"Dreams don’t have to just be dreams. You can make it a reality; if you just keep pushing and keep trying, then eventually you\'ll reach your goal. And if that takes a few years, then that\'s great, but if it takes 10 or 20, then that\'s part of the process."
+— Naomi Osaka</item>
+        <item>"We are not our best intentions. We are what we do."
+— Amy Dickinson</item>
+        <item>"I\'ve noticed when I fear something, if I just end up doing it, I\'m grateful in the end."
+— Colleen Hoover</item>
+        <item>"Work hard, know your s—t, show your s—t, and then feel entitled."
+— Mindy Kaling</item>
+        <item>"We’ve been making our own opportunities, and as you prove your worth and value to people, they can’t put you in a box. You hustle it into happening, right?"
+— Jennifer Lopez</item>
+        <item>"When you\'ve seen beyond yourself, then you may find, peace of mind is waiting there."
+— George Harrison</item>
+        <item>"Out of the mountain of despair, a stone of hope."
+— Martin Luther King, Jr.</item>
+        <item>"What you get by achieving your goals is not as important as what you become by achieving your goals."
+- Zig Ziglar</item>
+        <item>"I\'m realizing how much I\'ve diminished my own power. I\'m not doing that no more."
+— Alicia Keys</item>
+        <item>"You are never too old to set another goal or to dream a new dream."
+— C.S. Lewis</item>
+        <item>"I believe that if you\'ll just stand up and go, life will open up for you. Something just motivates you to keep moving."
+— Tina Turner</item>
+        <item>"How wild it was, to let it be."
+— Cheryl Strayed</item>
+        <item>"The simple act of listening to someone and making them feel as if they have truly been heard is a most treasured gift."
+— L. A. Villafane</item>
+        <item>"You have to be where you are to get where you need to go."
+— Amy Poehler</item>
+        <item>"Don\'t be afraid. Because you\'re going to be afraid. But remember when you become afraid, just don\'t be afraid."
+— Joan Jett</item>
+        <item>"We need to take risks. We need to go broke. We need to prove them wrong, simply by not giving up."
+— Awkwafina</item>
+        <item> "The only limit to our realization of tomorrow will be our doubts today."
+— Franklin Delano Roosevelt</item>
+        <item>"It is never too late to be what you might have been."
+— George Eliot</item>
+        <item>"You do not find the happy life. You make it."
+— Camilla Eyring Kimball</item>
+        <item>"We all have problems. But it\'s not what happens to us, [it \'s] the choices we make after."
+— Elizabeth Smart</item>
+        <item>"You don’t have to be defined or confined by your environment, by your family circumstances, and certainly not by your race or gender."
+— Mariah Carey</item>
+        <item>"When we let fear be our master, we cannot be happy and free as a butterfly. But when we choose to trust the journey and embrace love and joy, we are free to fly."
+— Annicken R. Day</item>
+        <item>"Definitions belong to the definers, not the defined."
+— Toni Morrison</item>
+        <item>"You must find the place inside yourself where nothing is impossible."
+— Deepak Chopra</item>
+        <item>"Whatever you think the world is withholding from you, you are withholding from the world."
+— Eckhart Tolle</item>
+        <item>"Perfection is not attainable, but if we chase perfection we can catch excellence."
+— Vince Lombardi</item>
+        <item>"A lot of people are afraid to say what they want. That\'s why they don\'t get what they want."
+— Madonna</item>
+        <item>"We have to let go of who we think we should be and embrace what is."
+— Achea Redd</item>
+        <item> "Being vulnerable is a strength, not a weakness."
+— Selena Gomez</item>
+        <item>"In order for the light to shine so brightly, the darkness must be present."
+— Sir Francis Bacon</item>
+        <item>"I don\'t look ahead. I\'m right here with you. It\'s a good way to be."
+— Danny DeVito</item>
+        <item>"It ain\'t about how hard you hit. It’s about how hard you can get hit and keep moving forward."
+— Sylvester Stallone in Rocky Balboa</item>
+        <item>"I will not let anyone scare me out of my full potential."
+— Nicki Minaj</item>
+        <item>"We have to be better. We have to love more, hate less. We\'ve gotta listen more and talk less. We\'ve gotta know that this is everybody\'s responsibility."
+— Meghan Rapinoe</item>
+        <item>"Trying to grow up is hurting. You make mistakes. You try to learn from them, and when you don\'t, it hurts even more."
+— Aretha Franklin</item>
+        <item>"Never bend your head. Always hold it high. Look the world straight in the eye."
+- Helen Keller</item>
+        <item>"Let love rule."
+— Lenny Kravitz</item>
+        <item>"The power of imagination makes us infinite."
+— John Muir</item>
+        <item> "The only journey is the one within."
+— Rainer Maria Rilke</item>
+        <item> "If my mind can conceive it, if my heart can believe it, then I can achieve it."
+— Muhammad Ali</item>
+        <item> "Embrace the glorious mess that you are."
+— Elizabeth Gilbert</item>
+        <item>"Clouds come floating into my life, no longer to carry rain or usher storm, but to add color to my sunset sky."
+— Rabindranath Tagore </item>
+    </string-array>
+    <string-array name="Sad">
+        <item> The pain is not on the day of missing our dear ones. The pain is really when you live without them and with their presence in your mind.</item>
+        <item>Nothing hurts more than realizing he meant everything to you and you meant nothing to him.</item>
+        <item>Don\'t trust too much. Don\'t hope too much, because that too much can hurt you so much...</item>
+        <item>It\'s hard to answer the question \'what\'s wrong\' when nothing\'s right...</item>
+        <item>Pain is the only thing that\'s telling me, I\'m still alive.</item>
+        <item>My heart stopped beating since you left.</item>
+        <item>One day you realized or look back, you\'ll find I\'m still waiting for you where you left me. Missing you...</item>
+        <item>My Smile: Doesn\'t always mean, I\'m happy. Sometimes it means, I can manage and sometimes it just means, I\'m tired of crying...</item>
+        <item>You play with my mind, my body my soul, my emotions and yet. I still love you. And you left me. Does that mean me that foolish girl on the planet?</item>
+        <item>I don\'t think you understand just how much. I love you.</item>
+        <item>One day you\'re going to remember me and how much I loved you... then you\'re going to hate yourself for letting me go.</item>
+        <item>A relationship is only made for two. But some bitches don\'t know how to count.</item>
+        <item>Never be sad for what is over, just be glad that it was once yours.</item>
+        <item>The heart is like a mirror. It can\'t reform after once broken. So, don\'t heart anyone is life.</item>
+        <item>The greatest challenge in life is discovering who you are. The second greatest is being happy with what you find.</item>
+        <item>Every time I look at the keyboard, I see that you and I are always together.</item>
+        <item>I am sorry for all the things, that made you sad and ashamed, I am sorry for all the things that didn\'t do. I am sorry for everything wrong. That I have ever done.</item>
+        <item>Please come back I\'m alone.</item>
+        <item>No matter what I say or do. I\'m still not over you. No matter how hard I try, you still manage to make me cry. No matter what, I\'m still in love and don\'t know why.</item>
+        <item>One of the most amazing things in the world is having someone fall in love with you who you thought you never had a chance with.</item>
+        <item>You want me to act like we\'ve never kissed, you want to forget; pretend we\'ve never met, and I\'ve tried and I\'ve tried, but I haven\'t yet... You walk by, and I fall to pieces.</item>
+        <item>I miss you so much hope you miss me too.</item>
+        <item>Without communication there is no relationship without respect, there is no love, without trust, there is no reason to continue.</item>
+        <item>No person deserves your tears and who deserves them won\'t make you cry.</item>
+        <item>Time goes by a lot slower when you miss the one you love.</item>
+        <item>I have seen you at your worst, I think you are the best.</item>
+        <item>I\'m slowly giving up.I\'m slowly giving up.</item>
+        <item>But when you walked out the door a piece of me died.</item>
+        <item>When you sit lonely, then you think about your pastime.</item>
+        <item>And tonight, I\'ll fall asleep with you in my heart.</item>
+        <item>I would love to tell you how I feel. I\'m just afraid that you don\'t feel the same way.</item>
+        <item>It takes a minute to like someone an hour to love some but to forget someone takes a lifetime.</item>
+        <item>In the book of life, the answers aren\'t in the back.</item>
+        <item>If you see a friend without a smile; give him one of yours.</item>
+        <item>Nobody deserves your tears, but whoever deserves them will not make you cry.</item>
+        <item>All good things must come to an end, but all bad things can continue forever.</item>
+        <item>The walls we build around us to keep sadness out also keeps out the joy.</item>
+        <item>It\'s easy to cry when you realize that everyone you love will reject you or die.</item>
+        <item>Good humour is the health of the soul, sadness its poison.</item>
+        <item>Smile, even if it\'s a sad smile because sadder than a sad smile is the sadness of not knowing how to smile.</item>
+        <item>Anger, tears, and sadness are only for those who have given up.</item>
+        <item>Absolute silence leads to sadness. It is the image of death.</item>
+        <item>Sadness is but a wall between two gardens.</item>
+        <item>Anger, tears, and sadness are only for those who have given up.</item>
+        <item>Absolute silence leads to sadness. It is the image of death.</item>
+        <item>Sadness is but a wall between two gardens.</item>
+        <item>Sorrow is one of the vibrations that prove the fact of living.</item>
+        <item>There is no worse sorrow than remembering happiness in the day of sorrow.</item>
+        <item>When sorrows come, they come not single spies, but in battalions.</item>
+        <item>Sadness is always the legacy of the past; regrets are pains of the memory.</item>
+        <item>We gather strength from sadness and from pain Each time we die we learn to live again.</item>
+        <item>Sorrow is like a precious treasure, shown only to friends.</item>
+        <item>Tears are words the heart can\'t express.</item>
+        <item>They that sow in tears shall reap in joy.</item>
+        <item>Life is pleasant. Death is peaceful. It\'s the transition that\'s troublesome.</item>
+        <item>There is no greater sorrow than to recall in misery the time when we were happy.</item>
+        <item>Hating people is like burning down your house to kill a rat.</item>
+        <item>As a well-spent day brings happy sleep, so a life well spent brings happy death.</item>
+        <item>It is loneliness that makes the loudest noise. This is true of men as of dogs.</item>
+        <item>Although the world is full of suffering, it is also full of the overcoming of it.</item>
+        <item>I’ll be okay is that what you want to say?</item>
+        <item>The World is mad and the people are sad.</item>
+        <item>But they all didn’t see the little bit of sadness in me.</item>
+        <item>Never put your happiness in someone else’s hands.</item>
+        <item>Be careful who you fall in love with, because someone somewhere not approves.</item>
+        <item>A feeling of sadness seemingly without a cause.</item>
+        <item>I did everything right for someone that does everything wrong.</item>
+        <item>Sometimes it takes losing something to realize what you’ve had.</item>
+        <item>Yesterday I was sad today I am happy yesterday I had a problem today I still have the same problem.</item>
+        <item>My tears are like anchors that sink my heart to the depths of the deepest ocean.</item>
+        <item>People walk away easily but they leave their memories with us forever.</item>
+        <item>I was born with an enormous need for affection and a terrible need to give it.</item>
+        <item>Don’t take me for granted, because unlike the rest. I am not afraid to walk away.</item>
+        <item>I hate when I am lying in bed looking out my window for the moon and stars, but I can’t find the Moon.</item>
+        <item>We are unhappier to see people ahead of us than happy to see people behind us.</item>
+        <item>Dear Hear, please stop getting involved in everything. Your job is to pump blood that\'s it.</item>
+        <item>The strongest among us are the ones who smile through the silent pain, cry behind closed doors and fight battles nobody knows about.</item>
+        <item>It hurts the most when the person who made you feel so special yesterday makes you feel so unwanted today.</item>
+        <item>Sometimes the people who are thousands of miles away from you can make you feel better than the people who are right beside you.</item>
+        <item>People cry, not because they\'re weak. It\'s because they\'ve been strong for too long.</item>
+        <item>You made me feel like you really liked me and then you just left like nothing even mattered.</item>
+        <item>Sometimes when I say: I\'m okay. I want someone to look me in the eyes, hug me tight, and say: I know you\'re not.</item>
+        <item>When I see you smile and know that it is not for me, that is when I will miss you the most.</item>
+        <item>I want to write \'I miss you\' on a rock and throw it at your face, so you know how much it hurts to miss you.</item>
+        <item>I\'m not afraid to fall in love. I\'m afraid to fall for the wrong person again. Sometimes life doesn\'t want to give you something you want, not because you don\'t deserve it, but because you deserve more.</item>
+        <item>During the day I keep myself busy and sometimes time passes. But at night, I really miss you.</item>
+        <item>The same person who said the sweetest things to me also said some of the meanest things I\'ve ever heard.</item>
+        <item>The worst kind of pain is when you\'re smiling to stop the tears from falling.</item>
+        <item>Loves when you listen to a song and it relates 100% sure to how you feel.</item>
+        <item>The hardest part about loving someone is watching that person love another person.</item>
+        <item>Loneliness is the human condition. No one is ever going to fill that space. </item>
+    </string-array>
+
+</resources>

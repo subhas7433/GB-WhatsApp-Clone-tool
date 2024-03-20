@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical"
+    tools:context=".PurchaseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/home_icon"
+            android:layout_height="@dimen/home_icon"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:background="#00ffffff"
+            android:src="@drawable/back_icon"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:text="Subscription"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/mid_black"
+            android:textSize="@dimen/home_title"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/callblockTutorial"
+            android:layout_width="@dimen/home_icon"
+            android:layout_height="@dimen/home_icon"
+            android:padding="@dimen/home_icon_padding"
+            android:src="@drawable/tutorial_icon"
+            android:layout_marginEnd="7dp"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/alreadySubscribed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/purchaseMemCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    app:cardCornerRadius="@dimen/home_card_radious"
+                    app:cardElevation="@dimen/home_card_elevation">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:minWidth="340dp"
+                        android:minHeight="85dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/primary"
+                        android:clickable="true"
+                        android:paddingHorizontal="15dp"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active Plan"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/opensans_bold"
+                                android:textSize="10sp"/>
+                            <TextView
+                                android:id="@+id/subTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weekly"
+                                android:fontFamily="@font/opensans_light"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="23sp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/subPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 799"
+                            android:fontFamily="@font/opensans_bold"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="15dp"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/otherMemCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:layout_marginHorizontal="15dp"
+                    app:cardCornerRadius="@dimen/home_card_radious"
+                    app:cardElevation="@dimen/home_card_elevation">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:minWidth="340dp"
+                        android:minHeight="85dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="@color/primary"
+                        android:clickable="true"
+                        android:paddingHorizontal="20dp"
+                        android:focusable="true">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active Plan"
+                                android:textAllCaps="true"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/opensans_bold"
+                                android:textSize="10sp"/>
+                            <TextView
+                                android:id="@+id/days"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="7 days left"
+                                android:fontFamily="@font/opensans_light"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="23sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/white"
+                android:layout_marginHorizontal="15dp"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mid_black"
+                    android:paddingVertical="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="Unlock all benefit"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.25dp"
+                    android:background="@color/hint"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7dp"
+                    android:paddingVertical="@dimen/benefit_layout_paVA">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="@dimen/benefit_icon_size"
+                        android:layout_height="@dimen/benefit_icon_size"
+                        android:src="@drawable/ad_icon"
+                        app:layout_constraintBottom_toTopOf="@+id/textView35"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView33" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="No ads"
+                        android:textColor="#DD2C27"
+                        android:textSize="@dimen/benfit_txt_size"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView10"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_light"
+                        android:text="Seamless fully ad-free app experience."
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/benefit_txt2_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/textView33"
+                        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="@dimen/benefit_layout_paVA">
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="@dimen/benefit_icon_size"
+                        android:layout_height="@dimen/benefit_icon_size"
+                        android:padding="2dp"
+                        android:src="@drawable/video_call_block_focused"
+                        app:layout_constraintBottom_toTopOf="@+id/textView36"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView34" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Video Call blocker"
+                        android:textColor="#0D539E"
+                        android:textSize="@dimen/benfit_txt_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView11"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_light"
+                        android:text="Smart video call blocking to filter out unnecessary calls."
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/benefit_txt2_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/textView34"
+                        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="@dimen/benefit_layout_paVA">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="@dimen/benefit_icon_size"
+                        android:layout_height="@dimen/benefit_icon_size"
+                        android:padding="2dp"
+                        android:src="@drawable/auto_reply_lg"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView37"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView37"
+                        app:tint="@color/colorSecondaryVariant" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Customized Auto reply"
+                        android:textColor="@color/colorSecondaryVariant"
+                        android:textSize="@dimen/benfit_txt_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_light"
+                        android:text="Personalized auto-reply feature for individuals and groups."
+                        android:textColor="@color/mid_black"
+                        android:textSize="@dimen/benefit_txt2_size"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/textView37"
+                        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                app:cardCornerRadius="@dimen/home_card_radious"
+                app:cardElevation="@dimen/home_card_elevation"
+                android:focusable="true">
+                <LinearLayout
+                    android:id="@+id/showSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:minWidth="340dp"
+                    android:minHeight="85dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/mid_black"
+                    android:clickable="true"
+                    android:paddingHorizontal="15dp"
+                    android:focusable="true">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Complete"
+                            android:textAllCaps="true"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/opensans_bold"
+                            android:textSize="10sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A Survey to get free"
+                            android:fontFamily="@font/opensans_light"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="19sp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start"
+                        android:fontFamily="@font/opensans_bold"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/inAppRecycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:listitem="@layout/layout_in_app_purchase"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/opensans_light"
+                android:lineSpacingExtra="2dp"
+                android:paddingBottom="40dp"
+                android:text="If you want to cancel or upgrade the plan then follow these steps - \n Step1 : Open Google play store and go to 'Payment and subscription'.\n Step2 : Select the subscription and cancel it. \nAfter that you can buy another subscription from our app."/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

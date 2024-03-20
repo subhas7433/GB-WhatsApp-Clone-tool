@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".WBCallBlock">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/topMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="7dp">
+
+            <!-- whatsapp switch card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardElevation="@dimen/Elevation_input_box"
+                app:cardCornerRadius="@dimen/input_box_radious"
+                app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/waVoiceSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/custom_voice_call_icon"
+                    android:text="Voice Call block"
+                    android:textColor="@color/switch_tint"
+                    android:textSize="14sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView25"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:showText="false"
+                    app:track="@drawable/switch_track" />
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardElevation="@dimen/Elevation_input_box"
+                app:cardCornerRadius="@dimen/input_box_radious"
+                app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/waVideoSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/custom_video_call_icon"
+                    android:text="Video Call block"
+                    android:textColor="@color/switch_tint"
+                    android:textSize="14sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView25"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:showText="false"
+                    app:track="@drawable/switch_track" />
+
+            </com.google.android.material.card.MaterialCardView>
+            <!-- Enable Schedule time -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:background="@drawable/switch_back"
+                android:minHeight="50dp"
+                app:cardElevation="@dimen/Elevation_input_box"
+                app:cardCornerRadius="@dimen/input_box_radious">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/schCallBlock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:buttonTint="@color/checkbox_tint"
+                        android:textColor="@color/checkbox_tint"
+                        android:paddingStart="5dp"
+                        android:text="@string/schedule_call_block"
+                        android:textSize="15sp"
+                        android:checked="false"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/help_ic"
+                        app:layout_constraintBottom_toBottomOf="@+id/schCallBlock"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.93"
+                        app:layout_constraintStart_toEndOf="@+id/schCallBlock"
+                        app:layout_constraintTop_toTopOf="@+id/schCallBlock"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <LinearLayout
+                        android:id="@+id/callTimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/schCallBlock">
+
+                        <TextView
+                            android:id="@+id/startAutoRp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="From : "
+                            android:textColor="@color/call_block"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/startCallTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="@color/transparent"
+                            android:drawableEnd="@drawable/edit_lg"
+                            android:padding="0dp"
+                            android:text="10:00pm"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/endAutoRp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To : "
+                            android:textColor="@color/call_block"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/endCallTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:background="@color/transparent"
+                            android:drawableEnd="@drawable/edit_lg"
+                            android:padding="0dp"
+                            android:text="06:00am"
+
+                            android:textAllCaps="false"
+                            android:textColor="@color/primary"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <FrameLayout
+                android:id="@+id/netiveHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <!--call block to-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/call_block_to"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/mid_black"
+                    android:textSize="15sp"/>
+                <ImageButton
+                    android:id="@+id/whatSendTo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="@color/hint"
+                    android:background="@drawable/help_ic"/>
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/contectOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardCornerRadius="@dimen/input_box_radious"
+                app:cardElevation="@dimen/Elevation_input_box"
+
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="7dp"
+                    android:paddingStart="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5">
+
+
+                        <RadioButton
+                            android:id="@+id/allContact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="3dp"
+                            android:buttonTint="@color/checkbox_tint"
+                            android:text="All Contact and Group"
+                            android:textColor="@color/checkbox_tint"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/exceptPhoneContact"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/checkbox_tint"
+                            android:text="Except My phone contact"
+                            android:textColor="@color/checkbox_tint"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/MyList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/checkbox_tint"
+                            android:text="My List"
+                            android:textColor="@color/checkbox_tint"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/exceptMyList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="5dp"
+                            android:buttonTint="@color/checkbox_tint"
+                            android:text="Except My List"
+                            android:textColor="@color/checkbox_tint"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <!--My List-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My List"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/mid_black"
+                    android:textSize="15sp"/>
+                <ImageButton
+                    android:id="@+id/mylistWhat"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="@color/hint"
+                    android:background="@drawable/help_ic"/>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+
+
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="@dimen/Elevation_input_box"
+
+                    tools:layout_editor_absoluteX="134dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/listCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+                        <ImageButton
+                            android:id="@+id/imageView21"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/about_back"
+                            android:backgroundTint="#80FFFFFF"
+                            android:padding="3.5dp"
+                            android:src="@drawable/contact_icon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="#CB1B1B1B" />
+
+                        <Button
+                            android:id="@+id/deleteAllMediaSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/transparent"
+                            android:paddingLeft="2dp"
+                            android:text="View Contact list"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView21"
+                            app:layout_constraintTop_toTopOf="@+id/imageView21" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/pickContact"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/add_icon"
+                    android:background="@drawable/custom_inputbox"
+                    android:backgroundTint="@color/colorSecondaryVariant"
+                    app:tint="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical">
+                <com.google.android.material.card.MaterialCardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/switch_back"
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="@dimen/Elevation_input_box"
+                    tools:layout_editor_absoluteX="134dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/listCardGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp">
+                        <ImageView
+                            android:id="@+id/imageView23"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/about_back"
+                            android:backgroundTint="#80FFFFFF"
+                            android:padding="6dp"
+                            android:src="@drawable/group_icon_focused"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="#CB1B1B1B" />
+
+                        <Button
+                            android:id="@+id/viewGroupList"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@color/transparent"
+                            android:paddingLeft="2dp"
+                            android:text="View Group list"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView23"
+                            app:layout_constraintTop_toTopOf="@+id/imageView23" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/pickGroup"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/add_icon"
+                    android:background="@drawable/custom_inputbox"
+                    android:backgroundTint="@color/colorSecondaryVariant"
+                    app:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--History Layout-->
+        <LinearLayout
+            android:id="@+id/History"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--History title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:paddingHorizontal="5dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="History"
+                    android:textColor="@color/mid_black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+                <TextView
+                    android:id="@+id/deleteAllSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="7dp"
+                    android:background="@drawable/custom_btn"
+                    android:backgroundTint="@color/ascii_cl_bg"
+                    android:drawableTint="@color/call_block"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/delete_icon_18dp"
+                    android:text="CLEAR ALL"
+                    android:textColor="#373737"
+                    android:textSize="9.5sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+                <Button
+                    android:id="@+id/seeFullHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    android:paddingHorizontal="0dp"
+                    android:text="@string/see_full_txt"
+                    android:clickable="true"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <!--NO History Section-->
+            <LinearLayout
+                android:id="@+id/noHistoryLA"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="3dp"
+                    android:src="@drawable/call_blocked_focused"
+                    app:tint="#C8C8C8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Nothing block yet."
+                    android:textColor="#C3C3C3"
+                    android:textSize="15sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/callBlockRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/recycle_call_block" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+

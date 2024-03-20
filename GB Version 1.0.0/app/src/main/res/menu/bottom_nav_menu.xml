@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/bt_ic_whatsapp"
+        android:iconTint="@color/bottom_nav_color"
+        android:title="@string/title_chat"/>
+    <item
+        android:id="@+id/navigation_status"
+        android:icon="@drawable/bt_ic_status"
+        android:iconTint="@color/bottom_nav_color"
+        android:title="@string/title_status"/>
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/bt_ic_home"
+        android:iconTint="@color/bottom_nav_color"
+        android:title="@string/title_home"/>
+
+    <item
+        android:id="@+id/navigation_restore_ms"
+        android:icon="@drawable/bt_ic_recover"
+        android:iconTint="@color/bottom_nav_color"
+        android:title="@string/title_restore_ms"/>
+    <item
+        android:id="@+id/navigation_text_fun"
+        android:icon="@drawable/bt_ic_design"
+        android:iconTint="@color/bottom_nav_color"
+        android:title="@string/title_text_fun"/>
+
+</menu>

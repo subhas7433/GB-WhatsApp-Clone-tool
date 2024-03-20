@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chatNameListCard"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:cardElevation="0.1dp"
+        app:cardCornerRadius="@dimen/input_box_radious"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="#66E8E8E8"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_person_24"
+                android:transitionName="imageTransition"
+                app:layout_constraintBottom_toBottomOf="@+id/underline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chatName"
+                app:layout_constraintVertical_bias="0.266"
+                app:tint="#DAD5D5" />
+
+            <TextView
+                android:id="@+id/timeAgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="5dp"
+                android:singleLine="true"
+                android:text="2 hours 15 minutes"
+                android:textColor="#818181"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/chatName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chatName"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/chatName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:maxLines="25"
+                android:singleLine="true"
+                android:text="Name"
+                android:textColor="@color/mid_black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:transitionName="nameTransition"
+                app:layout_constraintEnd_toStartOf="@+id/timeAgo"
+                app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chatMessage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:singleLine="true"
+                android:text="Messages"
+                android:layout_marginEnd="10dp"
+                android:textColor="#959595"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/underline"
+                app:layout_constraintEnd_toStartOf="@+id/unreadCount"
+                app:layout_constraintStart_toStartOf="@+id/chatName"
+                app:layout_constraintTop_toBottomOf="@+id/chatName" />
+
+            <TextView
+                android:id="@+id/unreadCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/custom_send_bt"
+                android:backgroundTint="@color/primary"
+                android:paddingHorizontal="6dp"
+                android:singleLine="true"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/underline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeAgo"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <View
+                android:id="@+id/underline"
+                android:layout_width="match_parent"
+                android:layout_height="0.01dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/about_cl"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/ad_frame"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

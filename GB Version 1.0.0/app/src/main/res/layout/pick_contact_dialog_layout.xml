@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <!-- Top nav -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:id="@+id/listDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Select Contacts"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"/>
+        <ImageButton
+            android:id="@+id/selectAll"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:src="@drawable/double_tick"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:tint="@color/mid_black" />
+        <ImageButton
+           android:id="@+id/refresh"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_reload"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="30dp"
+            />
+        <Button
+            android:id="@+id/pickedDone"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="30dp"
+            />
+    </LinearLayout>
+    <!-- Search textinput -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="5dp"
+
+        android:textColorHint="@color/hint"
+        app:boxBackgroundColor="@color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+        app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+        app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+        app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+        app:boxStrokeColor="@color/primary"
+        app:boxStrokeWidth="0.1dp"
+        app:boxStrokeWidthFocused="1dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testAutoBtn">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/autoReplyTextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:focusable="true"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:focusableInTouchMode="true"
+            android:inputType="textFilter"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+            android:textColor="@color/primary"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ContactListFromPH"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pickContactRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    tools:listitem="@layout/contact_list_from_phone_item"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

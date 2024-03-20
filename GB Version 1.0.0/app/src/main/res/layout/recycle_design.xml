@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:visibility="gone"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_round_icon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/images"
+            app:layout_constraintEnd_toEndOf="@+id/images"
+            app:layout_constraintStart_toStartOf="@+id/images"
+            app:layout_constraintTop_toTopOf="@+id/images" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingTop="5dp"
+        android:paddingBottom="3dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/shareIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="#0011FF00"
+            android:src="@drawable/share_icon" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/downloadIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="#0000ffff"
+            android:src="@drawable/download_lg" />
+
+        <ImageButton
+            android:id="@+id/downloaded"
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:background="#0000ffff"
+            app:tint="@color/primary"
+            android:src="@drawable/done_icon"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="#0000ffff"
+            android:src="@drawable/delete_icon"
+            android:visibility="gone"
+            app:tint="@color/primary" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/whatsappIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/whatsapp_focused" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/whatsappBsIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/ws_business_20" />
+
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

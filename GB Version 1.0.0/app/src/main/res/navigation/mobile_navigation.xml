@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.affixstudio.whatsapptool.fragmentsOur.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_status"
+            app:destination="@id/status" />
+        <action
+            android:id="@+id/action_home_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/status"
+        android:name="com.affixstudio.whatsapptool.fragmentsOur.StatusFragment"
+        android:label="@string/title_status"
+        tools:layout="@layout/fragment_status" >
+        <action
+            android:id="@+id/action_status_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_status_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat"
+        android:name="com.affixstudio.whatsapptool.fragmentsOur.ChatFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chat_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_chat_to_restore_ms"
+            app:destination="@id/restore_ms" />
+    </fragment>
+    <fragment
+        android:id="@+id/restore_ms"
+        android:name="com.affixstudio.whatsapptool.fragmentsOur.recoverSms"
+        android:label="@string/title_restore_ms"
+        tools:layout="@layout/fragment_recover_main" >
+        <action
+            android:id="@+id/action_restore_ms_to_text_fun"
+            app:destination="@id/text_fun" />
+        <action
+            android:id="@+id/action_restore_ms_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_restore_ms_to_chat"
+            app:destination="@id/chat" />
+    </fragment>
+    <fragment
+        android:id="@+id/text_fun"
+        android:name="com.affixstudio.whatsapptool.fragmentsOur.textFunction"
+        android:label="@string/title_text_fun"
+        tools:layout="@layout/fragment_text_function" >
+        <action
+            android:id="@+id/action_text_fun_to_restore_ms"
+            app:destination="@id/restore_ms" />
+        <action
+            android:id="@+id/action_text_fun_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+</navigation>

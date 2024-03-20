@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="16sp"
+        android:paddingVertical="12dp"
+        android:id="@+id/messages"
+        android:text="Sorry can't pick up your call"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp"
+        android:background="#B1B1B1"/>
+
+</LinearLayout>

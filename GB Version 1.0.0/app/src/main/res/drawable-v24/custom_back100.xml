@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/VA_off"/>
+    <corners android:radius="@dimen/home_card_radious"/>
+    <stroke android:width="0.5dp" android:color="@color/inactive_cl"/>
+</shape>

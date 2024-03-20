@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragmentsOur.TextRepeater">
+    <!--Main Contain-->
+    <LinearLayout
+        android:id="@+id/repeatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="0.1dp"
+            app:boxStrokeColor="@color/primary"
+            app:boxBackgroundColor="@color/transparent"
+            app:boxStrokeWidthFocused="1dp"
+            android:gravity="start"
+            android:elevation="5dp"
+            app:boxBackgroundMode="outline"
+            app:endIconMode="clear_text"
+            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:textColorHint="#818181"
+            android:hint="Type Text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/repeaterET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:textSize="16sp"
+                android:text="I miss you"
+                android:minLines="2"
+                android:maxLines="3"
+                android:maxLength="200"
+                android:gravity="start"
+                android:textAlignment="textStart"
+                android:paddingVertical="15dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:minEms="1"
+                app:boxStrokeWidth="0.1dp"
+                app:boxStrokeColor="@color/primary"
+                app:boxBackgroundColor="@color/transparent"
+                app:boxStrokeWidthFocused="1dp"
+                android:elevation="5dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="4"
+                android:maxEms="5"
+                app:endIconMode="clear_text"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColorHint="#818181"
+                android:hint="Repeat Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numberOfrepeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    android:focusable="true"
+                    android:text="50"
+                    android:textSize="15sp"
+                    android:maxLength="4"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/repeat_icon"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:id="@+id/convertRepeat"
+                android:layout_width="140dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/gradient_call_block"
+                android:backgroundTint="@color/primary"
+                android:clickable="true"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Convert"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_dialog"
+            android:layout_margin="3dp"
+            android:elevation="0.5dp"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/repeatResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="7dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/clear_text"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_weight="4"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/VA_off"
+                android:src="@drawable/close_icon"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/schOpen"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="#0000ffff"
+                android:src="@drawable/schedule_icon_20"
+                app:tint="@color/primary" />
+
+            <ImageButton
+                android:id="@+id/copy"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="#0000ffff"
+                android:src="@drawable/copy_icon" />
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="#0000ffff"
+                android:layout_weight="1"
+                android:src="@drawable/share_icon"/>
+            <ImageButton
+                android:id="@+id/whatsapp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="#0000ffff"
+                android:layout_weight="1"
+                android:src="@drawable/whatsapp_focused"/>
+            <ImageView
+                android:id="@+id/whatsappBusiness"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:background="#0000ffff"
+                android:layout_weight="1"
+                android:src="@drawable/ws_business_20"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

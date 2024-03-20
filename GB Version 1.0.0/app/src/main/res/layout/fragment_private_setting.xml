@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_private_setting">
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:visibility="visible">
+        <!-- Enable Schedule time -->
+        <com.google.android.material.card.MaterialCardView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:minHeight="50dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/materialCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:buttonTint="@color/primary"
+                    android:paddingStart="5dp"
+                    android:text="Schedule Private chat"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/help_ic"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.93"
+                    app:layout_constraintStart_toEndOf="@+id/materialCheckBox"
+                    app:layout_constraintTop_toTopOf="@+id/materialCheckBox"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <LinearLayout
+                    android:id="@+id/autoSelectTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCheckBox">
+
+                    <TextView
+                        android:id="@+id/startAutoRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="On : "
+                        android:textColor="@color/auto_reply"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/startTime"
+                        android:layout_width="100dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/transparent"
+                        android:drawableEnd="@drawable/edit_lg"
+                        android:padding="0dp"
+                        android:text="06:00am"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/endAutoRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Off : "
+                        android:textColor="@color/auto_reply"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/endTime"
+                        android:layout_width="100dp"
+                        android:layout_height="32dp"
+                        android:background="@color/transparent"
+                        android:drawableEnd="@drawable/edit_lg"
+                        android:padding="0dp"
+                        android:text="08:00pm"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feature"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginVertical="3dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/private_chat"
+            android:textSize="15sp"/>
+        <!--Specific Contact list-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:visibility="visible"
+            android:backgroundTint="#EAEAEA"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/double_tick"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/about_cl" />
+
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="See Messages and Medias without blue tick."
+                    android:textColor="#353535"
+                    android:textSize="14sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView22"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:minHeight="55dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="15dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/enableNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:buttonTint="@color/primary"
+                    android:paddingStart="5dp"
+                    android:text="Enable Notification"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:text="App will notify you when someone send messages if it\'s enable."/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:minHeight="50dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="15dp">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/privateMediaSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="20dp"
+                    android:text="Show Media File"
+                    android:visibility="visible"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="16sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:showText="false"
+                    app:track="@drawable/switch_track"
+                    tools:layout_editor_absoluteY="43dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginStart="5dp"
+                    android:text="It will automatic downloaded media file when someone send messages.\nBut it will consume more data."/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/autoTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/test_card_backround"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/auto_reply_lg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Test Auto Reply"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="It will help you how it works."
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/next_arrow"
+                    app:tint="@color/primary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:visibility="gone"
+            android:backgroundTint="@color/white"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="7dp">
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="13dp"
+                    android:src="@drawable/help_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check - "
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Folder Permission"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check - "
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notification Permission"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check - "
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Storage Permission"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="If is not please - "
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact us"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+</FrameLayout>

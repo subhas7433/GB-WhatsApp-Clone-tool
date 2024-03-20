@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/VA_off"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/closeicon"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/minimize"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/recycle_card_bg"
+        android:backgroundTint="@color/primary_back"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/watchVideo"
+            android:layout_width="40dp"
+            android:layout_height="33dp"
+
+            android:background="@color/transparent"
+            android:src="@drawable/video_icon"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play video"
+            android:textColor="@color/red"
+            android:textSize="7sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/watchVideo"
+            app:layout_constraintStart_toStartOf="@+id/watchVideo"
+            app:layout_constraintTop_toBottomOf="@+id/watchVideo" />
+
+        <ImageView
+            android:id="@+id/screenIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/help_ic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Auto Reply Schedule"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/screenIcon"
+            app:layout_constraintStart_toEndOf="@+id/screenIcon"
+            app:layout_constraintTop_toTopOf="@+id/screenIcon"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="15dp"
+            android:lineSpacingExtra="1dp"
+            android:text="@string/screenlock_details"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/understand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/pageTitle"
+            app:layout_constraintTop_toBottomOf="@+id/screenIcon"
+            app:layout_constraintWidth_percent="0.95" />
+
+        <Button
+            android:id="@+id/understand"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:paddingLeft="2dp"
+            android:text="Yes I understood"
+            android:textColor="@color/colorSecondaryVariant"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+</LinearLayout>

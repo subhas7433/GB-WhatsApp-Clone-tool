@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    tools:context=".activity.specificContactReply">
+
+    <!--Add Layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Add new Contact -->
+            <LinearLayout
+                android:id="@+id/chatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--TOP Navbar-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:background="@color/primary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:background="#00ffffff"
+                        android:src="@drawable/back_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:text="New Contact"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/chat_backround"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="55dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_receive_msg_bg"
+                        android:maxHeight="100dp"
+                        android:minWidth="100dp"
+                        android:minHeight="30dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="start"
+                            android:text="Hi! This is incoming messages from your friend or customer."
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:maxHeight="100dp"
+                        android:minWidth="100dp"
+                        android:minHeight="30dp"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="start"
+                            android:text="Type Auto Reply text"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="@dimen/BOTTOM_margin"
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="@dimen/Elevation_input_box">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/whatsapp_focused_35dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="Contact name"
+                            android:maxHeight="60dp"
+                            android:scrollbars="vertical"
+                            android:textColorHint="@color/hint"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                            app:boxStrokeColor="@color/primary"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/senderName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:maxLength="20"
+                                android:paddingStart="10dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/primary"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/contactBtn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="@color/colorSecondaryVariant"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageButton
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/contact_icon"
+                                android:backgroundTint="@color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="Customized Incoming message"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/help_ic"
+                        android:backgroundTint="@color/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:visibility="visible">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/TOP_margin"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:minHeight="60dp"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="@dimen/Elevation_input_box">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ms_lg_focused" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/transparent"
+                                android:gravity="start"
+                                android:hint="Type Incoming message"
+                                android:maxHeight="300dp"
+                                android:minHeight="60dp"
+                                android:scrollbars="vertical"
+                                android:textColorHint="@color/hint"
+                                app:boxBackgroundColor="@color/transparent"
+                                app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                                app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                                app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                                app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                                app:boxStrokeColor="@color/primary"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/message"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:maxLength="350"
+                                    android:maxLines="4"
+                                    android:minLines="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"
+                                    android:textColor="@color/primary"
+                                    android:textSize="15sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Message Match Option"
+                            android:textColor="@color/primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:background="@drawable/help_ic"
+                            android:backgroundTint="@color/colorOnSurface" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/exact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:buttonTint="@color/primary"
+                                android:text="Exact Match"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/contain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:text="Contain"
+                                android:textSize="16sp" />
+
+                        </RadioGroup>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginTop="@dimen/TOP_margin"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="60dp"
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="@dimen/Elevation_input_box">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/reply_icon" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/transparent"
+                            android:gravity="start"
+                            android:hint="Type Auto-Reply text"
+                            android:maxHeight="300dp"
+                            android:minHeight="60dp"
+                            android:scrollbars="vertical"
+                            android:textColorHint="@color/hint"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                            app:boxStrokeColor="@color/primary"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/Reply"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:maxLength="350"
+                                android:maxLines="4"
+                                android:minLines="1"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="8dp"
+                                android:textColor="@color/primary"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/colorPrimaryVariant"
+                    app:boxBackgroundColor="@color/transparent"
+                    app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                    app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                    app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                    app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                    app:boxStrokeColor="@color/primary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@color/hint">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/quick_ms_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:paddingStart="50dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="0dp"
+                        android:text="Choose Quick messages"
+                        android:textColor="@color/primary"
+                        android:textSize="15sp"
+                        tools:listitem="@layout/style_spinner" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <Button
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="58dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/red"
+                        android:gravity="center"
+                        android:text="Delete"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        app:cornerRadius="30dp" />
+                    <!-- add Button -->
+                    <Button
+                        android:id="@+id/addReply"
+                        android:layout_width="200dp"
+                        android:layout_height="58dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Create"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        app:cornerRadius="30dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                        app:layout_constraintTop_toBottomOf="@+id/autoReplyTextInputLayout" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--Add new Group -->
+            <LinearLayout
+                android:id="@+id/addGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!--TOP Navbar-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:background="@color/primary"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageButton
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="7dp"
+                        android:background="#00ffffff"
+                        android:src="@drawable/back_icon" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="2"
+                        android:text="Create Group"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/chat_backround"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="55dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_receive_msg_bg"
+                        android:maxHeight="100dp"
+                        android:minWidth="100dp"
+                        android:minHeight="30dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="start"
+                            android:text="Hi! This is incoming messages from the group."
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:maxHeight="100dp"
+                        android:minWidth="100dp"
+                        android:minHeight="30dp"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="7dp"
+                            android:gravity="start"
+                            android:text="Type Auto Reply text"
+                            android:textColor="@color/colorPrimaryVariant"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="@dimen/BOTTOM_margin"
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="@dimen/Elevation_input_box">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/whatsapp_focused_35dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="Group name"
+                            android:maxHeight="300dp"
+                            android:minHeight="60dp"
+                            android:scrollbars="vertical"
+                            android:textColorHint="@color/hint"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                            app:boxStrokeColor="@color/primary"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/GroupName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:maxLength="20"
+                                android:paddingStart="10dp"
+                                android:paddingTop="4dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/primary"
+                                android:textSize="15sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/groupSelectBtn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:backgroundTint="@color/colorSecondaryVariant"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageButton
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/group_icon_focused"
+                                android:backgroundTint="@color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/primary"
+                        android:text="Customized Incoming message"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:background="@drawable/help_ic"
+                        android:backgroundTint="@color/colorOnSurface" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:visibility="visible">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/TOP_margin"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:minHeight="60dp"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="@dimen/Elevation_input_box">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ms_lg_focused" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/transparent"
+                                android:gravity="start"
+                                android:hint="Type Incoming message"
+                                android:maxHeight="300dp"
+                                android:minHeight="60dp"
+                                android:scrollbars="vertical"
+                                android:textColorHint="@color/hint"
+                                app:boxBackgroundColor="@color/transparent"
+                                app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                                app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                                app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                                app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                                app:boxStrokeColor="@color/primary"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:endIconMode="clear_text">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/groupMessage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:maxLength="350"
+                                    android:maxLines="4"
+                                    android:minLines="1"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="8dp"
+                                    android:textColor="@color/primary"
+                                    android:textSize="15sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Message Match Option"
+                            android:textColor="@color/primary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:background="@drawable/help_ic"
+                            android:backgroundTint="@color/colorOnSurface" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/groupExactRadio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:buttonTint="@color/primary"
+                                android:text="Exact Match"
+                                android:textSize="16sp" />
+
+                            <RadioButton
+                                android:id="@+id/groupContainRadio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/primary"
+                                android:text="Contain"
+                                android:textSize="16sp" />
+
+                        </RadioGroup>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginTop="@dimen/TOP_margin"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="60dp"
+                    app:cardCornerRadius="@dimen/input_box_radious"
+                    app:cardElevation="@dimen/Elevation_input_box">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/reply_icon" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/transparent"
+                            android:gravity="start"
+                            android:hint="Type Auto-Reply text"
+                            android:maxHeight="300dp"
+                            android:minHeight="60dp"
+                            android:scrollbars="vertical"
+                            android:textColorHint="@color/hint"
+                            app:boxBackgroundColor="@color/transparent"
+                            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                            app:boxStrokeColor="@color/primary"
+                            app:boxStrokeWidth="0dp"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/groupReply"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:maxLength="350"
+                                android:maxLines="4"
+                                android:minLines="1"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="8dp"
+                                android:textColor="@color/primary"
+                                android:textSize="15sp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/LR_margin"
+                    android:layout_marginEnd="@dimen/LR_margin"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="@color/colorPrimaryVariant"
+                    app:boxBackgroundColor="@color/transparent"
+                    app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+                    app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+                    app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+                    app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+                    app:boxStrokeColor="@color/primary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintTextColor="@color/hint">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/group_quick_ms_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none"
+                        android:paddingStart="50dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="0dp"
+                        android:text="Choose Quick messages"
+                        android:textColor="@color/primary"
+                        android:textSize="15sp"
+                        tools:listitem="@layout/style_spinner" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <Button
+                        android:id="@+id/groupDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="58dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/red"
+                        android:gravity="center"
+                        android:text="Delete"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        app:cornerRadius="30dp" />
+                    <!-- add Button -->
+                    <Button
+                        android:id="@+id/groupCreate"
+                        android:layout_width="200dp"
+                        android:layout_height="58dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Create"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        app:cornerRadius="30dp"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                        app:layout_constraintTop_toBottomOf="@+id/autoReplyTextInputLayout" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--Main Layout -->
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--TOP Navbar-->
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="7dp"
+                android:background="#00ffffff"
+                android:src="@drawable/back_icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:text="Custom Reply"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/autoRpTutorial"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:alpha="0.7"
+                android:src="@drawable/about_icon"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitch">
+            <!--Tab Layout-->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_Specfic"
+                style="@style/Widget.MaterialComponents.TabLayout.PrimarySurface"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/transparent"
+                app:tabGravity="center"
+
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabIndicatorColor="#00000000"
+                app:tabIndicatorGravity="stretch"
+                app:tabMaxWidth="130dp"
+                app:tabMinWidth="100dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="#E8FAF2" />
+            <!--Tab Layout-->
+            <Button
+                android:id="@+id/viewSpecificContact"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/colorSecondary"
+                android:gravity="center"
+                android:text="Test"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:cornerRadius="30dp" />
+        </LinearLayout>
+
+        <!--Contact Recycle Layout-->
+        <LinearLayout
+            android:id="@+id/contactHistroy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <!-- Contact reply switch card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView24"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/contact_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/contactReplySwitch"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Enable for Contact Reply"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:thumb="@drawable/thumb"
+                        app:layout_constraintStart_toEndOf="@+id/imageView24"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:showText="false"
+                        app:track="@drawable/switch_track" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--Contact Recycler-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/contactRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/recycle_specific_customlist" />
+        </LinearLayout>
+        <!--Group Recycle Layout-->
+        <LinearLayout
+            android:id="@+id/groupHistroy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <!-- Group reply switch card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView25"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/group_icon_focused"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/groupReplySwitch"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Enable for Group Reply"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:thumb="@drawable/thumb"
+                        app:layout_constraintStart_toEndOf="@+id/imageView25"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:showText="false"
+                        app:track="@drawable/switch_track" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <!--Group Recycler-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/groupRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/recycle_specific_customlist" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/noHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/about_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Noting saved yet!"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- History reply list button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/oldMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorSecondaryVariant"
+        android:focusable="true"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="55dp"
+        android:visibility="gone"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/history_icon"
+        app:tint="@color/white" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/groupOldMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/colorSecondaryVariant"
+        android:focusable="true"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="55dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/history_icon"
+        app:tint="@color/white" />
+    <!--new contact form button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_new_Reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/primary"
+        android:focusable="true"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="55dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/add_icon"
+        app:tint="@color/white" />
+    <!--new Group form button-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_new_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/primary"
+        android:focusable="true"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="10dp"
+        app:fabCustomSize="55dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/add_icon"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

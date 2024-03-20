@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragmentsOur.DecorationText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:counterMaxLength="500"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeWidth="0.1dp"
+            app:boxStrokeColor="@color/primary"
+            app:boxBackgroundColor="@color/transparent"
+            app:boxStrokeWidthFocused="1dp"
+            android:elevation="5dp"
+            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:textColorHint="#818181"
+            android:hint="Type Text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/decorationET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:drawablePadding="10dp"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="15dp"
+                android:drawableTint="@color/primary"
+                android:drawableStart="@drawable/ic_baseline_functions_24"
+                android:focusable="true"
+                android:textSize="16sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton
+            android:id="@+id/decorationCross"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="5"
+            android:visibility="gone"
+            android:background="@color/transparent"
+            android:src="@drawable/close_icon"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/convertLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_send_bt"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Convert"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/decorationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/decorationRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/decoration_text_recycle"/>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="messageList">
+
+        <item> Hi </item>
+        <item> Hi2 </item>
+        <item> Hi3\ncffcfhhf </item>
+        <item> Hi 4</item>
+        <item> Hi 5</item>
+        <item> Hi 6</item>
+        <item> Hi 7</item>
+        <item> Hi 8</item>
+        <item> Hi 9</item>
+
+
+    </string-array>
+
+
+
+
+</resources>

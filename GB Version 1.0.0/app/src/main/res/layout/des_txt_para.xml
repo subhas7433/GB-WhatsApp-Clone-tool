@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp">
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. "
+        android:textColor="#3C3C3C"
+        android:textSize="11sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#3C3C3C"
+        android:text="@string/screenlock_details"/>
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/QkRecycleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/recycle_card_bg"
+        android:orientation="vertical"
+        android:paddingTop="9dp"
+        android:paddingBottom="4dp"
+        android:elevation="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/QuickText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="7dp"
+            android:text="Hi!How are you?"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="0dp"
+            android:layout_gravity="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="5dp"
+            android:elevation="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/schOpen"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="#0000ffff"
+                android:visibility="visible"
+                android:src="@drawable/schedule_icon_20"
+                app:tint="@color/primary" />
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/copy"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="#0000ffff"
+                android:src="@drawable/copy_icon"
+                app:tint="@color/primary" />
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/share"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="#0000ffff"
+                android:src="@drawable/share_icon"
+                app:tint="@color/primary"
+                />
+
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/whatsapp"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:elevation="10dp"
+                android:background="#0000ffff"
+                android:src="@drawable/whatsapp_focused"
+                app:tint="@color/primary" />
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/whatsappBusiness"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:elevation="10dp"
+                android:src="@drawable/ws_business_unfocused_20"
+                app:tint="@color/primary" />
+            <Space
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <ImageButton
+                android:id="@+id/more"
+                android:layout_width="24dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="25dp"
+                android:background="#0000ffff"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageMain"
+    android:layout_marginEnd="3dp">
+
+    <LinearLayout
+        android:id="@+id/mediaImageRecycleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/imageImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deleteSticker"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="#020202"
+        android:padding="4dp"
+        android:alpha="0.75"
+        android:src="@drawable/close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- no Whatsapp verticle-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noWhatsappLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="126dp"
+            android:layout_marginTop="272dp"
+            android:src="@drawable/whatsapp_focused"
+            app:layout_constraintEnd_toStartOf="@+id/textView31"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="1dp"
+            android:text="Wa or Wa Business is not installed in your device."
+            android:textSize="17sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView17"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="126dp"
+            android:src="@drawable/ws_business_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView31"
+            app:layout_constraintTop_toTopOf="@+id/imageView17"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+            app:layout_constraintEnd_toStartOf="@+id/imageView19"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="@+id/imageView19" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--permission View-->
+    <LinearLayout
+        android:id="@+id/permissionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/permission_background"
+        android:background="@drawable/custom_dialog"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Storage Permission"
+            android:textColor="@color/mid_black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/permissionImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/srn_use1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/ascii_cl"
+            android:text="Click on 'USE THIS FOLDER' from the bottom." />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:src="@drawable/srn_use2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/ascii_cl"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="'Allow' it and go back to the app." />
+
+        <TextView
+            android:id="@+id/grantPermission"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_send_bt"
+            android:backgroundTint="@color/status"
+            android:gravity="center"
+            android:elevation="3dp"
+            android:text="Grant Permission"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- Main Layout-->
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical">
+        <!--Top navigation layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_nav_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:background="@color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/status_download_title"
+                android:textColor="@color/mid_black"
+                android:fontFamily="@font/opensans_bold"
+                android:textSize="@dimen/home_title"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/tutorial"
+                android:layout_width="@dimen/home_icon"
+                android:layout_height="@dimen/home_icon"
+                android:padding="@dimen/home_icon_padding"
+                android:src="@drawable/tutorial_icon"
+                android:alpha="0.8"
+                android:layout_marginEnd="7dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@color/transparent"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/whatsappSclector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_item_height"
+                android:layout_weight="1"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="200dp"
+                android:popupBackground="#F4F4F4"
+                android:gravity="center"
+                android:background="@drawable/spinner_back"
+                android:backgroundTint="#F4F4F4"
+                android:paddingEnd="2dp"
+                android:textSize="12sp"
+                android:paddingStart="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="4dp"
+                android:splitMotionEvents="true"
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
+            <RadioGroup
+                android:id="@+id/topRG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/RBCatagory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tab_item_height"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/cs_status_btn_selector"
+                    android:button="@color/transparent"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="Status"
+                    android:textColor="@color/radio_btn_txt"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/RBsv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tab_item_height"
+                    android:background="@drawable/cs_status_btn_selector"
+                    android:textColor="@color/radio_btn_txt"
+                    android:button="@color/transparent"
+                    android:elevation="2dp"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="Downloaded"
+                    android:textSize="13sp" />
+            </RadioGroup>
+        </LinearLayout>
+        <!--status layout-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/swipLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                <LinearLayout
+                    android:id="@+id/mediaCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+                    <!--Images card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/imageCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#4DFFFFFF"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/media_card_padding">
+
+                            <TextView
+                                android:id="@+id/imagelb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/title_text_marging"
+                                android:background="@drawable/media_title"
+                                android:gravity="center_vertical"
+                                android:paddingTop="4dp"
+                                android:paddingEnd="8dp"
+                                android:text="Images"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/seeMoreImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/see_more_btn_height"
+                                android:layout_gravity="end"
+                                android:background="@color/transparent"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:text="See more image"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/imagelb"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imagelb" />
+                            <!--No Imageview -->
+                            <LinearLayout
+
+                                android:id="@+id/noImageLA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imagelb">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/custom_btn"
+                                    android:backgroundTint="#E6E6E6"
+                                    android:padding="9dp"
+                                    android:src="@drawable/image_icon"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/media_text_hint" />
+
+                                <TextView
+                                    android:id="@+id/noImageLB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Sorry, No images found yet"
+                                    android:textColor="@color/media_text_hint"
+                                    android:textSize="13sp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                            </LinearLayout>
+                            <!--Imageview Section-->
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imagelb">
+                                <!--Image Recycle View-->
+                                <LinearLayout
+                                    android:id="@+id/showImageLA"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginVertical="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/imageRV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scrollbars="horizontal"
+                                        android:visibility="visible"
+                                        android:orientation="horizontal"
+                                        tools:ignore="MissingConstraints"
+                                        tools:listitem="@layout/status_fullview_recycle" />
+                                </LinearLayout>
+                            </HorizontalScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <FrameLayout
+                        android:id="@+id/fl_adplaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:visibility="visible">
+
+                    </FrameLayout>
+
+
+                    <!--Videos card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/videoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="0dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/media_card_padding">
+
+                            <TextView
+                                android:id="@+id/textView34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/title_text_marging"
+                                android:gravity="center_vertical"
+                                android:paddingTop="4dp"
+                                android:paddingEnd="8dp"
+                                android:text="Video Status"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/seeMoreVideo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/see_more_btn_height"
+                                android:layout_gravity="end"
+                                android:background="@color/transparent"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:text="See more video"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/textView34"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/textView34" />
+                            <!--No Videoview -->
+                            <LinearLayout
+                                android:id="@+id/noVideoLA"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView34">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/custom_btn"
+                                    android:backgroundTint="#E6E6E6"
+                                    android:padding="5dp"
+                                    android:src="@drawable/play_ic"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/media_text_hint" />
+
+                                <TextView
+                                    android:id="@+id/noVideoLB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Sorry, No video found yet"
+                                    android:textColor="@color/media_text_hint"
+                                    android:textSize="13sp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                            </LinearLayout>
+                            <!--Videosview Section-->
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView34">
+                                <!--Image Recycle View-->
+                                <LinearLayout
+                                    android:id="@+id/showVideoLA"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/recycleVideo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:scrollbars="horizontal"
+                                        tools:ignore="MissingConstraints"
+                                        tools:listitem="@layout/status_fullview_recycle" />
+                                </LinearLayout>
+                            </ScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+                <!--Download layout-->
+                <LinearLayout
+                    android:id="@+id/downloadCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:paddingBottom="75dp"
+                    android:orientation="vertical">
+                    <!--Images card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="@dimen/media_card_evelation">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#4DF7A400"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/media_card_padding"
+                            android:paddingBottom="@dimen/media_card_padding">
+
+                            <TextView
+                                android:id="@+id/downloadimagelb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/title_text_marging"
+                                android:background="@drawable/media_title"
+                                android:gravity="center_vertical"
+                                android:paddingStart="8dp"
+                                android:paddingTop="4dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="8dp"
+                                android:text="Downloaded Image"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/seeMoreDownloadImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/see_more_btn_height"
+                                android:layout_gravity="end"
+                                android:background="@color/transparent"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:text="See more image"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="@+id/downloadimagelb"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/downloadimagelb" />
+                            <!--No Imageview -->
+                            <LinearLayout
+                                android:id="@+id/noDownloaded"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/downloadimagelb">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/custom_btn"
+                                    android:backgroundTint="#FFF8DD"
+                                    android:padding="9dp"
+                                    android:src="@drawable/image_icon"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/media_text_hint" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Sorry, No images downloaded yet"
+                                    android:textColor="@color/media_text_hint"
+                                    android:textSize="13sp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                            </LinearLayout>
+                            <!--Imageview Section-->
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/downloadimagelb">
+                                <!--Image Recycle View-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <include layout="@layout/media_image_recycleview" />
+                                    <include layout="@layout/media_image_recycleview" />
+                                    <include layout="@layout/media_image_recycleview" />
+                                    <include layout="@layout/media_image_recycleview" />
+                                    <include layout="@layout/media_image_recycleview" />
+                                    <include layout="@layout/media_image_recycleview" />
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        tools:ignore="MissingConstraints"
+                                        tools:listitem="@layout/media_video_recycleview" />
+                                </LinearLayout>
+                            </ScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <FrameLayout
+                        android:id="@+id/ad_frameDownload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </FrameLayout>
+                    <!--Videos card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/downloadvideoCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="@dimen/media_card_evelation">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#4DF7A400"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/media_card_padding"
+                            android:paddingBottom="@dimen/media_card_padding">
+
+                            <TextView
+                                android:id="@+id/downloadVideolb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/title_text_marging"
+                                android:background="@drawable/media_title"
+                                android:gravity="center_vertical"
+                                android:paddingStart="8dp"
+                                android:paddingTop="4dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="8dp"
+                                android:text="Downloaded Video"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/seeMoreDownloadVideo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/see_more_btn_height"
+                                android:layout_gravity="end"
+                                android:background="@color/transparent"
+                                android:paddingEnd="15dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:text="See more video"
+                                android:textColor="@color/black"
+                                android:textSize="11sp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="@+id/downloadVideolb"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/downloadVideolb" />
+                            <!--No Videoview -->
+                            <LinearLayout
+                                android:id="@+id/noDownloadVideosLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/downloadVideolb">
+
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:background="@drawable/custom_btn"
+                                    android:backgroundTint="#FFF8DD"
+                                    android:padding="5dp"
+                                    android:src="@drawable/play_ic"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/media_text_hint" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Sorry, No videos downloaded yet"
+                                    android:textColor="@color/media_text_hint"
+                                    android:textSize="13sp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView16" />
+                            </LinearLayout>
+                            <!--Videosview Section-->
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/downloadVideolb">
+                                <!--Image Recycle View-->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <include layout="@layout/media_video_recycleview" />
+                                    <include layout="@layout/media_video_recycleview" />
+                                    <include layout="@layout/media_video_recycleview" />
+                                    <include layout="@layout/media_video_recycleview" />
+                                    <include layout="@layout/media_video_recycleview" />
+                                    <include layout="@layout/media_video_recycleview" />
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        tools:ignore="MissingConstraints"
+                                        tools:listitem="@layout/media_video_recycleview" />
+                                </LinearLayout>
+                            </ScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

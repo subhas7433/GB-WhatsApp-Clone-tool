@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/minimize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/screenIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/done_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Schedule All Set"
+            android:textColor="@color/colorSecondaryVariant"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/screenIcon"
+            app:layout_constraintStart_toStartOf="@+id/screenIcon"
+            app:layout_constraintTop_toBottomOf="@+id/screenIcon"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/attentl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/custom_inputbox"
+            android:backgroundTint="#FFF3EB"
+            android:paddingVertical="4dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/ascii_cl"
+            android:text="WARNING : Not following these instructions will lead to failure."/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/showitagainCheckbox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+
+
+            <ImageView
+                android:id="@+id/srlocimg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/lock_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/srloctv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Screen Lock"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/srlocimg"
+                app:layout_constraintStart_toEndOf="@+id/srlocimg"
+                app:layout_constraintTop_toTopOf="@+id/srlocimg" />
+
+            <TextView
+                android:id="@+id/srnlockdetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/screenlock_details"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/srlocimg"
+                app:layout_constraintTop_toBottomOf="@+id/srloctv" />
+
+            <ImageView
+                android:id="@+id/timeSe"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/clock"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/srnlockdetails"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/timetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Time Gape"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/timeSe"
+                app:layout_constraintStart_toEndOf="@+id/timeSe"
+                app:layout_constraintTop_toTopOf="@+id/timeSe" />
+
+            <TextView
+                android:id="@+id/usage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/timeselection_details"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/timetitle"
+                app:layout_constraintTop_toBottomOf="@+id/timetitle" />
+
+
+            <!--                        battery optimizition-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/betteryOpLA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/battery"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/battery_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/thirdtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Battery Optimization"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/battery"
+                app:layout_constraintEnd_toStartOf="@+id/betteryOp"
+                app:layout_constraintStart_toEndOf="@+id/battery"
+                app:layout_constraintTop_toTopOf="@+id/battery" />
+
+
+            <TextView
+                android:id="@+id/betteryOp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TURN OFF"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/thirdtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/thirdtitle" />
+
+            <TextView
+                android:id="@+id/third_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/batteryopt_details"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/thirdtitle"
+                app:layout_constraintTop_toBottomOf="@+id/thirdtitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/showitagainCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Don't show it again."
+            android:textColor="@color/about_cl"
+            android:textSize="12sp"
+            android:buttonTint="@color/checkbox_tint"
+            app:layout_constraintBottom_toTopOf="@+id/edit"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom">
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:paddingHorizontal="18dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@color/about_cl"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:cornerRadius="0dp" />
+            <Button
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:background="@color/transparent"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:paddingHorizontal="18dp"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:cornerRadius="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:maxads="http://schemas.applovin.com/android/1.0"
+    android:orientation="vertical"
+    tools:context=".activityOur.Call_block">
+    <!--TOP Navbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="@dimen/home_icon"
+            android:layout_height="@dimen/home_icon"
+            android:layout_gravity="center_vertical"
+            android:padding="4dp"
+            android:background="#00ffffff"
+            android:src="@drawable/back_icon"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="2"
+            android:text="@string/call_block_title"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/mid_black"
+            android:textSize="@dimen/home_title"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/callblockTutorial"
+            android:layout_width="@dimen/home_icon"
+            android:layout_height="@dimen/home_icon"
+            android:padding="@dimen/home_icon_padding"
+            android:src="@drawable/tutorial_icon"
+            android:layout_marginEnd="7dp"
+            />
+    </LinearLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_for_textFun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/LR_margin"
+        android:textAllCaps="false"
+        android:background="@color/transparent"
+        app:tabGravity="center"
+        app:tabMode="scrollable"
+        app:tabIconTint="@color/tab_icon_tint"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="#00000000"
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicatorHeight="@dimen/tabIndicator_height"
+        app:tabInlineLabel="true"
+
+        app:tabPaddingTop="-2dp"
+        app:tabPaddingStart="@dimen/tabpadding_start"
+        app:tabRippleColor="@color/primary"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabTextAppearance="@style/TabLayoutStyle"
+        app:tabTextColor="@color/tab_hint_txt_cl"
+        />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerTextFun"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+<!--    <com.applovin.mediation.ads.MaxAdView-->
+<!--        android:id="@+id/bn_appLovin"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"-->
+<!--        maxads:adUnitId="e123340259ec3359" />-->
+
+</LinearLayout>

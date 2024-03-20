@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Quick Messages Section-->
+    <string-array name="autoQuickMessage">
+        <item> Now I am busy, text you later.</item>
+        <item> I am driving, text you later.</item>
+        <item> I am sleeping, talk to you later.</item>
+        <item> Can\'t talk now.</item>
+        <item> How may I help you?</item>
+        <item> I am driving car. Call you later. </item>
+        <item> Sorry I can\'t take your call now.</item>
+        <item> At the movie, text you later. </item>
+        <item> At work, talk to you later.</item>
+        <item> I am in a meeting, talk to you later.</item>
+        <item> Now I\'m busy talking to you later.</item>
+
+        <item> We will get in touch with you very soon.</item>
+        <item> Thank you for reaching out to us.</item>
+        <item> Please describe your problem in detail with some pictures.</item>
+
+        <item>अभी मैं व्यस्त हूं, आपको बाद में मैसेज करूंगा ।</item>
+        <item>मैं गाड़ी चला रहा हूं, आपको बाद में मैसेज करूंगा ।</item>
+        <item>मैं सो रहा हूँ, बाद में बात करता हूँ ।</item>
+        <item>क्षमा करें, मैं अभी आपका फोन नहीं उठा सकता |</item>
+        <item>अब मैं आपसे बाद में बात करने में व्यस्त हूं |</item>
+
+        <item>আমি এখন ব্যস্ত, পরে কথা বলব ।</item>
+        <item>আমি গাড়ি চালাচ্ছি, পরে ফোন করবো ।</item>
+        <item>মিটিংয়ে আছি, পরে কথা বলবো |</item>
+        <item>দুঃখিত আমি এখন কথা বলতে পারছি না |</item>
+        <item>আমি ইতিমধ্যে ঘুমাচ্ছি পরে কথা বলব |</item>
+
+
+
+    </string-array>
+
+    <string-array name="scheduleAutoReply">
+        <!--Usage-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!--Details-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+    </string-array>
+
+    <string-array name="replyFrequency">
+        <!--Usage-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!--Details-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+    </string-array>
+
+    <string-array name="sendReplyto">
+        <!--Usage-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!--Details-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+    </string-array>
+
+    <string-array name="specificReply">
+        <!--Usage-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!--Details-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+    </string-array>
+
+    <string-array name="customIncomingMsg">
+        <!--Usage-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature for.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!--Details-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+    </string-array>
+
+    <string-array name="messageMatch">
+        <!--Usage-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!--Details-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+    </string-array>
+
+    
+<!--    this is created for short tutorial in auto and using for index-->
+
+    <string-array name="short_tutorial_names">
+
+        0
+        <item>Schedule Auto-Reply</item>
+        1
+        <item>Reply Frequency(BETA)</item>
+        2
+        <item>Send Reply To</item>
+        3
+        <item>My List</item>
+        4
+        <item>Customized Reply</item>
+        5
+        <item>Send from(Prediction)</item>
+        6
+        <item>Customized Incoming message</item>
+        7
+        <item>Message Match Option</item>
+        8 For Call block
+        <item>@string/schedule_call_block</item>
+        9
+        <item>@string/call_block_to</item>
+
+    </string-array>
+
+<!--    here paste the short tutorials-->
+
+
+    <string-array name="short_tutorials">
+        <!--        Schedule Auto-Reply-->
+        <item>You can set the schedule to turn \'Auto reply\' on and off.\n\nIf you want to turn this function off, set the checkbox to unchecked.</item>
+        <!--        Reply Frequency-->
+        <item>Nothing Set : Auto Reply to all messages without control.\n\nReply only once every set days for each person or group.\n\nExample When you set the day at <b>1</b> then a reply will send to each contact or group a day.
+        </item>
+        <!--        Send Reply To-->
+        <item>Everyone : Auto reply will be sent to whoever sends you messages if you set this option.\n\nMy List : When you select \'My List\' (the contacts and groups you\'ve added below) , only for them reply will be sent.\n\nExcept My List : Auto-reply will be sent except to contacts and groups added in \'My list\'.
+        </item>
+        <!--        My List-->
+        <item>Contact List : Select your preferred mobile contacts in this list to exclude or include in this page\'s function.\n\nGroup List : Select the group or enter the group names(Case sensitive) to exclude or include in this page\'s function.
+        </item>
+        <!--        Customized Reply-->
+        <item> These options allow you to Auto-reply to specific person and specific Group when they send a certain type of message set by you. Enable them to start replying specifically.
+        </item>
+        <!--       Send from(Prediction)-->
+        <item>Prediction is sender names who can send you this media. These are not accurate all time.But app will predict names all most correctly  when the media was downloaded immediately as soon as you received chat notification and the multiple persons are not sending media at same time   </item>
+        <!--        customized incoming message-->
+        <item> It allows you to customise the reply condition. Enable this option to see customisation option bellow.</item>
+        <!--        Message match-->
+        <item>Exact Match : When some one send you exactly same message as you set as \'Incoming Messages\' , only then the app will reply.\n\nContain : When some one sends you a message which contain the text you set as \'Incoming Messages\', then reply will be sent.\n As an example - You got a message \' How are you ? \' and you have set \'How\' as \'Incoming Messages\' then app will reply because it contain \'How\'.
+        </item>
+
+            Schedule call block
+        <item> This allows you to block calls for specific time period. Turn this on to start scheduling call block</item>
+
+        <item> This option allows you to choose which calls you want to block.\n\nAll Contacts and Groups : All calls will be blocked regardless of known or unknown.\n\nExcept My phone contact: All calls will be blocked for the person who is not saved in your Phone Book.\n\nMy List : When you select \'My List\' (the contacts and groups you\'ve added below) , only for them call will be blocked.\n\nExcept My List : Call will be blocked except to contacts and groups added in \'My list\'.
+        </item>
+    </string-array>
+
+
+
+
+
+</resources>

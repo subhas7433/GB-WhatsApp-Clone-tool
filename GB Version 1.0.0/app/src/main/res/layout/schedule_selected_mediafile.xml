@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/mainConstrainstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/media_card_padding"
+        android:paddingEnd="@dimen/media_card_padding">
+
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="Selected media"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mediaBack"
+            app:layout_constraintStart_toEndOf="@+id/mediaBack"
+            app:layout_constraintTop_toTopOf="@+id/mediaBack" />
+
+        <TextView
+            android:id="@+id/deleteAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="10dp"
+            android:text="Clear all"
+            android:textColor="@color/mid_black"
+            android:textSize="12sp"
+            android:drawableTint="@color/mid_black"
+            android:drawableTop="@drawable/delete_icon_18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+            app:layout_constraintEnd_toStartOf="@+id/pickContact"
+            app:layout_constraintTop_toTopOf="@+id/textView27"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/pickContact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:background="@drawable/added_round_icon"
+            android:backgroundTint="@color/colorSecondaryVariant"
+            app:layout_constraintBottom_toBottomOf="@+id/deleteAll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/deleteAll" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediaBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/noMediaLA"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/no_chat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Ohh! Nothing to show."
+                    android:textColor="@color/about_cl"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <!--Selected media layout-->
+            <LinearLayout
+                android:id="@+id/selectedMeidaLA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/sch_selected_ImageLA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/deleteimageAll"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#0D000000"
+                        android:padding="6dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/delete_icon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:minWidth="100dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="25dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/imageRV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="horizontal"
+                                android:visibility="visible"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:listitem="@layout/media_image_recycleview" />
+                        </LinearLayout>
+                        <!--Image Recycle View-->
+
+
+
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sch_selected_Video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/deleteVideoAll"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#0D000000"
+                        android:padding="6dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/delete_icon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:minWidth="100dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="25dp"
+                        android:paddingBottom="10dp">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycleVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="horizontal"
+                            tools:ignore="MissingConstraints"
+                            tools:listitem="@layout/media_video_recycleview" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sch_selected_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/deleteAudioAll"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#0D000000"
+                        android:padding="6dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/delete_icon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:minWidth="100dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="25dp"
+                        android:paddingBottom="10dp">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/audioRecycle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:scrollbars="horizontal"
+                            tools:ignore="MissingConstraints"
+                            tools:listitem="@layout/media_audio_recycleview" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sch_selected_document"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/deleteDocAll"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#0D000000"
+                        android:padding="6dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/delete_icon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:minWidth="100dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="25dp"
+                        android:paddingBottom="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/docRecycle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:scrollbars="horizontal"
+                            tools:ignore="MissingConstraints"
+                            tools:listitem="@layout/media_document_recycleview" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sch_selected_voicenote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/custom_btn"
+                        android:backgroundTint="#0D000000"
+                        android:padding="6dp"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/delete_icon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/custom_sent_box"
+                        android:minWidth="100dp"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="25dp"
+                        android:paddingBottom="10dp">
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+                            <!--Image Recycle View-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingStart="5dp">
+
+                                <include layout="@layout/media_voicenote_recycleview" />
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    tools:ignore="MissingConstraints"
+                                    tools:listitem="@layout/media_voicenote_recycleview" />
+                            </LinearLayout>
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/seeMoreImage"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/see_more_btn_height"
+        android:layout_gravity="end"
+        android:layout_marginTop="7dp"
+        android:background="@color/transparent"
+        android:paddingEnd="5dp"
+        android:paddingBottom="0dp"
+        android:text="See more images"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</LinearLayout>

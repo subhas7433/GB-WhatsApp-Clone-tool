@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_bg"
+    android:backgroundTintMode="multiply"
+    android:backgroundTint="@color/chat_backround"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activityOur.induvidualChat">
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp">
+
+            <ImageButton
+                android:layout_width="@dimen/back_icon_topnav"
+                android:layout_height="@dimen/back_icon_topnav"
+                android:layout_gravity="center_vertical"
+
+                android:background="#00ffffff"
+                android:clipToOutline="true"
+                android:onClick="goback"
+                android:src="@drawable/back_icon"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="#D8D8D8"
+                android:paddingTop="9dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_baseline_person_24"
+                android:transitionName="imageTransition"
+                app:layout_constraintBottom_toBottomOf="@+id/underline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chatName"
+                app:layout_constraintVertical_bias="0.266"
+                app:tint="@color/accent" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_weight="2"
+                android:maxLength="25"
+                android:text="Username"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:background="#00ffffff"
+                android:onClick="deleteChat"
+                android:padding="5dp"
+                android:src="@drawable/delete_icon"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/workProperly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="5dp"
+            android:text="@string/compare_deleted_msg"
+            android:textColor="@color/blue"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/messageRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/message_recycle_design" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sendRecycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/message_sent_recycle_design" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="5dp"
+        android:paddingBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/input_icon"
+            android:layout_height="@dimen/input_icon"
+            android:layout_marginHorizontal="5dp"
+            android:src="@drawable/send_lg"
+            app:tint="@color/mid_black" />
+        <TextView
+            android:id="@+id/whatsappOpen"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_send_bt"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:elevation="3dp"
+            android:text="WhatsApp "
+            android:layout_marginEnd="3dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/whatsappB"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_send_bt"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            android:elevation="3dp"
+            android:text="WhatsApp Business"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

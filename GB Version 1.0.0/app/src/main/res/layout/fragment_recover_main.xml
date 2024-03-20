@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragmentsOur.recoverSms">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/recoverRefresh"/>
+    <!--First Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:orientation="vertical">
+        <!--TOP Navbar-->
+        <LinearLayout
+            android:id="@+id/recoverTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/VA_off"
+            android:elevation="@dimen/header_evulation"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_nav_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/LR_margin"
+                android:background="@color/transparent">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/recoverChatSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="@string/recover_chat_title"
+                    android:visibility="visible"
+                    android:textColor="@color/switch_tint"
+                    android:textSize="@dimen/home_title"
+                    android:fontFamily="@font/opensans_bold"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:showText="false"
+                    android:layout_marginEnd="@dimen/top_nav_icon_margin"
+                    app:track="@drawable/switch_track"
+                    tools:layout_editor_absoluteY="43dp" />
+                <ImageView
+                    android:id="@+id/tutorial"
+                    android:onClick="openFaq"
+                    android:layout_width="@dimen/home_icon"
+                    android:layout_height="@dimen/home_icon"
+                    android:padding="@dimen/home_icon_padding"
+                    android:src="@drawable/tutorial_icon"
+                    android:layout_marginEnd="7dp" />
+            </LinearLayout>
+            <!--Tab Layout-->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_recoverMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/LR_margin"
+                android:textAllCaps="false"
+                android:background="@color/transparent"
+                app:tabGravity="center"
+                app:tabIconTint="@color/tab_icon_tint"
+                app:tabIndicator="@drawable/tab_indicator"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabIndicatorColor="#00000000"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorHeight="@dimen/tabIndicator_height"
+                app:tabInlineLabel="true"
+                app:tabMaxWidth="@dimen/tabmaxwidth"
+                app:tabMinWidth="@dimen/tabminwidth"
+                app:tabPaddingTop="-2dp"
+                app:tabPaddingStart="@dimen/tabpadding_start"
+                app:tabRippleColor="@color/primary"
+                app:tabSelectedTextColor="@color/primary"
+                app:tabTextAppearance="@style/TabLayoutStyle"
+                app:tabTextColor="@color/tab_hint_txt_cl" />
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_recover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1AFFFFFF"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <!--permission View-->
+                <LinearLayout
+                    android:id="@+id/permissionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingBottom="40dp"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:id="@+id/permTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WhatsApp Data Recover"
+                        android:textColor="@color/colorPrimaryVariant"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/spl_recover"/>
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:visibility="gone"
+                        app:sliderAnimationDuration="600"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="true"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="#5A5A5A"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="2"
+                        app:sliderStartAutoCycle="true" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Please follow the instruction"
+                            android:textColor="@color/primary"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="At first Select 'GBwhats' app."
+                            android:textColor="@color/recover_msg"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView26"
+                            tools:ignore="HardcodedText" />
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:src="@drawable/about_back"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="5dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="After that Turn it On and press 'Allow' button "
+                            android:textColor="@color/recover_msg"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:background="#FFFFFF"
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView25"
+                            app:layout_constraintWidth_percent="0.90">
+
+                            <TextView
+                                android:id="@+id/imageView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="15sp"
+                                android:fontFamily="sans-serif"
+                                android:text="Allow notification access"
+                                android:textColor="@color/black"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.241"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.8"
+                                tools:layout_editor_absoluteY="200dp" />
+                        </LinearLayout>
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Couldn't understand ? - See video"
+                        android:textColor="#31B56C"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/grantPermission"
+                        android:layout_width="220dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="@color/primary"
+                        android:background="@drawable/custom_send_bt"
+                        android:gravity="center"
+                        android:text="Grant Permission"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+                <!--Recycle View-->
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recoverMedia">
+                    <TextView
+                        android:id="@+id/workProperly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:gravity="center"
+                        android:text="Please use WhatsApp in English to recover messages"
+                        android:textColor="@color/primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/recoverMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="@dimen/LR_margin"
+                        android:layout_marginEnd="@dimen/LR_margin"
+                        android:backgroundTint="#FFD6D6"
+                        app:cardBackgroundColor="@color/dir_chat"
+                        app:cardCornerRadius="@dimen/input_box_radious"
+                        app:cardElevation="1dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/workProperly">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/doc_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/custom_btn"
+                                android:backgroundTint="#A8FFFFFF"
+                                android:padding="10dp"
+                                android:rotation="-40"
+                                android:src="@drawable/doument_icon"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/chatName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Recover All Media"
+                                android:textColor="@color/recover_msg"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:transitionName="nameTransition"
+                                app:layout_constraintStart_toEndOf="@+id/doc_icon"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/chatMessage"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Images, Videos, Audio and Documents"
+                                android:textColor="#2E2E2E"
+                                android:textSize="10sp"
+                                app:layout_constraintStart_toStartOf="@+id/chatName"
+                                app:layout_constraintTop_toBottomOf="@+id/chatName" />
+
+                            <TextView
+                                android:id="@+id/noDelete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:singleLine="true"
+                                android:text="9"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="12dp"
+                                android:paddingTop="4dp"
+                                android:paddingBottom="4dp"
+                                android:background="@drawable/custom_btn"
+                                android:backgroundTint="@color/recover_msg"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:transitionName="nameTransition"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/chatNameRecycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:visibility="visible"
+                        tools:ignore="MissingConstraints"
+                        tools:listitem="@layout/chat_names" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

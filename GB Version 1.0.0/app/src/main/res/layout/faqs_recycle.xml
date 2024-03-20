@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/faqRecycleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/about_back"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="How do you contact us?"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Go to Setting page and click on Chat with us."
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

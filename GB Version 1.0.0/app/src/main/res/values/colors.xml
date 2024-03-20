@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Primary brand color. -->
+    <color name="primary">#15C2D1</color>
+    <color name="colorPrimaryVariant">#11A8B5</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>
+
+    <color name="primaryLight">#C1F3E5</color>
+
+    <!-- Secondary brand color. -->
+    <color name="colorSecondary">#14E1F3</color>
+    <color name="colorSecondaryVariant">#14E1F3</color>
+    <color name="colorOnSecondary">#FF000000</color>
+    <color name="colorOnSurface">#CACACA</color>
+
+    <color name="snackbarBg">@color/primary</color>
+    <color name="layout_bg">#F3F3F3</color>
+
+    <color name="primary_background">#F8F8F8</color>
+    <color name="botton_nav_background">#FFFFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="accent">#F6FFFB</color>
+
+    <color name="primary_back">#F6FFFB</color>
+    <color name="primary_recycle_card_bg">#F6FFFB</color>
+    <color name="primary_text">@color/colorPrimaryVariant</color>
+    <color name="primary_icon">@color/primary</color>
+    <color name="primary_textbox">#FFFFFF</color>
+    <color name="primary_gradient_light">#F1FCF7</color>
+    <color name="primary_back_light">#F1FFF9</color>
+    <color name="secondarydarkgrey">#919191</color>
+
+    <color name="cardWhite">#FFFFFFFF</color>
+
+    <color name="hint">#BCBCBC</color>
+    <color name="darkgrey">#606060</color>
+    <color name="gray_500">#D5D5D5</color>
+    <color name="gray_900">#1d1d1d</color>
+    <color name="gray_800">#3e3e3e</color>
+    <color name="darkgrey_bold">#3F3F3F</color>
+    <color name="darkgrey_light">#ACACAC</color>
+    <color name="border_box">#A6A6A6</color>
+
+    <color name="auto_off_back_switch">#ffffff</color>
+    <color name="auto_on_back_switch">#FFFFFF</color>
+    <!--section color-->
+    <color name="auto_reply">@color/primary</color>
+    <color name="auto_reply_bg">@color/primaryLight</color>
+    <color name="private_chat">@color/primary</color>
+    <color name="private_chat_bg">@color/primaryLight</color>
+    <color name="status">@color/primary</color>
+    <color name="status_bg">@color/primaryLight</color>
+    <color name="quick_msg">@color/primary</color>
+    <color name="quick_msg_bg">@color/primaryLight</color>
+    <color name="sche_sms">@color/primary</color>
+    <color name="sche_sms_light">@color/primaryLight</color>
+    <color name="recover_all">@color/primary</color>
+    <color name="recover_all_bg">@color/primaryLight</color>
+
+    <color name="recover_msg">@color/primary</color>
+    <color name="recover_msg_bg">@color/primaryLight</color>
+    <color name="ascii_cl">@color/primary</color>
+    <color name="ascii_cl_bg">@color/primaryLight</color>
+    <color name="call_block">@color/primary</color>
+    <color name="call_block_bg">@color/primaryLight</color>
+    <color name="caption_cl">@color/primary</color>
+    <color name="caption_cl_bg">@color/primaryLight</color>
+    <color name="caption_card_back">@color/primary_back</color>
+    <color name="dc_text">@color/primary</color>
+    <color name="dc_text_bg">@color/primaryLight</color>
+    <color name="txt_repeat_cl">@color/primary</color>
+    <color name="txt_repeat_cl_bg">@color/primaryLight</color>
+    <color name="whats_web_cl">@color/primary</color>
+    <color name="whats_web_cl_bg">@color/primaryLight</color>
+    <color name="dir_chat">#FAFFFC</color>
+
+    <color name="status_light">#FFED90</color>
+    <color name="switch_active">@color/primary</color>
+
+    <color name="blue_gray_800">#37474f</color>
+    <color name="premium">#FFD000</color>
+
+    <color name="blue_500">#9AD9FF</color>
+    <color name="blue_700">#0071ca</color>
+    <color name="blue_800">#0061b8</color>
+    <color name="blue_900">#004399</color>
+    <color name="blue_gray_900">#263238</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+
+    <color name="red">#B81D19</color>
+    <color name="blue">#FF0386F8</color>
+
+    <color name="trans_back">#B3FFFFFF</color>
+    <color name="about_cl">#787878</color>
+    <color name="recycle_icon_cl">@color/primary</color>
+
+    <!--background color-->
+    <color name="fragment_back_cl">#FFFFFF</color>
+    <color name="chat_backround">#F1ECE6</color>
+    <color name="added_layout_bg">#FFFFFF</color>
+    <color name="test_card_backround">#FFDBE3</color>
+    <color name="recycle_card_backround">#ECFFF7</color>
+    <color name="layout_chat_backround">#FFFFFF</color>
+    <color name="title_color">@color/primary</color>
+
+    <color name="media_text_hint">#505050</color>
+    <color name="media_icon_hint_back">#CCCCCC</color>
+    <color name="media_image_card_bg">#80FFD9FA</color>
+    <color name="media_video_card_bg">#B3E6FFD9</color>
+    <color name="media_audio_card_bg">#80C3F8FF</color>
+    <color name="media_voiceover_card_bg">#80FFF6BF</color>
+    <color name="media_document_card_bg">#80FFD8BA</color>
+    <color name="media_sticker_card_bg">#80FFBBD6</color>
+    <color name="double_tick_cl">#1E88E5</color>
+
+    <color name="switch_off_cl">#AAAAAA</color>
+    <color name="switch_on_cl">@color/primary</color>
+    <color name="VA_on">#EBFDF5</color>
+    <color name="VA_off">#FAFAFA</color>
+
+    <color name="tab_hint_txt_cl">#80323232</color>
+    <color name="mid_black">#353535</color>
+    <color name="dc_icon_icon_tint">@color/primary</color>
+    <color name="permission_background">#F5F5F5</color>
+    <color name="full_screen_header_bg">#7C7C7C</color>
+    <color name="auto_reply_icon_cl">#4A4A4A</color>
+    <color name="inactive_cl">#959595</color>
+
+
+</resources>

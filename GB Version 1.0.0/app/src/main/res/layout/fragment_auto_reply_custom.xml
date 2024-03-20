@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/customAutoScrollView"
+    tools:context=".fragment.auto_reply_custom">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="9dp"
+        android:orientation="vertical"
+        android:paddingBottom="150dp"
+        android:visibility="visible">
+        <!-- Custom auto reply text card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/testAutoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="0dp"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="2dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/auto_reply_lg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Test Auto Reply"
+                    android:textColor="@color/auto_reply"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/next_arrow"
+                    app:tint="@color/auto_reply" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Reply to"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/mid_black"
+                android:textSize="15sp"/>
+            <ImageButton
+                android:id="@+id/whatSendTo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:backgroundTint="@color/hint"
+                android:background="@drawable/help_ic"/>
+        </LinearLayout>
+        <!--Send Reply to-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/contectOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/Elevation_input_box"
+
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="7dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/reply_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#4A4A4A" />
+
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView20"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+
+                    <RadioButton
+                        android:id="@+id/everyOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/checkbox_tint"
+                        android:text="Everyone"
+                        android:textColor="@color/checkbox_tint"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/contactList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/checkbox_tint"
+                        android:text="My List"
+                        android:textColor="@color/checkbox_tint"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/exceptContectList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/checkbox_tint"
+                        android:text="Except My List"
+                        android:textColor="@color/checkbox_tint"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/exceptPhoneContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/primary"
+                        android:text="Except Phone Contact"
+
+                        android:visibility="gone"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Group reply switch card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+
+                <ImageView
+                    android:id="@+id/imageView24"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/group_icon_focused"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/groupReplySwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Enable for Group Chat"
+                    android:textColor="@color/hint"
+                    android:textSize="15sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView24"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:showText="false"
+                    app:track="@drawable/switch_track" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <FrameLayout
+            android:id="@+id/ad_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </FrameLayout>
+
+        <!--My List-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My List"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textColor="@color/mid_black"
+                android:textSize="15sp"/>
+            <ImageButton
+                android:id="@+id/mylistWhat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:backgroundTint="@color/hint"
+                android:background="@drawable/help_ic"/>
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+
+
+                app:cardCornerRadius="@dimen/input_box_radious"
+                app:cardElevation="@dimen/Elevation_input_box"
+
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/listCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp">
+                    <ImageButton
+                        android:id="@+id/imageView21"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/about_back"
+                        android:backgroundTint="#80FFFFFF"
+                        android:padding="3.5dp"
+                        android:src="@drawable/contact_icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="#CB1B1B1B" />
+
+                    <Button
+                        android:id="@+id/deleteAllMediaSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/transparent"
+                        android:paddingLeft="2dp"
+                        android:text="View Contact list"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView21"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView21"
+                        app:layout_constraintTop_toTopOf="@+id/imageView21" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <ImageView
+                android:id="@+id/pickContact"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/add_icon"
+                android:background="@drawable/custom_inputbox"
+                android:backgroundTint="@color/colorSecondaryVariant"
+                app:tint="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical">
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:background="@drawable/switch_back"
+                app:cardCornerRadius="@dimen/input_box_radious"
+                app:cardElevation="@dimen/Elevation_input_box"
+                tools:layout_editor_absoluteX="134dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/listCardGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp">
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/about_back"
+                        android:backgroundTint="#80FFFFFF"
+                        android:padding="6dp"
+                        android:src="@drawable/group_icon_focused"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="#CB1B1B1B" />
+
+                    <Button
+                        android:id="@+id/viewGroupList"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/transparent"
+                        android:paddingLeft="2dp"
+                        android:text="View Group list"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="true"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView23"
+                        app:layout_constraintTop_toTopOf="@+id/imageView23" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <ImageView
+                android:id="@+id/pickGroup"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/add_icon"
+                android:background="@drawable/custom_inputbox"
+                android:backgroundTint="@color/colorSecondaryVariant"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Customized Reply"
+                android:textColor="@color/mid_black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" (Most useful)"
+                android:layout_weight="1"
+                android:textColor="@color/auto_reply"
+                android:textSize="10sp"/>
+            <ImageButton
+                android:id="@+id/specificReplyWhat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:backgroundTint="@color/hint"
+                android:background="@drawable/help_ic"/>
+        </LinearLayout>
+
+        <!--Specific Contact list-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/VA_off"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/Elevation_input_box">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/spicificLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/specificContactReply"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/specific_contact_title"
+                        android:textSize="12sp"/>
+
+                    <Button
+                        android:id="@+id/viewSpecificContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:text="View list"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/mid_black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/specificContactReply"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <ImageButton
+                        android:id="@+id/addSpecificGroupAutoBt"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/colorSecondaryVariant" />
+
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/specificContactReply"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text=""
+                    android:textColor="@color/switch_off_cl"
+                    android:textSize="15sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:showText="false"
+                    app:track="@drawable/switch_track" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--Specific Group list-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/specificGroupCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/VA_off"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:cardElevation="@dimen/Elevation_input_box">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/spicificGroupLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/specificGroupReply"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/individual_group_title"
+                        android:textSize="12sp"/>
+
+                    <Button
+                        android:id="@+id/viewGroupContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:text="View list"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/mid_black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/specificContactReply"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <ImageButton
+                        android:id="@+id/addSpecificAutoBt"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/colorSecondaryVariant" />
+
+                </LinearLayout>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/specificGroupReply"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text=""
+                    android:textColor="@color/switch_off_cl"
+                    android:textSize="15sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:showText="false"
+                    app:track="@drawable/switch_track" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <FrameLayout
+            android:id="@+id/ad_frame2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </FrameLayout>
+
+        <!--This space helps to scrolls down when coming from shortcut-->
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="list">
+<!--        0-->
+        <item>Auto Reply</item>
+<!--        1-->
+        <item>Ascii Faces</item>
+<!--        2-->
+        <item>SMS Template</item>
+<!--        3-->
+        <item>Direct Chat</item>
+<!--        4-->
+        <item>Design Text</item>
+<!--        5-->
+        <item>Quick Reply</item>
+<!--        6-->
+        <item>Recover Chat</item>
+<!--        7-->
+        <item>Status Download</item>
+<!--        8-->
+        <item>Schedule</item>
+<!--        9-->
+        <item>Text Repeater</item>
+<!--        10-->
+        <item>No Blue Tick</item>
+<!--        11-->
+        <item>Web</item>
+        <!--        12-->
+        <item>@string/call_block_title</item>
+    </string-array>
+
+    <string-array name="videoIds">
+        0 Auto Reply <item>JtyyTpgllEg</item>
+        1 Ascii Faces <item>ajN5IgFuW7w</item>
+        2 SMS Template <item>YoxtQgHqTio</item>
+        3 Direct Chat <item>J6WskxFWtiI</item>
+        4 Design Text <item>yaOkLsQy9Ns</item>
+        5 Quick Reply <item>_xV2FMoVbmw</item>
+        6 Recover Chat <item>c3yf8wzzu9E</item>
+        7 Status Download <item>JCBivkUfXy0</item>
+        8 Schedule <item>wk8h_T3YSAI</item>
+        9 Text Repeater <item>IsCWTfTN3jY</item>
+        10 No Blue Tick <item>UiIQfNK-kJc</item>
+        11 WhatsApp Web<item>L_3FxE89D8o</item>
+        11 call block<item>BhmF58kE4pM</item>
+    </string-array>
+    <string-array name="urlList">
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+        <item>https://youtu.be/yE_CKgG9gcQ</item>
+    </string-array>
+
+    <string-array name="details">
+        <!--Auto Reply-->
+        <item>
+            1. At first you need to turn on this feature by taping "Auto Reply Off" button.\n
+            2. Give the permission that app ask for.\n
+            3. You can set customized text for auto reply.\n
+            4. Then turn on or turn off this feature.\n
+            5. Customize the time. How many time to send the reply for each person or group in a day.\n
+            6. Also activate this feature for group chat by taping on "Auto Reply for Group chat".
+        </item>
+        <!-- Ascii face-->
+        <item>
+            1. Tap on "Ascii face" button on home section or select "Text Fun" from bottom navbar.\n
+            2. Select "Ascii face" icon from top navbar.\n
+            3. Here you can Direct go to "Schedule Messages" section by taping "clock" icon.\n
+            4. You can copy,share the text with anyone.
+        </item>
+        <!--caption-->
+        <item>
+            1. Click "Caption" button on Home section.\n
+            2. Select Category All,Greeting,Sales,Promotion,Love,Romantic,WishBox,Shayari,Motivation and much more.\n
+            3. New screen open.You can select category by clicking "Category" option.\n
+            4. Here you can Direct go to "Schedule Messages" section by taping "clock" icon.\n
+            5. You can copy,share the text with anyone.
+        </item>
+        <!--Direct chat -->
+        <item>
+            1. There are two option.\n
+            2. First one is in Home screen\n
+                * Paste or Type WA number and send it to "WA" or "WA Business" by clicking "WA" or "WA Business" icon.\n
+                * Also send blank messages.\n
+            3. Second one is "Chat" from bottom navbar\n
+                * At first Type or paste number.\n
+                * Select one of the "Quick messages" or type any text if you want.\n
+                * Also go to  Caption,Text Repeater,Ascii face,Decoration text section by clicking individual icon.\n
+                * Customize the time.\n
+                * Select one of that "WA" or "WA Business".(Default: WA)\n
+                * After click on "Send" button.
+        </item>
+        <!--Decoration Text-->
+        <item>
+            1. Tap on "Decoration Text" button on home section or select "Text Fun" from bottom navbar.\n
+            2. Select "Decoration Text" icon from top navbar.\n
+            3. Type any text to design. Scroll and Select one of that which you like most.\n
+            4. Here you can Direct go to "Schedule Messages" section by taping "clock" icon.\n
+            5. You can copy,share the text with anyone.\n
+            6. Also direct send to "WA" or "WA Business" by just click the icon.
+        </item>
+        <!--Quick Messages-->
+        <item>
+            1. Tap on "Quick Messages" button on home section or select "Text Fun" from bottom navbar.\n
+            2. Select "Quick Messages" icon from top navbar.\n
+            3. Here you find three option.\n
+                * Category :\n
+                - Here you find random most usages text messages.\n
+                * Saved :\n
+                - Here you can save customized messages which you used most.Click the "Plus" icon to add new quick messages.\n
+                * Language :\n
+                - You can Set language English,Hindi,Bengali or Mixed.\n
+            4. Scroll and Select one of that which you like most.\n
+            5. Here you can Direct go to "Schedule Messages" section by taping "clock" icon.\n
+            6. You can copy,share the text with anyone.\n
+            7. Also direct send to "WA" or "WA Business" by just click the icon.
+        </item>
+        <!--Recover Messages-->
+        <item>
+            1. Tap on "Recover Sms" button on home section or select "Restore" from bottom navbar.\n
+            2. Give the permission that app ask for.\n
+            3. When someone delete messages from "WA" or "WA Business" app will notify you or you can find out this deleted messages here.\n
+            4. Yon can delete this conversation permanently.\n
+            5. But this app does not Recover photos and videos for now.
+        </item>
+        <!--Status Download-->
+        <item>
+            1. Tap on "Status Download" button on home section or select "Status" from bottom navbar.\n
+            2. Give the permission that app ask for.\n
+            3. Select one of that "All","Images","Video" or "Downloaded" option from the top navbar.\n
+            4. Choose "WA" or "WA Business"  Status to show.\n
+            5. Here you find "Share","Download","WA","WA Business" icon to the bottom of images or videos.\n
+            6. Click on those icon to share,download or send to WA or WA business account.\n
+            7. Find the Downloaded file from "Downloaded" section from top navbar.
+        </item>
+        <!--Schedule Messages-->
+        <item>
+            1. Tap on "Try it" button on Schedule card in home section top.\n
+            2. Here you can check the history of all Schedule messages.\n
+            3. If you want to edit just click on the conversation and save it again.\n
+            4. Add new schedule messages just tap on "Plus" button on bottom right.\n
+            5. Fill the all details and Save it.\n
+            6. If you want to reset or delete the form just click on "Delete" button.
+        </item>
+        <!--Text Repeater-->
+        <item>
+            1. Tap on "Text Repeater" button on home section or select "Text Fun" from bottom navbar.\n
+            2. Select "Text Repeater" icon from top navbar.\n
+            3. Type any text to Repeat. After that how many time to repeat the text by entering the number in "Repeat number" textbox.\n
+            4. Then click on "Convert" button.\n
+            5. If you want to reset Click on "Cross" icon.\n
+            4. Below you can Direct go to "Schedule Messages" section by taping "clock" icon.\n
+            5. You can copy,share the text with anyone.\n
+            6. Also direct send to "WA" or "WA Business" by just click the icon.
+        </item>
+
+    </string-array>
+
+    <string-array name="usage">
+<!--        Auto Reply-->
+        <item>
+            1. Auto Reply use for easily customized reply text to your friend or customer in few seconds.\n
+            2. Through it you are able to automatically send messages.\n
+            3. It also available for Group chat.
+        </item>
+        <!--Ascii face-->
+        <item>
+            Ascii face option use for design face reaction for fun and showing our expressing by some symbol.
+        </item>
+        <!--caption-->
+        <item>
+            SMS Template option use for All type of most usage messages.Easily sent to your friend by your choice.\n
+            Like Greeting,Sales,Promotion,Love,Romantic,WishBox,Shayari,Motivation,Festival,Inspiration,Sad.\n
+            Also you can use it.
+        </item>
+        <!--Direct chat -->
+        <item>
+            Direct Chat option use for Sending messages without saving his/her number.\n
+            Available.
+        </item>
+        <!--Decoration Text-->
+        <item>
+            Decoration text use for Design your name and text which you like to try different type of font and design.
+        </item>
+        <!--Quick Messages-->
+        <item>
+            Quick messages will help you send most useful messages or repeatedly send messages to a person or customer.\n
+            Available in three language.\n
+            You can add also.
+        </item>
+        <!--Recover Messages-->
+        <item>
+            Recover messages option use for Recover your "Messsages".
+        </item>
+        <!--Status Download-->
+        <item>
+            Now you can download Image and Video status using status download option and Share to your friend.
+        </item>
+        <!--Text Repeater-->
+        <item>
+            It can help repeat the text how many time you want.And share to your friend or customer.
+        </item>
+        <!--Schedule Messages-->
+        <item>
+            Schedule the messages by setup text and wishes to your friend or customer.\n
+            Automatically app will send messages on time which you saved.
+        </item>
+
+    </string-array>
+
+
+
+
+
+</resources>

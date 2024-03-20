@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".activity.customreplyeditor.CustomReplyEditorActivity">
+        <!--TOP Navbar-->
+        <TextView
+            android:id="@+id/aptitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_nav_height"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="Auto-Reply Text"
+            android:textAlignment="gravity"
+            android:textColor="@color/title_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--auto reply text card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/testAutoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:backgroundTint="#EDFFF7"
+            app:cardElevation="0.5dp"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aptitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/auto_reply_lg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Test Auto Reply"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="It will help you how it works."
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/next_arrow"
+                    app:tint="@color/primary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Auto reply text area -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/autoReplyTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:elevation="5dp"
+            android:hint="Type Auto-Reply text"
+            android:textColorHint="@color/hint"
+            app:boxBackgroundColor="@color/transparent"
+            app:boxCornerRadiusBottomEnd="@dimen/input_box_radious"
+            app:boxCornerRadiusBottomStart="@dimen/input_box_radious"
+            app:boxCornerRadiusTopEnd="@dimen/input_box_radious"
+            app:boxCornerRadiusTopStart="@dimen/input_box_radious"
+            app:boxStrokeColor="@color/primary"
+            app:boxStrokeWidth="0.1dp"
+            app:boxStrokeWidthFocused="1dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="200"
+            app:endIconMode="clear_text"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/testAutoBtn">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/autoReplyTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:minLines="3"
+                android:gravity="start"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/primary"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <!-- Save Button -->
+
+        <!-- Wato message r/watomatic link -->
+
+
+        <Button
+            android:id="@+id/saveCustomReplyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/save"
+            app:cornerRadius="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/autoReplyTextInputLayout" />
+
+        <Button
+            android:id="@+id/tip_wato_message"
+            android:layout_width="301dp"
+            android:layout_height="94dp"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/tip_view_messages_from_fellow_users"
+            android:textAllCaps="false"
+            android:textColor="?attr/colorControlNormal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveCustomReplyBtn" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveCustomReplyBtn">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose quick messages"
+                android:textColor="@color/mid_black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewQuick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="2dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/quick_ms_cat_list" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

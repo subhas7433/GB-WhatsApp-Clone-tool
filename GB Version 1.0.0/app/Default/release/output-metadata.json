@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.affixstudio.gbversion",
+  "variantName": "DefaultRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 26,
+      "versionName": "1.26.0",
+      "outputFile": "app-Default-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

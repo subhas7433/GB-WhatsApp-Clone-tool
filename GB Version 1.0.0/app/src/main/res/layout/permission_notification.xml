@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/dialog_min_width"
+    android:background="@color/permission_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:paddingTop="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Permission"
+            android:layout_weight="1"
+            android:textColor="@color/mid_black"
+            android:textSize="18sp"
+            android:fontFamily="@font/opensans_extrabold"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            app:tint="@color/mid_black"
+            android:src="@drawable/close_icon"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:elevation="20dp"
+        android:src="@drawable/srn_notification1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/ascii_cl"
+        android:text="Select \'GB Watapp 2023\' app." />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:src="@drawable/srn_notification2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/ascii_cl"
+        android:text="Turn it on and go back to the app." />
+    <TextView
+        android:id="@+id/granNotiPer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/custom_send_bt"
+        android:backgroundTint="@color/recover_all"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:text="Grant Permission"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

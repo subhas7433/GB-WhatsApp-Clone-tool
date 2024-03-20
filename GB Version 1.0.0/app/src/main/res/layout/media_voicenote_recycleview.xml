@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="3dp">
+
+    <LinearLayout
+        android:id="@+id/mediaVoiceRecycleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/media_marginEnd"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="@dimen/media_audio_width"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/media_marginEnd"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="#E6FFFFFF"
+                android:padding="6dp"
+                android:src="@drawable/voice_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/Decoration_Text"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/musicbtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/voiceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="25"
+                android:text="WhatsAppAu12\nAudio.mp39"
+                android:textAlignment="center"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                app:layout_constraintStart_toEndOf="@+id/imageView16"
+                app:layout_constraintTop_toTopOf="@+id/imageView16" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/deleteAudio"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:alpha="0.75"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/custom_btn"
+        android:backgroundTint="#020202"
+        android:padding="4dp"
+        android:src="@drawable/close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Whatsapptool" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/layout_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/opensans_regular</item>
+
+        <!--Animation for new page-->
+            <!--Enabaling transition-->
+        <item name="android:windowActivityTransitions">true</item>
+            <!--Setting up-->
+        <item name="android:windowEnterTransition">@transition/trans_anim</item>
+        <item name="android:windowExitTransition">@transition/trans_anim_exit</item>
+        <item name="android:windowExitAnimation">@transition/trans_anim_exit</item>
+        <item name="android:windowAllowReturnTransitionOverlap">@transition/trans_anim_exit</item>
+
+
+
+
+
+        <!--        AppBottomSheetDialogTheme-->
+
+    </style>
+
+
+    <style name="Theme.Whatsapptool.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="LaunchTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
+    </style>
+    <style name="Theme.Whatsapptool.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Whatsapptool.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+
+    <!--    BottomSheetDialogTheme-->
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModelStyle</item>
+    </style>
+    <!--    BottomSheetDialogStyle-->
+    <style name="AppModelStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="background"> @drawable/corner_round_dialog</item>
+        <item name="backgroundTint">@color/transparent</item>
+    </style>
+    <style name="custom_style_dialog">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:height">400dp</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

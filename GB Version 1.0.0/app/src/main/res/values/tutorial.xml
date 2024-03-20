@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+   <!-- auto -->
+    <string-array name="usefull1">
+
+        <item>Custom Text</item>
+        <item>Custom Reply to Contact</item>
+        <item>History</item>
+        <item>Specific List Reply</item>
+        <item>Schedule Auto Reply</item>
+        <item>Reply Frequency</item>
+
+    </string-array>
+
+    <string-array name="Details1">
+        <item>Manually Auto Reply ON/OFF</item>
+        <item><b>In Setting -) </b>Schedule the time.</item>
+        <item>Custom text reply.</item>
+        <item>Group Reply ON/OFF</item>
+        <item>Respond only once every custom days for each contact or group.</item>
+
+        <item><b>In Custom -) </b>Reply to Everyone or Custom List.Also Create List for group for contact or group.</item>
+        <item>Specific Custom Reply for Individual contact or Group.</item>
+        <item>See the example click on text button from History tab.</item>
+
+        <item><b>In History -) </b>Test Auto Reply.See recently sent message with incoming messages.</item>
+    </string-array>
+
+            <!--    ascii-->
+    <string-array name="usefull2">
+        <item>Awesome face made by Symbol.</item>
+        <item>Emotion Attached</item>
+    </string-array>
+
+    <string-array name="Details2">
+        <item>See Awesome face with some emotion.</item>
+        <item>It all made by different font or symbol.</item>
+        <item>Directly forward to Schedule section.</item>
+        <item>Also Copy, Share that.</item>
+    </string-array>
+
+
+<!--    caption-->
+    <string-array name="usefull3">
+        <item>Category : Greeting, Sales, Promotion, Love, Romantic, WishBox, Shayari, Motivation, Festival, Inspiration, Sad.</item>
+        <item>Choose on of that and Share.</item>
+        <item>Also Copy and Share which you like.</item>
+    </string-array>
+
+    <string-array name="Details3">
+        <item>Direct Set to Schedule Or Status.</item>
+        <item>Lots useful type of message.</item>
+    </string-array>
+
+<!--direct-->
+    <string-array name="usefull4">
+        <item>Sending messages without saving his/her number.</item>
+
+    </string-array>
+
+    <string-array name="Details4">
+        <item>Enter WA number or pick from the contact list.</item>
+        <item>Choose quick message and type any text if you want.</item>
+        <item>From here you can go to Caption, Ascii, Quick Replies, Text Repeater, Design text.</item>
+        <item>You can set this chat to Schedule messages.</item>
+
+        <item>See recent activity of direct chat.</item>
+    </string-array>
+
+<!--decoration-->
+    <string-array name="usefull5">
+        <item>Design Name or Caption.</item>
+        <item>Font Change</item>
+    </string-array>
+
+    <string-array name="Details5">
+        <item>Type which name or text you want to design.</item>
+        <item>Scroll down and choose one of that.</item>
+        <item>You can forward it Schedule chat section.</item>
+
+    </string-array>
+
+<!--    quickMessage-->
+    <string-array name="usefull6">
+        <item>Most useful messages</item>
+        <item>Repeatedly send messages</item>
+        <item>Available in three language.</item>
+        <item>You can also add your own.</item>
+    </string-array>
+
+    <string-array name="Details6">
+        <item>In Category -) Random most useful message list</item>
+        <item>Here you can copy and share this message with your friends or customer.</item>
+
+        <item>In Saved -) This is custom list which you can make.</item>
+        <item>By clicking this \'+\' icon you find a form for adding new quick message in Saved list.</item>
+        <item>Also there are multiple language for quick message.</item>
+        <item>This quick message you can find everywhere where you see any input message box.</item>
+        <item>By choosing you can see different language list here.</item>
+    </string-array>
+
+<!--    recoverMessage-->
+    <string-array name="usefull7">
+        <item>See deleted Message</item>
+        <item>Media Recover</item>
+        <item>Custom ON/OFF</item>
+    </string-array>
+
+    <string-array name="Details7">
+        <item>In Message -) Here you can find message of individual chat.</item>
+        <item>But you have to compare those deleted messages with your chats.</item>
+        <item>Delete all data by clicking \'Clear All\' button.</item>
+
+        <item>In Media -) Here you can find deleted media file.</item>
+        <item>Like Images, Videos, Documents, Voice notes, Audio files.</item>
+        <item>You can see predicted sender name .</item>
+        <item>Share this message.</item>
+    </string-array>
+
+<!--    statusDownload-->
+    <string-array name="usefull8">
+        <item>Download Easily </item>
+        <item>Share Directly </item>
+
+    </string-array>
+
+    <string-array name="Details8">
+        <item>In Status -) Here you found Image and Video statuses.</item>
+        <item>By tapping \'Download\' button you can download this in your phone.</item>
+
+        <item>In Downloaded -) Here you see list of downloaded file.</item>
+
+    </string-array>
+
+<!--    scheduleMessage-->
+    <string-array name="usefull9">
+        <item>Status Schedule</item>
+        <item>Schedule Chat</item>
+        <item>Message using text function</item>
+        <item>Attach Multiple Media</item>
+        <item>History</item>
+
+    </string-array>
+
+    <string-array name="Details9">
+        <item>There is two function \'Status Schedule\' and \'Schedule Chat\'.</item>
+
+        <item>Status Schedule -) You can set Images, Videos, Text function, caption.Also type any text for status.</item>
+        <item>Set date and time for auto Status.</item>
+        <item>Schedule Chat -) Here you can schedule chat.</item>
+
+        <item>You can use media file like Images, Videos, Music, Document, Text function, caption.</item>
+        <item>All view Selected file in this list.</item>
+        <item>Set date and time for sending Schedule chat.</item>
+        <item>Here you found history for all activity.</item>
+        <item>Test\n You can test it.</item>
+    </string-array>
+
+<!--    textRepeater-->
+    <string-array name="usefull10">
+        <item>Custom Text</item>
+        <item>Repeat Max 5000 times</item>
+        <item>Direct forward</item>
+    </string-array>
+
+    <string-array name="Details10">
+        <item>Here you type any text which you want to repeat it.</item>
+        <item>Enter repeat number(max 5000 times) and click on convert button.</item>
+
+        <item>Also you can copy and share.</item>
+    </string-array>
+
+<!--    private-->
+    <string-array name="usefull11">
+        <item>Seen like offline</item>
+        <item>Messages Read</item>
+        <item>Also Media</item>
+        <item>Custom Switch</item>
+        <item>Notification On/Off</item>
+    </string-array>
+
+    <string-array name="Details11">
+        <item>Manually ON/OFF.</item>
+
+        <item>In Message -) See messages here with individual chat list.</item>
+        <item>You can read unseen message.(Your friend can\'t see blue double tick.</item>
+        <item>Also clear all message by clicking \'Clear All\' button.</item>
+
+        <item>In Media -) Show unseen media file here.</item>
+        <item>See Images, Videos, Audio, Documents, Voice note, Sticker list here. Tap on that file to full view.</item>
+        <item>You can see sender name by prediction.</item>
+
+
+        <item>In Setting -) Enable Notification</item>
+        <item>Show media file ON/OFF</item>
+    </string-array>
+
+<!--whatsWeb-->
+    <string-array name="usefull12">
+        <item>Dark mode Chat</item>
+        <item>Keyboard lock</item>
+        <item>Toggle Or Menu button On/Off</item>
+    </string-array>
+
+    <string-array name="Details12">
+        <item>Here you easily Log In Log out.</item>
+        <item>Also lock the keyboard.</item>
+        <item>You can turn on dark mode.</item>
+    </string-array>
+
+    <!--Call Blocks-->
+    <string-array name="usefull13">
+        <item>Voice Call Block</item>
+        <item>Video Call Block</item>
+        <item>Schedule Call Block.</item>
+        <item>Call block to custom list.</item>
+
+    </string-array>
+
+    <string-array name="Details13">
+        <item>Individually voice call and video call block.</item>
+        <item>You can create a custom list to block calls or without this custom list.</item>
+        <item>Call block to \'All Contact\',\'Except phone contact\', \'Custom list\', \'Except custom list\'.</item>
+
+        <item>You can also see the history of blocked calls.</item>
+    </string-array>
+    
+</resources>

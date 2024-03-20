@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="WhatsappChooser">
+        <item>Whatsapp</item>
+        <item>Whatsapp Business</item>
+
+    </string-array>
+
+
+    <string-array name="QuickMessageCategory">
+        <item>All</item>
+        <item>Greeting</item>
+        <item>Sales</item>
+        <item>Promotion</item>
+        <item>Romantic</item>
+        <item>Festival</item>
+        <item>Love</item>
+        <item>Shayari</item>
+        <item>Motivation</item>
+        <item>Inspiration</item>
+
+    </string-array>
+
+
+
+
+
+</resources>

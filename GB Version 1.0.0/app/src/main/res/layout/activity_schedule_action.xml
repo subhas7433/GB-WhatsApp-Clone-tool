@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/primary_back"
+    tools:context=".activityOur.scheduleAction">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/animate_clock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/starting_scheduling"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+    <TextView
+        android:id="@+id/sendingLb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="7dp"
+        android:text="@string/starting_schedule"
+        android:textColor="@color/sche_sms"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginVertical="15dp"
+        android:src="@drawable/spl_schedule"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="50sp"
+        android:textColor="@color/primary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/please_don_t_touch_the_screen"
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+    <TextView
+        android:id="@+id/cancelSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_schedule"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_btn"
+        android:textSize="14sp"
+        android:backgroundTint="#BD0404"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="7dp"
+        android:paddingHorizontal="15dp"/>
+</LinearLayout>

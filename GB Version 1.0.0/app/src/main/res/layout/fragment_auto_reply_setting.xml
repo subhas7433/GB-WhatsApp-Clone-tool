@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".fragment.auto_reply_Setting">
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="9dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <!--auto reply text card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/autoTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:visibility="visible"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:padding="2dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/auto_reply_lg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Test Auto Reply"
+                    android:textColor="@color/auto_reply"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageView8"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="It will help you to know how it works."
+                    android:textColor="#717171"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/next_arrow"
+                    app:tint="@color/auto_reply" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+        <!-- Enable Apps -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/supportedAppsSelectorCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@color/primary_back"
+            android:backgroundTint="@color/white"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplyTextCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/enableApps"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="29dp"
+                    android:layout_height="29dp"
+                    android:layout_margin="10dp"
+                    android:padding="2dp"
+                    android:src="@drawable/android_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/selectAppsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/enable_for_apps"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@+id/imageView12"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/editEnabledAppsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:text="Enable Apps"
+                    android:textColor="@color/colorSecondaryVariant"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/enabled_apps_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/editEnabledAppsButton"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/selectAppsLabel"
+                    app:layout_constraintTop_toBottomOf="@id/selectAppsLabel"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!-- Enable Schedule time -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:minHeight="50dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/materialCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:buttonTint="@color/checkbox_tint"
+                    android:textColor="@color/checkbox_tint"
+                    android:paddingStart="5dp"
+                    android:text="Schedule Auto-Reply"
+                    android:textSize="15sp"
+                    android:checked="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/help_ic"
+                    app:layout_constraintBottom_toBottomOf="@+id/materialCheckBox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.93"
+                    app:layout_constraintStart_toEndOf="@+id/materialCheckBox"
+                    app:layout_constraintTop_toTopOf="@+id/materialCheckBox"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <LinearLayout
+                    android:id="@+id/autoSelectTimeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCheckBox">
+
+                    <TextView
+                        android:id="@+id/startAutoRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="From : "
+                        android:textColor="@color/auto_reply"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/startTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/transparent"
+                        android:drawableEnd="@drawable/edit_lg"
+                        android:padding="0dp"
+                        android:text="10:00pm"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/endAutoRp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To : "
+                        android:textColor="@color/auto_reply"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/endTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:background="@color/transparent"
+                        android:drawableEnd="@drawable/edit_lg"
+                        android:padding="0dp"
+                        android:text="06:00am"
+
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- Custom auto reply text card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mainAutoReplyTextCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:padding="2dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/title_24_focused"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/mainAutoReplyLabel"
+                    android:textColor="@color/mid_black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageView11"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/mainAutoReplyTextPlaceholder"
+                    android:textSize="12sp"
+                    android:textColor="@color/secondarydarkgrey"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    app:layout_constraintVertical_bias="0.166" />
+
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/edit_lg"
+                    app:tint="@color/switch_off_cl" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Supported app selector checklist empty card.
+        Actual checklist will be generated at runtime -->
+
+
+        <!-- Reply frequency Time picker -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/replyFrequencyTimePickerCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="10dp"
+                android:paddingRight="8dp">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:padding="4dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/clock_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/timePickerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/time_picker_title"
+                    android:textColor="@color/mid_black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageView13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/replyFrequencyAbout"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/help_ic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/timePickerSubTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/time_picker_sub_title_default"
+                    android:textColor="@color/secondarydarkgrey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/timePickerTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/timePickerTitle"
+                    app:layout_constraintVertical_bias="0.1" />
+
+                <TextView
+                    android:id="@+id/textVie9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set day"
+                    android:textColor="@color/primary"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="5dp"
+                    android:textStyle="normal"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/frequencySetterWidget"
+                    app:layout_constraintEnd_toStartOf="@+id/frequencySetterWidget"
+                    app:layout_constraintTop_toTopOf="@+id/frequencySetterWidget" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/frequencySetterWidget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/timePickerSubTitle">
+
+                    <ImageView
+                        android:id="@+id/imgMinus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="@string/decrease_frequency"
+                        android:src="@drawable/minus"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/timeSelectedText"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/mid_black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@id/imgMinus"
+                        app:layout_constraintStart_toEndOf="@+id/imgMinus"
+                        app:layout_constraintTop_toTopOf="@+id/imgMinus" />
+
+                    <ImageView
+                        android:id="@+id/imgPlus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:contentDescription="@string/increase_frequency"
+                        android:src="@drawable/plus"
+                        app:layout_constraintStart_toEndOf="@+id/timeSelectedText"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <FrameLayout
+            android:id="@+id/ad_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </FrameLayout>
+        <!--Specific Contact list-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/switch_back"
+            android:visibility="gone"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/contact_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/specificContactReply"
+                    android:layout_width="270dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:text="Contact Reply"
+                    android:textColor="@color/black"
+                    android:textOff="Contact Reply OFF"
+                    android:textOn="Contact Reply ON"
+                    android:textSize="16sp"
+                    android:thumb="@drawable/thumb"
+                    app:layout_constraintStart_toEndOf="@+id/imageView22"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:showText="false"
+                    app:track="@drawable/switch_track" />
+
+                <LinearLayout
+                    android:id="@+id/spicificLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/specificContactReply"
+                    app:layout_constraintTop_toBottomOf="@+id/specificContactReply">
+
+                    <Button
+                        android:id="@+id/viewSpecificContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/transparent"
+                        android:paddingLeft="2dp"
+                        android:text="View Contact List"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/induTabChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/ctimg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/contact_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cttitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Customized Reply"
+                    android:textColor="@color/mid_black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/ctimg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cttxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_marginEnd="10dp"
+                    android:text="with each person or group."
+                    android:textColor="@color/secondarydarkgrey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ctGo"
+                    app:layout_constraintStart_toStartOf="@+id/cttitle"
+                    app:layout_constraintTop_toBottomOf="@+id/cttitle"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/ctGo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/next_arrow"
+                    app:tint="@color/switch_off_cl" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--Specific Group list-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/groupTabChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            app:cardElevation="@dimen/Elevation_input_box"
+            app:cardCornerRadius="@dimen/input_box_radious"
+            app:layout_constraintTop_toBottomOf="@+id/mainAutoReplySwitchCardView"
+            tools:layout_editor_absoluteX="134dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="15dp">
+
+                <ImageView
+                    android:id="@+id/gpimg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/group_icon_focused"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/grouptitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Specific Group Reply"
+                    android:textColor="@color/mid_black"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/gpimg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/grouptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Send messages to specific group."
+                    android:textColor="@color/black"
+                    android:textSize="8sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/grouptitle"
+                    app:layout_constraintTop_toBottomOf="@+id/grouptitle"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/gpGo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/mainAutoReplyEditBtnTooltip"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/next_arrow"
+                    app:tint="@color/about_cl" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contactListCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="@dimen/recycle_card_Elevation">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="370dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:backgroundTint="@color/primary"
+                app:cardElevation="@dimen/Elevation_input_box"
+                app:cardCornerRadius="100dp">
+
+                <TextView
+                    android:id="@+id/textIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="c"
+                    android:layout_marginBottom="1dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contactName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="25"
+                    android:singleLine="true"
+                    android:text="Contact name"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/contactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:maxLength="32"
+                    android:singleLine="true"
+                    android:text="9804481133"
+                    android:visibility="gone"
+                    android:textColor="@color/gray_800"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/deleteContact"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:src="@drawable/close_icon" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    tools:context=".fragment_private_recover_chat">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/recoverRefresh">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <!-- no chat verticle-->
+        <LinearLayout
+            android:id="@+id/noChatLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/no_chat"
+                android:layout_marginTop="-50dp" />
+
+            <TextView
+                android:id="@+id/showMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Ohh no chat available to show!"
+                android:textSize="16sp"
+                android:textColor="@color/border_box"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@color/private_chat_bg"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="7dp"
+                android:text="How to turn on ?"
+                android:textColor="@color/private_chat"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="3dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/workProperlyImg"
+                    android:layout_width="22dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/whatsapp"
+                    />
+                <TextView
+                    android:id="@+id/workProperly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/compare_deleted_msg"
+                    android:textColor="@color/colorPrimaryVariant"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    />
+                <TextView
+                    android:id="@+id/clearAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginStart="5dp"
+                    android:paddingTop="3dp"
+                    android:drawableTint="@color/black"
+                    android:drawableTop="@drawable/delete_icon_18dp"
+                    android:text="CLEAR ALL"
+                    android:textColor="@color/black"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/privateChatSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:paddingStart="8dp"
+                android:paddingEnd="25dp"
+                android:text="Private Message"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimaryVariant"
+                android:textOff="Private Chat OFF"
+                android:textOn="Private Chat ON"
+                android:textSize="16sp"
+                android:thumb="@drawable/thumb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:showText="false"
+                app:track="@drawable/switch_track"
+                tools:layout_editor_absoluteY="43dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:background="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatNameRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:visibility="visible"
+                tools:listitem="@layout/chat_names" />
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

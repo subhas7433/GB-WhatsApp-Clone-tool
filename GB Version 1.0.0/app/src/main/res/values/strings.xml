@@ -1,0 +1,463 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="app_name" tools:ignore="MissingTranslation">GB Tool</string>
+    <string name="app_version" tools:ignore="MissingTranslation">V 1.0.0</string>
+    <string name="saved_quick_message" tools:ignore="MissingTranslation">quickMessage</string>
+    <string name="title_activity_bottom_navigation" tools:ignore="MissingTranslation">bottom_navigation</string>
+    <string name="title_home" tools:ignore="MissingTranslation">Home</string>
+    <string name="title_status" tools:ignore="MissingTranslation">Status</string>
+    <string name="title_chat" tools:ignore="MissingTranslation">Chat</string>
+    <string name="title_restore_ms" tools:ignore="MissingTranslation">Restore</string>
+    <string name="title_text_fun" tools:ignore="MissingTranslation">Text Fun</string>
+    <string name="notification_listener_service" tools:ignore="MissingTranslation">To recover WA deleted messages.</string>
+    <!--Section title-->
+    <string name="auto_reply_title" tools:ignore="MissingTranslation">Auto Reply</string>
+    <string name="no_blue_tick_title" tools:ignore="MissingTranslation">No Blue Tick</string>
+    <string name="recover_chat_title" tools:ignore="MissingTranslation">Recover Chat</string>
+    <string name="status_download_title" tools:ignore="MissingTranslation">Status Download</string>
+    <string name="sms_template_title" tools:ignore="MissingTranslation">SMS Template</string>
+    <string name="schedule_chat_title" tools:ignore="MissingTranslation">Schedule(Beta)</string>
+    <string name="status_schedule_title" tools:ignore="MissingTranslation">Status Schedule</string>
+    <string name="ascii_face_title" tools:ignore="MissingTranslation">Ascii Face</string>
+    <string name="design_txt_title" tools:ignore="MissingTranslation">Design Text</string>
+    <string name="quick_reply_title" tools:ignore="MissingTranslation">Quick Reply</string>
+    <string name="repeat_txt_title" tools:ignore="MissingTranslation">Repeat Text</string>
+    <string name="direct_chat_title" tools:ignore="MissingTranslation">Direct Chat</string>
+    <string name="wa_web_title" tools:ignore="MissingTranslation">Web</string>
+
+
+    <string name="playstoreUrl" tools:ignore="MissingTranslation">https://play.google.com/store/apps/details?id=com.affixstudio.gbversion</string>
+    <string name="url_privacy_policy" tools:ignore="MissingTranslation">https://adeekshith.github.io/watomatic/#/privacy-policy.md</string>
+    <string name="adeekshith_twitter_handle" translatable="false" tools:ignore="MissingTranslation">\@adeekshith</string>
+    <string name="url_adeekshith_twitter" translatable="false" tools:ignore="MissingTranslation">https://twitter.com/adeekshith</string>
+
+    <string name="about" tools:ignore="MissingTranslation">About</string>
+    <string name="settings" tools:ignore="MissingTranslation">Settings</string>
+    <string name="privacy_policy_label" tools:ignore="MissingTranslation">Privacy Policy</string>
+    <string name="service_name" tools:ignore="MissingTranslation">WA tool:Recover Message</string>
+    <string name="mainAutoReplyTextPlaceholder" tools:ignore="MissingTranslation">(Custom Reply)</string>
+    <string name="auto_reply_default_message" tools:ignore="MissingTranslation">⚠️User not available\n Auto Reply</string>
+    <string name="mainAutoReplyLabel" tools:ignore="MissingTranslation">Auto Reply text</string>
+    <string name="mainAutoReplySwitchOffLabel" tools:ignore="MissingTranslation">Auto Reply</string>
+    <string name="mainAutoReplySwitchOnLabel" tools:ignore="MissingTranslation">Auto Reply</string>
+    <string name="mainAutoReplyEditBtnTooltip" tools:ignore="MissingTranslation">Click to edit auto reply text</string>
+
+    <string name="decline" tools:ignore="MissingTranslation">Decline</string>
+    <string name="accept" tools:ignore="MissingTranslation">Accept</string>
+    <string name="sure" tools:ignore="MissingTranslation">I\'m Sure</string>
+    <string name="retry" tools:ignore="MissingTranslation">Retry</string>
+    <string name="permission_dialog_title" tools:ignore="MissingTranslation">Permission Required</string>
+    <string name="permission_dialog_msg" tools:ignore="MissingTranslation">This app requires Notification Access permissions to work.</string>
+    <string name="permission_dialog_denied_title" tools:ignore="MissingTranslation">Permission Denied</string>
+    <string name="permission_dialog_denied_msg" tools:ignore="MissingTranslation">Without this permission app is unable to auto-reply to the notifications. Are you sure you want to deny the permission?</string>
+
+    <!--    Auto Reply section-->
+
+    <string name="auto_reply_des" tools:ignore="MissingTranslation">System sends auto replies to your friend or customer at anytime in those app. Also reply group chats and much more.</string>
+    <string name="auto_reply_usage" tools:ignore="MissingTranslation">System send auto replies to your friend or customer at anytime. Also enable for group chat.</string>
+    <!-- Select apps to auto reply -->
+
+    <string name="enable_for_apps" tools:ignore="MissingTranslation">Enable for apps</string>
+    <string name="enable_auto_reply_switch_msg" tools:ignore="MissingTranslation">Enable Auto Reply Switch First.</string>
+    <string name="error_atleast_single_app_must_be_selected" tools:ignore="MissingTranslation">Error: Select at-least a single app</string>
+
+    <!-- Group chats -->
+    <string name="groupReplySwitchLabel" tools:ignore="MissingTranslation">Auto reply for Group chats</string>
+    <string name="group_reply_on_info_message" tools:ignore="MissingTranslation">Enabled auto reply for group chats</string>
+    <string name="group_reply_off_info_message" tools:ignore="MissingTranslation">Disabled auto reply for group chats</string>
+
+    <string name="time_picker_title" tools:ignore="MissingTranslation">Reply Frequency (BETA)</string>
+    <string name="time_picker_sub_title_default" tools:ignore="MissingTranslation">Respond to all messages without control</string>
+    <string name="time_picker_sub_title" tools:ignore="MissingTranslation">Respond only once every %1$d day(s) for each person or group</string>
+    <string name="time_format_placeholder" tools:ignore="MissingTranslation">00:00</string>
+    <string name="time_picker_edit_btn_tooltip" tools:ignore="MissingTranslation">Click to edit time delay between replies</string>
+
+
+    <!-- Custom message editor -->
+    <string name="save" tools:ignore="MissingTranslation">Save</string>
+    <string name="tip_view_messages_from_fellow_users" tools:ignore="MissingTranslation">🦩 <u>View templates from community and share yours too ➚</u></string>
+    <string name="append_watomatic_arribution_checkbox_label" tools:ignore="MissingTranslation">Append Watomatic arribution to help spread the word</string>
+    <string name="sent_using_Watomatic" tools:ignore="MissingTranslation"></string>
+
+    <string name="share_app_text" tools:ignore="MissingTranslation">I am using Watomatic to break away from WA. Try it out: watomatic.app</string>
+    <string name="share" tools:ignore="MissingTranslation">Share</string>
+    <string name="share_subject" tools:ignore="MissingTranslation">Watomatic: Auto Reply for WA</string>
+    <string name="watomatic_community_label" tools:ignore="MissingTranslation"><u>Community</u></string>
+    <string name="watomatic_subreddit_label" tools:ignore="MissingTranslation"><u>Let\'s discuss\nr/watomatic</u></string>
+    <string name="watomatic_subreddit_url" translatable="false" tools:ignore="MissingTranslation">https://www.reddit.com/r/watomatic</string>
+    <string name="watomatic_github_url" translatable="false" tools:ignore="MissingTranslation">https://github.com/adeekshith/watomatic</string>
+    <string name="watomatic_wato_message_url" translatable="false" tools:ignore="MissingTranslation">https://www.reddit.com/r/watomatic/comments/lrkn7j/fellow_watos_share_your_creative_wato_message/</string>
+    <string name="watomatic_whatsnew_label" tools:ignore="MissingTranslation">What\'s New?</string>
+    <string name="watomatic_github_latest_release_url" translatable="false" tools:ignore="MissingTranslation">https://github.com/adeekshith/watomatic/releases/latest</string>
+
+    <!-- Share debug logs -->
+    <string name="app_logs_file_name" translatable="false" tools:ignore="MissingTranslation">WatomaticLogs.txt</string>
+    <string name="share_email_body" translatable="false" tools:ignore="MissingTranslation">Hi Team Watomatic,\nPlease find the attachment of the app logs.</string>
+    <string name="share_email_subject" translatable="false" tools:ignore="MissingTranslation">Watomatic AppLogs</string>
+    <string name="share_email_id" translatable="false" tools:ignore="MissingTranslation">watomatic@deekshith.in</string>
+    <string name="share_email_err_msg" translatable="false" tools:ignore="MissingTranslation">Couldnot find any application to process this request</string>
+
+    <!-- keys and app internal strings -->
+    <string name="key_pref_app_language" translatable="false" tools:ignore="MissingTranslation">pref_app_language</string>
+    <string name="pref_show_notification_replied_msg" translatable="false" tools:ignore="MissingTranslation">pref_show_notification_replied_msg</string>
+    <string name="pref_auto_start_permission" translatable="false" tools:ignore="MissingTranslation">pref_auto_start_permission</string>
+    <string name="pref_is_append_watomatic_attribution" translatable="false" tools:ignore="MissingTranslation">pref_is_append_watomatic_attribution</string>
+    <string name="pref_show_foreground_service_notification" translatable="false" tools:ignore="MissingTranslation">pref_show_foreground_service_notification</string>
+
+    <!-- app settings -->
+    <string name="show_notification_label" tools:ignore="MissingTranslation">Show notification for replied messages</string>
+    <string name="preference_category_general_label" tools:ignore="MissingTranslation">General settings</string>
+    <string name="preference_category_notifications_label" tools:ignore="MissingTranslation">Notifications</string>
+    <string name="preference_category_troubleshooting_label" tools:ignore="MissingTranslation">Troubleshooting</string>
+    <string name="enable_auto_start_label" tools:ignore="MissingTranslation">Enable Auto Start</string>
+    <string name="add_attribution_label" tools:ignore="MissingTranslation">Add Attribution</string>
+    <string name="enabled_apps_title" tools:ignore="MissingTranslation">Enabled Apps</string>
+    <string name="always_on_notification" tools:ignore="MissingTranslation">Always-On notification</string>
+    <string name="display_persistent_notification_summary" tools:ignore="MissingTranslation">Display a persistent notification to ensure Watomatic is not killed by the system</string>
+    <string name="enable_auto_start_summary" tools:ignore="MissingTranslation">Some devices might need you to manually enable Auto start for Watomatic from device settings</string>
+
+    <!-- Local language names (non translatable) -->
+    <string name="lang_en" translatable="false" tools:ignore="MissingTranslation">English (en)</string>
+    <string name="lang_ar_rSA" translatable="false" tools:ignore="MissingTranslation">اَلْعَرَبِيَّةُ (ar-SA)</string>
+    <string name="lang_ca_rES" translatable="false" tools:ignore="MissingTranslation">Català (ca-ES)</string>
+    <string name="lang_de_rDE" translatable="false" tools:ignore="MissingTranslation">Deutsch (de-DE)</string>
+    <string name="lang_es_rES" translatable="false" tools:ignore="MissingTranslation">Español (es-ES)</string>
+    <string name="lang_es_rMX" translatable="false" tools:ignore="MissingTranslation">Español (México) (es-MX)</string>
+    <string name="lang_eu_rES" translatable="false" tools:ignore="MissingTranslation">Euskara (eu-ES)</string> <!-- Basque -->
+    <string name="lang_fi_rFI" translatable="false" tools:ignore="MissingTranslation">Suomi (fi_FI)</string>
+    <string name="lang_fr_rFR" translatable="false" tools:ignore="MissingTranslation">Français (fr-FR)</string>
+    <string name="lang_in_rID" translatable="false" tools:ignore="MissingTranslation">Indonesian (in-ID)</string>
+    <string name="lang_it_rIT" translatable="false" tools:ignore="MissingTranslation">Italiano (it-IT)</string>
+    <string name="lang_mk_rMK" translatable="false" tools:ignore="MissingTranslation">македонски јазик (mk-MK)</string>
+    <string name="lang_nl_rNL" translatable="false" tools:ignore="MissingTranslation">Nederlands (nl-NL)</string>
+    <string name="lang_pt_rBR" translatable="false" tools:ignore="MissingTranslation">Portuguese (pt-BR)</string>
+    <string name="lang_pl_rPL" translatable="false" tools:ignore="MissingTranslation">Polski (pl-PL)</string>
+    <string name="lang_ru_rRU" translatable="false" tools:ignore="MissingTranslation">Pусский (ru-RU)</string>
+    <string name="lang_ta_rIN" translatable="false" tools:ignore="MissingTranslation">தமிழ் (ta-IN)</string>
+    <string name="lang_tr_rTR" translatable="false" tools:ignore="MissingTranslation">Türkçe (tr-TR)</string>
+
+    <!-- Language codes (non translatable) -->
+    <string name="lang_code_en" translatable="false" tools:ignore="MissingTranslation">en</string>
+    <string name="lang_code_ar_rSA" translatable="false" tools:ignore="MissingTranslation">ar-SA</string>
+    <string name="lang_code_ca_rES" translatable="false" tools:ignore="MissingTranslation">ca-ES</string>
+    <string name="lang_code_de_rDE" translatable="false" tools:ignore="MissingTranslation">de-DE</string>
+    <string name="lang_code_es_rES" translatable="false" tools:ignore="MissingTranslation">es-ES</string>
+    <string name="lang_code_es_rMX" translatable="false" tools:ignore="MissingTranslation">es-MX</string>
+    <string name="lang_code_eu_rES" translatable="false" tools:ignore="MissingTranslation">eu-ES</string>
+    <string name="lang_code_fi_rFI" translatable="false" tools:ignore="MissingTranslation">fi-FI</string>
+    <string name="lang_code_fr_rFR" translatable="false" tools:ignore="MissingTranslation">fr-FR</string>
+    <string name="lang_code_in_rID" translatable="false" tools:ignore="MissingTranslation">in-ID</string>
+    <string name="lang_code_it_rIT" translatable="false" tools:ignore="MissingTranslation">it-IT</string>
+    <string name="lang_code_mk_rMK" translatable="false" tools:ignore="MissingTranslation">mk-MK</string>
+    <string name="lang_code_nl_rNL" translatable="false" tools:ignore="MissingTranslation">nl-NL</string>
+    <string name="lang_code_pt_rBR" translatable="false" tools:ignore="MissingTranslation">pt-BR</string>
+    <string name="lang_code_pl_rPL" translatable="false" tools:ignore="MissingTranslation">pl-PL</string>
+    <string name="lang_code_ru_rRU" translatable="false" tools:ignore="MissingTranslation">ru-RU</string>
+    <string name="lang_code_ta_rIN" translatable="false" tools:ignore="MissingTranslation">ta-IN</string>
+    <string name="lang_code_tr_rTR" translatable="false" tools:ignore="MissingTranslation">tr-TR</string>
+
+    <!-- App Language selection -->
+    <string name="app_language" tools:ignore="MissingTranslation">App Language</string>
+
+    <!-- App Rating Dialog -->
+    <string name="app_rating_dialog_title" tools:ignore="MissingTranslation">What do you think?</string>
+    <string name="app_rating_dialog_msg" tools:ignore="MissingTranslation">We are interested in what you think of the app. Tap the stars above to rate it.</string>
+    <string name="app_rating_dialog_rate_button_title" tools:ignore="MissingTranslation">Rate it!</string>
+    <string name="app_rating_dialog_rate_later_title" tools:ignore="MissingTranslation">May be later</string>
+    <string name="app_rating_goto_store_dialog_title" tools:ignore="MissingTranslation">We\'re happy!</string>
+    <string name="celebrate_emoji" translatable="false" tools:ignore="MissingTranslation">😃🙌</string>
+    <string name="app_rating_goto_store_dialog_msg" tools:ignore="MissingTranslation">Please share this rating of our app on the Google Play Store by tapping \"Continue\"\!</string>
+    <string name="app_rating_pitch" tools:ignore="MissingTranslation">This app is free, no ads, no tracking, open source and is made by contributors like you and me.
+        Your feedback is our only encouragement.</string>
+    <string name="app_rating_goto_store_dialog_button1_title" tools:ignore="MissingTranslation">Not Interested</string>
+    <string name="app_rating_goto_store_dialog_button2_title" tools:ignore="MissingTranslation">Continue</string>
+    <string name="app_rating_feedback_dialog_title" tools:ignore="MissingTranslation">Contact us</string>
+    <string name="app_rating_feedback_dialog_msg" tools:ignore="MissingTranslation">Let us know how we can improve.</string>
+    <string name="app_rating_feedback_dialog_mail_button_title" tools:ignore="MissingTranslation">Email Us</string>
+    <string name="app_rating_feedback_dialog_telegram_button_title" tools:ignore="MissingTranslation">Telegram</string>
+
+    <!--Autostart Permission Dialog-->
+    <string name="auto_start_permission_dialog_title" tools:ignore="MissingTranslation">AutoStart Permission</string>
+    <string name="running_in_the_background" tools:ignore="MissingTranslation">Running in the background</string>
+    <string name="auto_start_permission_dialog_message" tools:ignore="MissingTranslation">Enable \"Auto Start\" permission in device settings to allow Watomatic to start on device restart.</string>
+    <string name="device_based_settings_message" tools:ignore="MissingTranslation">Note: Settings may vary or may not be available based on your device</string>
+    <string name="setting_not_available_for_device" tools:ignore="MissingTranslation">This setting is not available or may not be needed for your device.</string>
+    <string name="enable_auto_start_setting" tools:ignore="MissingTranslation">Proceed</string>
+    <string name="decline_auto_start_setting" tools:ignore="MissingTranslation">Cancel</string>
+    <string name="app_not_installed_text" tools:ignore="MissingTranslation">Not installed</string>
+    <string name="advanced_settings" tools:ignore="MissingTranslation">Advanced settings</string>
+    <string name="key_pref_advanced_settings" translatable="false" tools:ignore="MissingTranslation">pref_advanced_settings</string>
+    <string name="contact_based_reply" tools:ignore="MissingTranslation">Contact based replies</string>
+    <string name="pref_reply_contacts" translatable="false" tools:ignore="MissingTranslation">pref_reply_contacts</string>
+    <string name="contact_reply_type" tools:ignore="MissingTranslation">Reply to</string>
+    <string name="blacklist" tools:ignore="MissingTranslation">Everyone except selected contacts</string>
+    <string name="whitelist" tools:ignore="MissingTranslation">Nobody except selected contacts</string>
+    <string name="pref_code_blacklist" translatable="false" tools:ignore="MissingTranslation">pref_blacklist</string>
+    <string name="pref_code_whitelist" translatable="false" tools:ignore="MissingTranslation">pref_whitelist</string>
+    <string name="pref_reply_contacts_type" translatable="false" tools:ignore="MissingTranslation">pref_reply_contacts_type</string>
+    <string name="enable_contact_based_reply" tools:ignore="MissingTranslation">Enable contact based replies</string>
+    <string name="select_contacts" tools:ignore="MissingTranslation">Select contacts</string>
+    <string name="key_pref_select_contacts" translatable="false" tools:ignore="MissingTranslation">pref_select_contacts</string>
+    <string name="contact_selector" tools:ignore="MissingTranslation">Contact selector</string>
+    <string name="select_all" tools:ignore="MissingTranslation">Select all</string>
+    <string name="select_none" tools:ignore="MissingTranslation">Select none</string>
+    <string name="contact_permission_dialog_msg" tools:ignore="MissingTranslation">Contact read access is required in order to filter names and enable this feature. Do you want to continue?</string>
+    <string name="contact_permission_dialog_proceed" tools:ignore="MissingTranslation">Proceed</string>
+    <string name="contact_permission_dialog_cancel" tools:ignore="MissingTranslation">Cancel</string>
+    <string name="undo" tools:ignore="MissingTranslation">Undo</string>
+    <string name="all_contacts_selected" tools:ignore="MissingTranslation">All contacts selected</string>
+    <string name="all_contacts_unselected" tools:ignore="MissingTranslation">All contacts unselected</string>
+
+    <string name="donations_activity_title" tools:ignore="MissingTranslation">Donations</string>
+    <string name="donations_data_fetch_error" tools:ignore="MissingTranslation">Unable to fetch latest data</string>
+    <string name="donations_goal_title_0" tools:ignore="MissingTranslation">Struggling</string>
+    <string name="donations_goal_0" tools:ignore="MissingTranslation">Every penny counts to help it survive</string>
+    <string name="donations_goal_title_20" tools:ignore="MissingTranslation">Just Surviving</string>
+    <string name="donations_goal_20" tools:ignore="MissingTranslation">Supports daily maintenance and critical fixes</string>
+    <string name="donations_goal_title_30" tools:ignore="MissingTranslation">Stable</string>
+    <string name="donations_goal_30" tools:ignore="MissingTranslation">Quicker bug fixes and keeping it current</string>
+    <string name="donations_goal_title_70" tools:ignore="MissingTranslation">Slow and steady progress</string>
+    <string name="donations_goal_70" tools:ignore="MissingTranslation">Minor features and interface improvements</string>
+    <string name="donations_goal_title_100" tools:ignore="MissingTranslation">Boost mode</string>
+    <string name="donations_goal_100" tools:ignore="MissingTranslation">Help us make it a powerful auto reply app with lots of advanced features</string>
+    <string name="donation_progress_label" tools:ignore="MissingTranslation">of monthly goal</string>
+    <string name="liberapay" translatable="false" tools:ignore="MissingTranslation">Liberapay</string>
+    <string name="paypal" translatable="false" tools:ignore="MissingTranslation">Paypal</string>
+    <string name="bitcoin" translatable="false" tools:ignore="MissingTranslation">Bitcoin</string>
+    <string name="add_custom_contact" tools:ignore="MissingTranslation">Add custom contact name</string>
+    <string name="contact_permission_suggestion_dialog_msg" tools:ignore="MissingTranslation">Contact read access is required in order to filter replies by contact names. If the access is not enabled, only manually entered names will be allowed. Do you want to enable it?</string>
+    <string name="contact_permission_dialog_enable_permission" tools:ignore="MissingTranslation">Enable contact permission</string>
+    <string name="contact_permission_dialog_not_now" tools:ignore="MissingTranslation">Not now</string>
+    <string name="contact_permission_dialog_title" tools:ignore="MissingTranslation">Contact read access</string>
+    <string name="delete" tools:ignore="MissingTranslation">Delete</string>
+    <string name="github" translatable="false" tools:ignore="MissingTranslation">GitHub</string>
+    <string name="dollar_sign" translatable="false" tools:ignore="MissingTranslation">$</string>
+    <string name="decrease_frequency" tools:ignore="MissingTranslation">Decrease frequency</string>
+    <string name="increase_frequency" tools:ignore="MissingTranslation">Increase frequency</string>
+    <string name="current_donation_progress" tools:ignore="MissingTranslation">Current donation progress</string>
+    <string name="error_name_cannot_be_blank" tools:ignore="MissingTranslation">Name cannot be blank</string>
+    <string name="error_name_cannot_be_duplicate" tools:ignore="MissingTranslation">Name already present</string>
+    <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Blank fragment</string>
+    <string name="recover_message_table_name" tools:ignore="MissingTranslation">whatsappMessages</string>
+    <string name="schiduleTableName" tools:ignore="MissingTranslation">scheduleMessage</string>
+    <string name="title_activity_first_screen" tools:ignore="MissingTranslation">First_screen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label" tools:ignore="MissingTranslation">First Fragment</string>
+    <string name="second_fragment_label" tools:ignore="MissingTranslation">Second Fragment</string>
+    <string name="next" tools:ignore="MissingTranslation">Next</string>
+    <string name="previous" tools:ignore="MissingTranslation">Previous</string>
+
+    <string name="hello_first_fragment" tools:ignore="MissingTranslation">Hello first fragment</string>
+    <string name="hello_second_fragment" tools:ignore="MissingTranslation">Hello second fragment. Arg: %1$s</string>
+
+    <string name="Recover_msg_title" tools:ignore="MissingTranslation">Recover Chat</string>
+    <string name="recover_msg_des" tools:ignore="MissingTranslation">You can easily recover deleted messages and media files.</string>
+    <string name="chatHistorytable" tools:ignore="MissingTranslation">Chat_history</string>
+
+
+    <string name="shareAppText" tools:ignore="MissingTranslation">Install GB Latest version app for \n\n❆ Auto Reply \n❆ No Blue tick \n❆ Recover Chat\n❆ Status Download\n❆ Schedule Chat and Status and much more. \n\n Here is the link -  </string>
+
+
+    <!--Ads unit id -->
+    <string name="nativeAdsId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/6295310374</string>
+    <string name="bannerAdID" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/8769145066</string>
+    <string name="RewardAdsId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/4829900052</string>
+    <string name="interstitalAdId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/5329998474</string>
+    <string name="OpenAppAdId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/8873086849</string>
+
+
+    <string name="forScheduleMatch" tools:ignore="MissingTranslation">If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.</string>
+    <string name="sms_template" tools:ignore="MissingTranslation">SMS Template</string>
+
+    <string name="allfileDT" translatable="false" tools:ignore="MissingTranslation">This permission allow us to access entire data of your device storage.Which is important to save WA statuses.\n\n Except statuses we do not share or store your file data. </string>
+    <string name="allAppQueryDT" translatable="false" tools:ignore="MissingTranslation">This permission is required to get installed apps info,\n\n which is needed to enable Auto Reply function for specific apps</string>
+
+    <string name="AccesssiblityDT" tools:ignore="MissingTranslation">We need this permission in order to schedule the messages. It enables us to perform auto click on the widgets as SEND button in WA chat.Which is required for sending schedule message.\n\nWe don\'t store or share any sensitive personal data through this permission.</string>
+    <string name="recover_media_table_name" tools:ignore="MissingTranslation">recoverMedia</string>
+    <string name="specificReply" tools:ignore="MissingTranslation">specificReply</string>
+    <string name="send_reply_to" tools:ignore="MissingTranslation">send_reply_to</string>
+    <string name="schedule_auto" tools:ignore="MissingTranslation">schedule_auto</string>
+    <string name="contactList" tools:ignore="MissingTranslation">contactList</string>
+    <string name="autoReplyHistory" tools:ignore="MissingTranslation">autoReplyHistory</string>
+    <string name="auto_reply" tools:ignore="MissingTranslation">Auto Reply</string>
+    <string name="schedule_chat" tools:ignore="MissingTranslation">Schedule Chat</string>
+    <string name="incomingMessagePreview" tools:ignore="MissingTranslation">Hi! This is incoming messages from your friend or customer.</string>
+    <string name="defaultAutoReplyPreview" tools:ignore="MissingTranslation">Type Auto Reply text</string>
+    <string name="batteryopt_details" tools:ignore="MissingTranslation">TURN OFF Battery Optimization for WAKit Prime.</string>
+    <string name="timeselection_details" tools:ignore="MissingTranslation">Keep at least 3 minute gape between scheduled tasks.</string>
+    <string name="screenlock_details" tools:ignore="MissingTranslation">Set your screen lock to swipe or none.</string>
+    <string name="Private_chat_des" tools:ignore="MissingTranslation">You will able to see the message and media file without blue tick.</string>
+    <string name="all_files_des" tools:ignore="MissingTranslation">This permission allow us to access entire data of your device storage.Which is important to save WA statuses.Through this we get statuses file from WA folder from your storage.\n\nExcept statuses we do not share or store your file data.\n\n By clicking the Accept button you are permitting us to do the above tasks.</string>
+    <string name="Yes_i_agree" tools:ignore="MissingTranslation">Yes, I am permitting this app to do the above task.</string>
+
+    <string name="groupList" tools:ignore="MissingTranslation">groupList</string>
+    <string name="replyfrequency" tools:ignore="MissingTranslation">replyfrequency</string>
+    <string name="schedule_media_folder_name" tools:ignore="MissingTranslation">Scheduled Media</string>
+    <string name="noBlueTickTopNotice" tools:ignore="MissingTranslation">No blue tick will appear in WA</string>
+    <string name="privateChatTableName" tools:ignore="MissingTranslation">privateChat</string>
+    <string name="privateMediaRecordTable" tools:ignore="MissingTranslation">privateMediaRecord</string>
+    <string name="privateMediaNamesTable" tools:ignore="MissingTranslation">privateMediaNames</string>
+    <string name="privateNotificationEnableTag" tools:ignore="MissingTranslation">isPrivateNotificationEnable</string>
+    <string name="privateChatOnTag" tools:ignore="MissingTranslation">isPrivateChatOn</string>
+    <string name="privateMediaOnTag" tools:ignore="MissingTranslation">privateMediaOn</string>
+    <string name="recoverMediaOnTag" tools:ignore="MissingTranslation">recoverMediaOn</string>
+    <string name="allStoredMediaNamesTable" tools:ignore="MissingTranslation">allStoredMediaNames</string>
+    <string name="isPrivateActivityTag" tools:ignore="MissingTranslation">isPrivateActivity</string>
+    <string name="updateUIbrodcustRecever" tools:ignore="MissingTranslation">com.affix.action.privateMediaDownloaded</string>
+    <string name="mediaReceivedNotiMessage" tools:ignore="MissingTranslation">Some one sent a file. Tap to see.</string>
+    <string name="mediaDeletedNotiMsg" tools:ignore="MissingTranslation">Some one deleted a chat. Tap to see.</string>
+    <string name="tableCreationSQLPart1" tools:ignore="MissingTranslation">"CREATE TABLE IF NOT EXISTS "</string>
+    <string name="privateMediaRecordSQL" tools:ignore="MissingTranslation">"(_id INTEGER PRIMARY KEY autoincrement,RecevedFrom text, Message text,time text,isdeleted INTEGER ) "</string>
+    <string name="privateMediaNamesSQL" tools:ignore="MissingTranslation">(_id INTEGER PRIMARY KEY autoincrement,MediaName text, MediaType INTEGER,time text)</string>
+
+
+    <string name="versionInfoText" translatable="false" tools:ignore="MissingTranslation">Thanks for updating!\nNew in version 1.7.3:\n&#8211;Use built-in tools for darkmode if supported\n&#8211;Fix punctuation, capitalization, app name, spelling (thanks @MicaelJarniac)\n&#8211;Add Indonesian Localization (thanks @the7thNightmare)\n&#8211;Add safety popup for logout action\n&#8211;Reorder hamburger menu\n&#8211;Fix view broken on tablets</string>
+
+    <string name="introInfoText" translatable="false" tools:ignore="MissingTranslation">Thanks for installing!\nJust connect your phone as you would on your computer.\nTo lock and unlock the keyboard, use the keyboard button top right. Your settings will be saved.</string>
+    <string name="aboutText" translatable="false" tools:ignore="MissingTranslation">WA Web To Go\n\nby Leonhard Künzler\nandroid@kuenzler.io\n\ngithub.com/92lleo/WA WebToGo\n\n© 2017&#8211;2022\n\nv1.7.3\n\nThis app is in no way affiliated with WA Inc. The rights for WA and WA Web belong to WA Inc. This app is a private project to enable the use of WA Web on Android devices.</string>
+
+    <string name="navigation_drawer_open" translatable="false" tools:ignore="MissingTranslation">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false" tools:ignore="MissingTranslation">Close navigation drawer</string>
+    <string name="sidebar_button_logout" translatable="false" tools:ignore="MissingTranslation">Logout</string>
+    <string name="sidebar_button_reload" translatable="false" tools:ignore="MissingTranslation">Reload</string>
+    <string name="sidebar_button_new_session" translatable="false" tools:ignore="MissingTranslation">New Session</string>
+    <string name="sidebar_button_switch_session" translatable="false" tools:ignore="MissingTranslation">Switch Session</string>
+    <string name="sidebar_button_toggle_appbar_visibility" translatable="false" tools:ignore="MissingTranslation">Toggle Appbar Visibility</string>
+    <string name="sidebar_button_toggle_dark_mode" translatable="false" tools:ignore="MissingTranslation">Toggle Dark Mode</string>
+    <string name="sidebar_button_about" translatable="false" tools:ignore="MissingTranslation">About</string>
+    <string name="sidebar_title_settings" translatable="false" tools:ignore="MissingTranslation">Settings</string>
+    <string name="sidebar_button_settings" translatable="false" tools:ignore="MissingTranslation">@string/sidebar_title_settings</string>
+    <string name="appbar_button_scroll_left" translatable="false" tools:ignore="MissingTranslation">Scroll left</string>
+    <string name="appbar_title_scroll_right" translatable="false" tools:ignore="MissingTranslation">Scroll right</string>
+    <string name="appbar_button_toggle_keyboard" translatable="false" tools:ignore="MissingTranslation">Toggle Keyboard</string>
+    <string name="toast_saved_to_downloads_folder" translatable="false" tools:ignore="MissingTranslation">Saved to downloads folder</string>
+    <string name="notification_title_tap_to_open" translatable="false" tools:ignore="MissingTranslation">Tap to open</string>
+    <string name="notification_text_saved_as" translatable="false" tools:ignore="MissingTranslation">Saved as %s</string>
+    <string name="appversion_semantic" translatable="false" tools:ignore="MissingTranslation">1.7.3</string>
+    <string name="compare_deleted_msg" tools:ignore="MissingTranslation">Compare those deleted messages with your WA chats.</string>
+    <string name="title_activity_test" tools:ignore="MissingTranslation">test</string>
+    <string name="nav_header_title" tools:ignore="MissingTranslation">Android Studio</string>
+    <string name="nav_header_subtitle" tools:ignore="MissingTranslation">android.studio@android.com</string>
+    <string name="nav_header_desc" tools:ignore="MissingTranslation">Navigation header</string>
+    <string name="action_settings" tools:ignore="MissingTranslation">Settings</string>
+
+    <string name="menu_home" tools:ignore="MissingTranslation">Home</string>
+    <string name="menu_gallery" tools:ignore="MissingTranslation">Gallery</string>
+    <string name="menu_slideshow" tools:ignore="MissingTranslation">Slideshow</string>
+    <string name="autoReplyStartTAG" tools:ignore="MissingTranslation">autoStartTimeMilis</string>
+    <string name="autoReplyEndTAG" tools:ignore="MissingTranslation">autoEndTimeMilis</string>
+    <string name="scheduleFstIndicater" tools:ignore="MissingTranslation">scheduleFirstIndi</string>
+    <string name="scheduleNameWhenAddingNew" tools:ignore="MissingTranslation">Create Schedule</string>
+    <string name="scheduleNameWhenTesting" tools:ignore="MissingTranslation">Schedule Test</string>
+    <string name="scheduleScreenName" tools:ignore="MissingTranslation">@string/schedule_chat_title</string>
+    <string name="scheduleNameWhenAddingNewStatus" tools:ignore="MissingTranslation">Status Schedule</string>
+
+    <string name="selectDateScheduleText" tools:ignore="MissingTranslation">Select Date</string>
+    <string name="selectTimeScheduleText" tools:ignore="MissingTranslation">Select Time</string>
+    <string name="isFromOtherScreenPlayPrivateMedia" tools:ignore="MissingTranslation">isFromOtherScreen</string>
+    <string name="updateChatUpdateBroadcast" tools:ignore="MissingTranslation">com.affix.action.MessageReceived</string>
+    <string name="dontShowInsmallAllDelete" tools:ignore="MissingTranslation">dontShowSmall</string>
+    <string name="dontShowInFullAllDelete" tools:ignore="MissingTranslation">dontShowFull</string>
+    <string name="warningTextDeleteAll" tools:ignore="MissingTranslation">If you delete these files, you won\'t be able to see them again if your friend sends the same files.</string>
+    <string name="warningTextDeleteSingle" tools:ignore="MissingTranslation">If you delete this file, you won\'t be able to see it again if your friend sends the same file.</string>
+    <string name="dontShowRecheckScheduleTag" tools:ignore="MissingTranslation">dontShowRecheck</string>
+
+    <string name="contactOfPhoneBookTableName" tools:ignore="MissingTranslation">contactOfPhoneBook</string>
+    <string name="selectAllPickedContactBroadCast" tools:ignore="MissingTranslation">com.affix.action.selectAllPickedContact</string>
+    <string name="warningTextDeleteAllSetting" tools:ignore="MissingTranslation">It will delete all the data of Schedule , No Blue Tick , Recover Chat \n</string>
+    <string name="fristInAutoReplyTag" tools:ignore="MissingTranslation">fristInAutoReply</string>
+    <string name="fristInScheduleTeg" tools:ignore="MissingTranslation">fristInSchedule</string>
+    <string name="fristInDirectChatTeg" tools:ignore="MissingTranslation">fristInDirectChat</string>
+    <string name="fristInStatusTeg" tools:ignore="MissingTranslation">fristInStatus</string>
+    <string name="fristInRecoveTeg" tools:ignore="MissingTranslation">fristInRecover</string>
+    <string name="fristInTextFunTeg" tools:ignore="MissingTranslation">fristInTextFun</string>
+    <string name="fristInCaptionTeg" tools:ignore="MissingTranslation">fristInCaption</string>
+    <string name="fristInWebTeg" tools:ignore="MissingTranslation">fristInWeb</string>
+    <string name="affix_studio" tools:ignore="MissingTranslation">- By Affix Studio</string>
+    <string name="fristInPrivateTeg" tools:ignore="MissingTranslation">fristInPrivate</string>
+    <string name="isScheduleONTag" tools:ignore="MissingTranslation">isScheduleON</string>
+    <string name="contactEmail" tools:ignore="MissingTranslation">wakitprime@gmail.com</string>
+    <string name="appUpdateTypeTag" tools:ignore="MissingTranslation">appUpdateType</string>
+    <string name="autoReplyHistoryBroadCast" tools:ignore="MissingTranslation">com.affix.action.autoReplied</string>
+    <string name="ad_des_dammy" tools:ignore="MissingTranslation">Get Auto-Reply, Schedule messages, Status download, Recover sms and much more.</string>
+    <string name="specific_contact_title" tools:ignore="MissingTranslation">Specific Contact</string>
+    <string name="individual_group_title" tools:ignore="MissingTranslation">Individual Group</string>
+    <string name="see_full_txt">SEE FUll</string>
+    <string name="cancel_schedule">Cancel Schedule</string>
+    <string name="please_don_t_touch_the_screen">Please Don\'t touch the screen.</string>
+    <string name="starting_schedule">Starting Schedule</string>
+    <string name="starting_scheduling">Starting Scheduling</string>
+    <string name="splash_screen_title">GB Version 2023 Feature</string>
+    <string name="notification_title_when_screen_locked">Device is Locked</string>
+    <string name="notification_Msg_when_screen_locked">Unlock and Tap to continue</string>
+    <string name="call_block_title">Call Block</string>
+    <string name="callBlockStartTAG">callBlockStart</string>
+    <string name="callBlockEndTAG">callBlockEnd</string>
+    <string name="callScheduleIndiTAG">callScheduleIndi</string>
+    <string name="WAcallBlockOnTAG">WAcallBlockOn</string>
+    <string name="WBcallBlockStartTAG">WBcallBlockStart</string>
+    <string name="WBcallBlockEndTAG">WBcallBlockEnd</string>
+    <string name="callBlockStartMilisTAG">callBlockStartMilis</string>
+    <string name="callBlockEndMilisTAG">callBlockEndMilis</string>
+    <string name="WBcallBlockStartMilisTAG">WBcallBlockStartMilis</string>
+    <string name="WBcallBlockEndMilisTAG">WBcallBlockEndMilis</string>
+    <string name="WBcallScheduleIndiTAG">WBcallScheduleIndi</string>
+    <string name="CallBlockList">CallBlockListtable</string>
+    <string name="blockCallOfTAG">blockCallOf</string>
+    <string name="WBblockCallOfTAG">WBblockCallOf</string>
+    <string name="WAvoicecallblockOnTAG">WAvoicecallblockOn</string>
+    <string name="WAVideocallblockOnTAG">WAVideocallblockOn</string>
+    <string name="WBvoicecallblockOnTAG">WBvoicecallblockOn</string>
+    <string name="WBVideocallblockOnTAG">WBVideocallblockOn</string>
+    <string name="wentForNotiPermissionCallBlockTAG">wentForNotiPermissionCallBlock</string>
+    <string name="WAscheduleCallBlockOnTAG">WAscheduleCallBlockOn</string>
+    <string name="WBscheduleCallBlockOnTAG">WBscheduleCallBlockOn</string>
+    <string name="IseMilisChangedCBlockTag">IseMilisChanged</string>
+    <string name="IssMilisChangedCBlockTag">IssMilisChanged</string>
+    <string name="WBIssMilisChangedCBlockTag">WBIssMilisChanged</string>
+    <string name="WBIseMilisChangedCBlockTag">WBIseMilisChanged</string>
+    <string name="call_block_history_table">callBlockHistory</string>
+    <string name="CallBlockListtable2">CallBlockListtable2</string>
+    <string name="schedule_call_block">Schedule Call Block</string>
+    <string name="call_block_to">Call block to</string>
+    <string name="fristInCallBlockTeg">fristInCallBlock</string>
+
+    <string name="dot">⚫</string>
+    <string name="we_dont_collect">We don\'t collect any data from your device.(Verified by Play store)</string>
+    <string name="openVideoCallITag">openVideoCall</string>
+
+
+    <string name="facebook_app_id">817906216131621</string>
+    <string name="fb_login_protocol_scheme">fb817906216131621</string>
+    <string name="facebook_client_token">73aa523bfa1c6f2d2cf046ceb4a4c335</string>
+    <string name="firebaseItemNameRecoverOpen">RecoverOpen</string>
+    <string name="firebaseItemNameDirectChat">DirectChat</string>
+    <string name="firebaseItemNameStatusDownload">StatusDownload</string>
+    <string name="firebaseItemNameTextFun">TextFun</string>
+    <string name="firebaseItemNameQuickMsg">QuickMsg</string>
+    <string name="firebaseItemNameTextRepeter">TextRepeter</string>
+    <string name="firebaseItemNameDesignText">DesignText</string>
+    <string name="firebaseItemNameAsciiFace">AsciiFace</string>
+    <string name="totaQueChatNamesTAG">totaQueChatNames</string>
+    <string name="all_contact_and_status">All Contact and Status</string>
+    <string name="all_conatct">All Conatct</string>
+    <string name="only_status">Only Status</string>
+    <string name="my_list">My List</string>
+    <string name="my_list_and_status">My List and Status</string>
+    <string name="new_year_wishes">NEW YEAR WISHES</string>
+    <string name="gameID">5266899</string>
+    <string name="interstitalAdIdUnity">Interstitial_Android</string>
+    <string name="unityBannerID">Banner_Android</string>
+    <string name="appLovin_interstitial">8f85681aa60a5635</string>
+    <string name="license">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxMpfr/s95Ah9zi6u0BBMEMKgrxVhrGpjGKJOIsXvaciEd7Ty0DLdutJJSg1sw8bMRnmOrB1QgLq+T0TBXiEI65yt95JNRocb81FneJFjTT+8dXa14BjHLiJC1zwhMaGZ1+rkgorGnr+9VxVnXUe5R00TQyTj5yz0fXy5Z0tnlQ3dr2wQnixoJsKA07hgNeqsZLD7zXJUqSex+klEBcPRMJcO8q/WmhyVXiULk2TPBmXkrnkU7PJuMv6qfMZjUjcSmbct2X3by5PMlZKLC1/dlOB+seUemWx2O7+CYuu7d+SiYuMkK7+wIDNYIaR46izKR3uz/7NGAvXyKE4m+QxDsQIDAQAB\n</string>
+    <string name="marchentID">13901016922296670777</string>
+    <string name="gptNumbar">9775444911</string>
+    <string name="getAdsUrl">https://whatsgpt.affixstudio.co.in/php/AdsForGBVersion/getAds.php</string>
+    <string name="appOpenAppLovin">7b823ca31bdd681d</string>
+    <string name="applovinNativeADID">80ffb9b675bfe69e</string>
+    <string name="smallApplovinNative">134f13b379edddaa</string>
+    <string name="pollfishAPIKey">1323dc83-8f3f-41b4-b7e1-507a474ab0e4</string>
+    <string name="userPremiumInfoTable">userPremiumInfoTable</string>
+
+
+</resources>
