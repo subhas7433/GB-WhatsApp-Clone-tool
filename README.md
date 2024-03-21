@@ -71,6 +71,20 @@ Here are some screenshots to give you a glimpse of what My Amazing App looks lik
 </p>
 
 
+Giving credit to other developers whose work you've incorporated into your project is an important aspect of collaborating in the open-source community, even if your project is private and for showcase purposes. Here's how to appropriately give credit in your README:
+
+---
+
+## Acknowledgments
+
+Special thanks to the following developers and projects whose work contributed significantly to the success of the GB WhatsApp Clone:
+
+- **adeekshith**: The integration of the [watomatic](https://github.com/adeekshith/watomatic) repository was crucial for the Auto Reply feature. It provided a robust starting point and significantly accelerated the development process.
+
+- **92lleo**: Utilizing [WhatsappWebToGo](https://github.com/92lleo/WhatsappWebToGo) enabled the seamless implementation of the WhatsApp Web feature. Their innovative approach and codebase were indispensable.
+
+Their work provided a solid foundation and saved valuable time, showcasing the spirit of the open-source community.
+
 ## Contact
 For more information about my work, or to discuss employment opportunities, please contact me at subashisguchait10@gmail.com .
 
