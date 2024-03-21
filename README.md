@@ -35,7 +35,7 @@ This project serves as a testament to my ability to:
 
 ## Home Screen
 <p float="left">
-  <img src="Screenshots/AutoReply/home.png" width="200"/>
+  <img src="Screenshots/home.png" width="200"/>
 
 </p>
 
