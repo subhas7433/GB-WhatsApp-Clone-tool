@@ -1,6 +1,12 @@
-# GB WhatsApp Clone – Technical Showcase
+# GB WhatsApp Clone
 
-Welcome to the GB WhatsApp Clone, an Android application crafted as a technical showcase to demonstrate advanced programming skills, API usage, and a deep understanding of Android development paradigms. This app mirrors the functionality of WhatsApp and introduces enhanced features that push the boundaries of messaging applications.
+GB WhatsApp Clone is an enhanced version of the popular messaging app, designed to give users more control over their messaging experience. With advanced features such as Auto Reply, Call Block, Chat Scheduling, and No Blue Tick, this app takes your WhatsApp usage to the next level. Enjoy customization and features that are not available in the standard version of WhatsApp.
+
+<p float="left">
+  <img src="Screenshots/home.png" width="200"/>
+
+</p>
+
 
 ## Core Features
 
@@ -20,24 +26,26 @@ Welcome to the GB WhatsApp Clone, an Android application crafted as a technical 
 - Utilizes Android File Observer API to discreetly manage media files.
 - Offers users the choice to view media without sending read confirmations and to recover files even after they've been deleted by the sender.
 
-## Technical Highlights
+## Advanced Functionalities
 
-This project serves as a testament to my ability to:
-- Work with Android's Notification and Accessibility APIs.
-- Design and implement a user-friendly interface while maintaining performance and efficiency.
-- Handle file operations in a privacy-conscious manner.
-- Manage state and user interactions across a variety of contexts.
+- **SMS Template**: Create and use message templates for quick responses.
+- **Status Download**: Save the statuses shared by your contacts easily.
+- **Design Text**: Customize your text messages with different fonts and styles.
+- **And More**: Discover additional tools to enhance your messaging experience.
+
+
+## Technical Details
+
+- **Auto Reply**: Built using Android Notification API, this feature allows users to set custom replies for convenience and efficiency.
+- **Call Blocking**: Implemented using the same Android Notification API, it gives users the ability to block calls based on various filters.
+- **Chat Scheduling**: The scheduling functionality leverages the Android Accessibility API to give users the power to schedule messages precisely.
+- **Media Privacy**: The No Blue Tick feature uses the Android File Observer API to smartly manage media visibility and privacy.
 
 
 
 
 ## Screenshots
 
-## Home Screen
-<p float="left">
-  <img src="Screenshots/home.png" width="200"/>
-
-</p>
 
 ## Auto Reply Screen
 <p float="left">
