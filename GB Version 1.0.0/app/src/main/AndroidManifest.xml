@@ -291,7 +291,7 @@
 <!--            android:value="true" />-->
 <!--        <meta-data-->
 <!--            android:name="applovin.sdk.key"-->
-<!--            android:value="ZgxD2fEHaPe8aNfIpWoeLSLkfHxgDO_rzv5GSOm4wNSDA2sZCdT_GSZOibfE43NVdvrgebLVxxJtcdlvPQS98w" />-->
+<!--            android:value="" />-->
     </application>
 
 </manifest>
