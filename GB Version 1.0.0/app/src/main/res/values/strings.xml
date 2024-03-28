@@ -259,11 +259,11 @@
 
 
     <!--Ads unit id -->
-    <string name="nativeAdsId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/6295310374</string>
-    <string name="bannerAdID" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/8769145066</string>
-    <string name="RewardAdsId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/4829900052</string>
-    <string name="interstitalAdId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/5329998474</string>
-    <string name="OpenAppAdId" tools:ignore="MissingTranslation">ca-app-pub-7685168822144606/8873086849</string>
+    <string name="nativeAdsId" tools:ignore="MissingTranslation"></string>
+    <string name="bannerAdID" tools:ignore="MissingTranslation"></string>
+    <string name="RewardAdsId" tools:ignore="MissingTranslation"></string>
+    <string name="interstitalAdId" tools:ignore="MissingTranslation"></string>
+    <string name="OpenAppAdId" tools:ignore="MissingTranslation"></string>
 
 
     <string name="forScheduleMatch" tools:ignore="MissingTranslation">If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.If people like you, they’ll listen to you, but if they trust you, they’ll do business with you.</string>
